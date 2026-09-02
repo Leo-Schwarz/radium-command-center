@@ -100,9 +100,7 @@ const MilestoneSection: React.FC<MilestoneSectionProps> = ({
           </p>
 
           <div className="space-y-3">
-            {milestone.epics
-              .filter(epic => showCompleted || epic.tasks.some(t => !t.completed))
-              .map(epic => {
+            {milestone.epics.map(epic => {
                 const visibleTasks = showCompleted ? epic.tasks : epic.tasks.filter(t => !t.completed);
                 if (visibleTasks.length === 1) {
                   return (
