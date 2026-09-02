@@ -13,11 +13,19 @@ interface TaskBoardCardProps {
   epicTitle: string;
   onToggle?: (taskId: string) => void;
   onOpen?: () => void;
+  draggable?: boolean;
+  onDragStart?: (e: React.DragEvent<HTMLDivElement>) => void;
+  className?: string;
 }
 
-const TaskBoardCard: React.FC<TaskBoardCardProps> = ({ task, milestoneTitle, epicTitle, onToggle, onOpen }) => {
+const TaskBoardCard: React.FC<TaskBoardCardProps> = ({ task, milestoneTitle, epicTitle, onToggle, onOpen, draggable, onDragStart, className }) => {
   return (
-    <div onClick={onOpen} className="flex items-start gap-3 py-3.5 border-b border-white/[0.05] last:border-b-0 hover:bg-white/[0.02] transition-colors rounded-lg -mx-2 px-2 group cursor-pointer">
+    <div
+      onClick={onOpen}
+      draggable={draggable}
+      onDragStart={onDragStart}
+      className={`flex items-start gap-3 py-3.5 border-b border-white/[0.05] last:border-b-0 hover:bg-white/[0.02] transition-colors rounded-lg -mx-2 px-2 group cursor-pointer ${className || ''}`}
+    >
       <button
         onClick={(e) => { e.stopPropagation(); onToggle?.(task.id); }}
         className={`

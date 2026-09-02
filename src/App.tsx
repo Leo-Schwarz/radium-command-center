@@ -51,6 +51,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
   const [knowledgeDocs, setKnowledgeDocs] = useState<KnowledgeDoc[]>([]);
   const [selectedKnowledgeDocId, setSelectedKnowledgeDocId] = useState<string | null>(null);
   const [marketingStats, setMarketingStats] = useState<MarketingStatsType | null>(null);
+  const [dragOverColumn, setDragOverColumn] = useState<string | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
   // Build task index from original data (so completed state reflects realtime)
@@ -522,8 +523,8 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           </div>
         </section>
 
-        {/* Urgent — two column, full width */}
-        <div className="mb-14">
+        {/* Urgent — two column, full width with box */}
+        <div className="mb-14 bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-400" style={{ boxShadow: '0 0 6px rgba(248,113,113,0.4)' }} />
@@ -550,14 +551,41 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {plannerColumns.map(col => (
-              <div key={col.iso} className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-4 flex flex-col min-h-[140px]">
+              <div
+                key={col.iso}
+                className={`bg-[#0f0f11] rounded-2xl p-4 flex flex-col min-h-[140px] transition-colors ${
+                  dragOverColumn === col.iso
+                    ? 'border border-purple-400/40 ring-1 ring-purple-400/20'
+                    : 'border border-white/[0.08]'
+                }`}
+                onDragOver={(e) => { e.preventDefault(); setDragOverColumn(col.iso); }}
+                onDragLeave={() => setDragOverColumn(null)}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  const taskId = e.dataTransfer.getData('text/plain');
+                  if (taskId) {
+                    updateTask(taskId, { dueDate: col.iso });
+                  }
+                  setDragOverColumn(null);
+                }}
+              >
                 <div className="mb-3">
                   <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">{col.label}</h3>
                   <p className="text-[11px] text-white/25 mt-0.5">{col.subtitle}</p>
                 </div>
                 <div className="flex-1 space-y-0.5">
                   {col.tasks.map(task => (
-                    <TaskBoardCard key={task.id} task={task} milestoneTitle={taskIndex[task.id].milestone.title} epicTitle={taskIndex[task.id].epic.title} onToggle={toggleTask} onOpen={() => setSelectedTaskId(task.id)} />
+                    <TaskBoardCard
+                      key={task.id}
+                      task={task}
+                      milestoneTitle={taskIndex[task.id].milestone.title}
+                      epicTitle={taskIndex[task.id].epic.title}
+                      onToggle={toggleTask}
+                      onOpen={() => setSelectedTaskId(task.id)}
+                      draggable
+                      onDragStart={(e) => { e.dataTransfer.setData('text/plain', task.id); e.dataTransfer.effectAllowed = 'move'; }}
+                      className="cursor-grab active:cursor-grabbing"
+                    />
                   ))}
                   {col.tasks.length === 0 && (
                     <p className="text-[12px] text-white/15 py-3 text-center italic">No tasks</p>
