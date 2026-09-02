@@ -87,3 +87,53 @@ export interface KnowledgeIndex {
   docs: KnowledgeDoc[];
   lastUpdated: string;
 }
+
+// ─── Hiring Tracker ───
+
+export type CandidateStatus =
+  | 'new'
+  | 'screening'
+  | 'interview'
+  | 'offer'
+  | 'hired'
+  | 'rejected'
+  | 'on-hold';
+
+export type HiringRoleStatus = 'open' | 'hiring' | 'filled' | 'paused';
+
+export interface HiringCandidate {
+  id: string;
+  name: string;
+  email?: string;
+  linkedIn?: string;
+  roleId: string;
+  status: CandidateStatus;
+  source: string; // e.g. "AngelList", "Referral", "LinkedIn outbound"
+  notes: string;
+  rating?: number; // 1-5
+  appliedAt?: string; // ISO date
+  stageHistory: { stage: CandidateStatus; date: string; note?: string }[];
+}
+
+export interface HiringRole {
+  id: string;
+  title: string;
+  department: string;
+  status: HiringRoleStatus;
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  location: string; // "Remote (EU)", "London", "Berlin"
+  salaryRange: string; // "€60k–€80k"
+  description: string;
+  requirements: string[];
+  niceToHave: string[];
+  owner: string;
+  linkedPillarIds: string[];
+  notes: string;
+  postedAt?: string; // ISO date
+  candidates: HiringCandidate[];
+}
+
+export interface HiringData {
+  roles: HiringRole[];
+  lastUpdated: string;
+}

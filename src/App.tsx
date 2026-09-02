@@ -10,6 +10,8 @@ import MilestonePage from './components/MilestonePage';
 import KnowledgeBase from './components/KnowledgeBase';
 import KnowledgeDocDetail from './components/KnowledgeDocDetail';
 import MarketingStats from './components/MarketingStats';
+import HiringTab from './components/HiringTab';
+import { hiringData } from './data/hiringData';
 import TaskCompletionSummary from './components/TaskCompletionSummary';
 import type { FirefliesSyncPatch, HubSpotSyncPatch, LinkedInSyncPatch } from './types/sync';
 import type { MarketingStats as MarketingStatsType } from './types/marketing';
@@ -47,7 +49,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
   const [, setSyncApplied] = useState(false);
   const [liLoading, setLiLoading] = useState(false);
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null);
-  const [activeView, setActiveView] = useState<'dashboard' | 'all-tasks' | 'knowledge-base' | 'marketing-stats'>('dashboard');
+  const [activeView, setActiveView] = useState<'dashboard' | 'all-tasks' | 'knowledge-base' | 'marketing-stats' | 'hiring'>('dashboard');
   const [knowledgeDocs, setKnowledgeDocs] = useState<KnowledgeDoc[]>([]);
   const [selectedKnowledgeDocId, setSelectedKnowledgeDocId] = useState<string | null>(null);
   const [marketingStats, setMarketingStats] = useState<MarketingStatsType | null>(null);
@@ -410,6 +412,18 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           >
             Marketing Stats
           </button>
+          <button
+            onClick={() => setActiveView('hiring')}
+            className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
+              activeView === 'hiring'
+                ? 'text-white/80 border-b-2 border-white/30'
+                : 'text-white/30 hover:text-white/55'
+            }`}
+          >
+            Hiring {hiringData.roles.length > 0 && (
+              <span className="ml-1 text-[10px] text-white/30 tabular-nums">{hiringData.roles.length}</span>
+            )}
+          </button>
         </div>
 
         {activeView === 'all-tasks' && (
@@ -666,8 +680,12 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           <MarketingStats stats={marketingStats} />
         )}
 
+        {activeView === 'hiring' && (
+          <HiringTab data={hiringData.roles} onBack={() => setActiveView('dashboard')} />
+        )}
+
         {/* Footer */}
-        {activeView !== 'knowledge-base' && activeView !== 'marketing-stats' && (
+        {activeView !== 'knowledge-base' && activeView !== 'marketing-stats' && activeView !== 'hiring' && (
           <footer className="mt-20 pt-6 border-t border-white/[0.06]">
             <p className="text-[10px] tracking-[0.1em] text-white/20">
               Updated {data.lastUpdated} · {openTasks.length} open · {allTasks.length} total · {data.milestones.length} pillars{hsCount > 0 ? ` · ${hsCount} from HubSpot` : ''}{liCount > 0 ? ` · ${liCount} from LinkedIn` : ''}{knowledgeDocs.length > 0 ? ` · ${knowledgeDocs.length} knowledge docs` : ''}
