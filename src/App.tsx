@@ -273,7 +273,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
 
   const urgentTasks = useMemo(() => allTasks.filter(t => !t.completed && t.tags.includes('urgent')), [allTasks]);
 
-  // Weekly Planner: 5-day columns + backlog
+  // Weekly Planner: 5-day columns
   const plannerColumns = useMemo(() => {
     const offsets = [0, 1, 2, 3, 4];
     return offsets.map(offset => {
@@ -289,16 +289,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
     });
   }, [openTasks]);
 
-  const plannerBacklog = useMemo(() => {
-    const futureIsos: string[] = [];
-    for (let i = 0; i < 5; i++) {
-      const d = new Date();
-      d.setHours(0, 0, 0, 0);
-      d.setDate(d.getDate() + i);
-      futureIsos.push(d.toISOString().split('T')[0]);
-    }
-    return openTasks.filter(t => !t.dueDate || !futureIsos.includes(t.dueDate));
-  }, [openTasks]);
+
 
   if (milestoneId) {
     const milestone = data.milestones.find(m => m.id === milestoneId);
@@ -531,69 +522,52 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           </div>
         </section>
 
-        {/* Urgent & This Week */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-14">
-          {/* Urgent */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-red-400" style={{ boxShadow: '0 0 6px rgba(248,113,113,0.4)' }} />
-                <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Urgent</h2>
-              </div>
-              <span className="text-[11px] font-medium text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-white/[0.04]">{urgentTasks.length}</span>
+        {/* Urgent — two column, full width */}
+        <div className="mb-14">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-red-400" style={{ boxShadow: '0 0 6px rgba(248,113,113,0.4)' }} />
+              <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Urgent</h2>
             </div>
-            <div>
+            <span className="text-[11px] font-medium text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-white/[0.04]">{urgentTasks.length}</span>
+          </div>
+          {urgentTasks.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {urgentTasks.map(task => (
                 <TaskBoardCard key={task.id} task={task} milestoneTitle={taskIndex[task.id].milestone.title} epicTitle={taskIndex[task.id].epic.title} onToggle={toggleTask} onOpen={() => setSelectedTaskId(task.id)} />
               ))}
-              {urgentTasks.length === 0 && <p className="text-[13px] text-white/20 py-4 text-center">No urgent tasks.</p>}
             </div>
+          ) : (
+            <p className="text-[13px] text-white/20 py-4 text-center">No urgent tasks.</p>
+          )}
+        </div>
+
+        {/* Weekly Planner — full width, no backlog */}
+        <div className="mb-14">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-2 h-2 rounded-full bg-purple-400" style={{ boxShadow: '0 0 6px rgba(192,132,252,0.4)' }} />
+            <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Weekly Planner</h2>
           </div>
-          {/* Weekly Planner */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-2 h-2 rounded-full bg-purple-400" style={{ boxShadow: '0 0 6px rgba(192,132,252,0.4)' }} />
-              <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Weekly Planner</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-              {plannerColumns.map(col => (
-                <div key={col.iso} className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-4 flex flex-col min-h-[140px]">
-                  <div className="mb-3">
-                    <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">{col.label}</h3>
-                    <p className="text-[11px] text-white/25 mt-0.5">{col.subtitle}</p>
-                  </div>
-                  <div className="flex-1 space-y-0.5">
-                    {col.tasks.map(task => (
-                      <TaskBoardCard key={task.id} task={task} milestoneTitle={taskIndex[task.id].milestone.title} epicTitle={taskIndex[task.id].epic.title} onToggle={toggleTask} onOpen={() => setSelectedTaskId(task.id)} />
-                    ))}
-                    {col.tasks.length === 0 && (
-                      <p className="text-[12px] text-white/15 py-3 text-center italic">No tasks</p>
-                    )}
-                  </div>
-                  <div className="mt-3 pt-2 border-t border-white/[0.05] flex items-center justify-between">
-                    <span className="text-[10px] text-white/30 tabular-nums">{col.tasks.length} tasks</span>
-                  </div>
-                </div>
-              ))}
-              {/* Backlog */}
-              <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-4 flex flex-col min-h-[140px]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {plannerColumns.map(col => (
+              <div key={col.iso} className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-4 flex flex-col min-h-[140px]">
                 <div className="mb-3">
-                  <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Backlog</h3>
-                  <p className="text-[11px] text-white/25 mt-0.5">No date set</p>
+                  <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">{col.label}</h3>
+                  <p className="text-[11px] text-white/25 mt-0.5">{col.subtitle}</p>
                 </div>
                 <div className="flex-1 space-y-0.5">
-                  {plannerBacklog.map(task => (
+                  {col.tasks.map(task => (
                     <TaskBoardCard key={task.id} task={task} milestoneTitle={taskIndex[task.id].milestone.title} epicTitle={taskIndex[task.id].epic.title} onToggle={toggleTask} onOpen={() => setSelectedTaskId(task.id)} />
                   ))}
-                  {plannerBacklog.length === 0 && (
+                  {col.tasks.length === 0 && (
                     <p className="text-[12px] text-white/15 py-3 text-center italic">No tasks</p>
                   )}
                 </div>
                 <div className="mt-3 pt-2 border-t border-white/[0.05] flex items-center justify-between">
-                  <span className="text-[10px] text-white/30 tabular-nums">{plannerBacklog.length} tasks</span>
+                  <span className="text-[10px] text-white/30 tabular-nums">{col.tasks.length} tasks</span>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
