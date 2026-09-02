@@ -28,6 +28,16 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
     return map;
   }, [milestones]);
 
+  const completedTaskIds = useMemo(() => {
+    const ids = new Set<string>();
+    milestones.forEach(m =>
+      m.epics.forEach(ep =>
+        ep.tasks.forEach(t => { if (t.completed) ids.add(t.id); })
+      )
+    );
+    return ids;
+  }, [milestones]);
+
   const allTags = useMemo(() => {
     const set = new Set<string>();
     docs.forEach(d => d.tags.forEach(t => set.add(t)));
@@ -169,7 +179,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
         )}
 
         {selectedDoc && (
-          <KnowledgeDocDetail doc={selectedDoc} milestoneTitles={milestoneTitles} epicTitles={epicTitles} onClose={() => setSelectedDocId(null)} />
+          <KnowledgeDocDetail doc={selectedDoc} milestoneTitles={milestoneTitles} epicTitles={epicTitles} completedTaskIds={completedTaskIds} onClose={() => setSelectedDocId(null)} />
         )}
 
       </div>

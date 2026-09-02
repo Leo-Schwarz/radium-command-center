@@ -337,6 +337,16 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
     return map;
   }, [data.milestones]);
 
+  const completedTaskIds = useMemo(() => {
+    const ids = new Set<string>();
+    data.milestones.forEach(m =>
+      m.epics.forEach(ep =>
+        ep.tasks.forEach(t => { if (t.completed) ids.add(t.id); })
+      )
+    );
+    return ids;
+  }, [data]);
+
   const selectedKnowledgeDoc = selectedKnowledgeDocId ? knowledgeDocs.find(d => d.id === selectedKnowledgeDocId) : null;
 
   return (
@@ -683,6 +693,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
               return map;
             }, [data.milestones])}
             epicTitles={epicTitleMap}
+            completedTaskIds={completedTaskIds}
             onClose={() => setSelectedKnowledgeDocId(null)}
           />
         )}

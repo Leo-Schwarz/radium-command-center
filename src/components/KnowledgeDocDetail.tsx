@@ -6,10 +6,11 @@ interface Props {
   doc: KnowledgeDoc;
   milestoneTitles?: Record<string, string>;
   epicTitles?: Record<string, string>;
+  completedTaskIds?: Set<string>;
   onClose: () => void;
 }
 
-export default function KnowledgeDocDetail({ doc, milestoneTitles, epicTitles, onClose }: Props) {
+export default function KnowledgeDocDetail({ doc, milestoneTitles, epicTitles, completedTaskIds, onClose }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -74,38 +75,43 @@ export default function KnowledgeDocDetail({ doc, milestoneTitles, epicTitles, o
             </button>
           </div>
 
-          {/* Links */}
-          {(doc.linkedMilestoneIds.length > 0 || doc.linkedEpicIds.length > 0 || doc.linkedTaskIds.length > 0 || doc.sourceUrl) && (
-            <div className="flex items-center gap-2 mt-3 flex-wrap">
-              {doc.sourceUrl && (
-                <a
-                  href={doc.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] text-blue-400/70 hover:text-blue-300 transition-colors"
-                  onClick={e => e.stopPropagation()}
-                >
-                  <ExternalLink size={10} />
-                  Source
-                </a>
-              )}
-              {doc.linkedMilestoneIds.map(msId => (
-                <span key={msId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
-                  {milestoneTitles?.[msId] || msId}
-                </span>
-              ))}
-              {doc.linkedEpicIds.map(epId => (
-                <span key={epId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
-                  {epicTitles?.[epId] || epId}
-                </span>
-              ))}
-              {doc.linkedTaskIds.map(tkId => (
-                <span key={tkId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
-                  {tkId}
-                </span>
-              ))}
-            </div>
-          )}
+          {/* Links — hide completed task references */}
+          {(() => {
+            const visibleTaskIds = doc.linkedTaskIds.filter(tkId => !completedTaskIds?.has(tkId));
+            const hasLinks = doc.linkedMilestoneIds.length > 0 || doc.linkedEpicIds.length > 0 || visibleTaskIds.length > 0 || doc.sourceUrl;
+            if (!hasLinks) return null;
+            return (
+              <div className="flex items-center gap-2 mt-3 flex-wrap">
+                {doc.sourceUrl && (
+                  <a
+                    href={doc.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] text-blue-400/70 hover:text-blue-300 transition-colors"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    <ExternalLink size={10} />
+                    Source
+                  </a>
+                )}
+                {doc.linkedMilestoneIds.map(msId => (
+                  <span key={msId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
+                    {milestoneTitles?.[msId] || msId}
+                  </span>
+                ))}
+                {doc.linkedEpicIds.map(epId => (
+                  <span key={epId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
+                    {epicTitles?.[epId] || epId}
+                  </span>
+                ))}
+                {visibleTaskIds.map(tkId => (
+                  <span key={tkId} className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.06] text-white/50 border border-white/[0.06]">
+                    {tkId}
+                  </span>
+                ))}
+              </div>
+            );
+          })()}
         </div>
 
         {/* Content */}
