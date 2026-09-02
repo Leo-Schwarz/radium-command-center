@@ -1,501 +1,311 @@
 {
-  "lastSyncAt": "2026-09-01T14:30:00Z",
+  "lastSyncAt": "2026-09-02T13:00:00Z",
   "dateRange": "7d",
+  "_meta": {
+    "generatedBy": "Claude cloud run, 2026-09-02",
+    "windows": {
+      "7d": "2026-08-26 -> 2026-09-02",
+      "30d": "2026-08-05 -> 2026-09-02 (28 days, the boundary actually counted)",
+      "website": "Contentsquare data ends 2026-09-01; site figures are 2026-08-26 -> 2026-09-01"
+    },
+    "sources": {
+      "hubspot": "live, portal 244452220",
+      "website": "live, Contentsquare project 921964",
+      "googleAds": "UNAVAILABLE",
+      "linkedin": "UNAVAILABLE"
+    },
+    "warning": "Every zero in the googleAds and linkedin blocks is an absent source, not a measured zero. Check _status on each block before reading any number."
+  },
   "kpis": {
-    "weeklySignups": 47,
-    "weeklyActivations": 38,
-    "weeklyQualifiedActivations": 22,
-    "activationRate": 81,
-    "qualifiedActivationRate": 47,
-    "costPerSignup": 56,
-    "organicVsPaidSplit": 62
+    "weeklySignups": 253,
+    "weeklyActivations": 9,
+    "weeklyQualifiedActivations": 0,
+    "activationRate": 3.6,
+    "qualifiedActivationRate": 0,
+    "costPerSignup": 0,
+    "organicVsPaidSplit": 20,
+    "_notes": {
+      "weeklyQualifiedActivations": "UNMEASURABLE. Requires first_api_request_date, which is empty on all but 3 contacts portal-wide (all Jun/Jul). Gated on the second half of T019.",
+      "qualifiedActivationRate": "UNMEASURABLE, same reason.",
+      "costPerSignup": "UNAVAILABLE - needs Google Ads spend.",
+      "organicVsPaidSplit": "% organic of ATTRIBUTED contacts only: 10 organic / 49 attributed. 204 of 253 weekly contacts arrive as OFFLINE/INTEGRATION with no source, so this is a thin base. See T022.",
+      "activationRate": "9 of 253 created an API key. Paid-search cohort activates at 15.4% (6 of 39) - roughly 4x the blended rate."
+    }
   },
   "hubspot": {
-    "totalContacts": 6342,
-    "newContacts7d": 47,
-    "newContacts30d": 192,
+    "_status": "live",
+    "_asOf": "2026-09-02T13:00:00Z",
+    "totalContacts": 15708,
+    "newContacts7d": 253,
+    "newContacts30d": 2453,
     "productEvents7d": [
       {
         "event": "Signup Form Submit",
-        "count": 47
+        "count": 253
       },
       {
         "event": "API Key Created",
-        "count": 38
+        "count": 9
       },
       {
         "event": "First Token Usage",
-        "count": 22
+        "count": 0,
+        "_status": "unmeasurable"
       },
       {
         "event": "First Spend",
-        "count": 14
+        "count": 0,
+        "_status": "no_property"
+      }
+    ],
+    "attribution7d": [
+      {
+        "source": "Paid search",
+        "contacts": 39,
+        "withApiKey": 6,
+        "activationRate": 15.4
+      },
+      {
+        "source": "Organic / direct / referral",
+        "contacts": 10,
+        "withApiKey": 0,
+        "activationRate": 0
+      },
+      {
+        "source": "Offline / integration (unattributed)",
+        "contacts": 204,
+        "withApiKey": 3,
+        "activationRate": 1.5
       }
     ],
     "contactHistory": [
       {
-        "date": "2026-06-06",
-        "value": 4562
+        "date": "2026-06-10",
+        "value": 10194
       },
       {
-        "date": "2026-06-13",
-        "value": 4650
+        "date": "2026-06-17",
+        "value": 10255
       },
       {
-        "date": "2026-06-20",
-        "value": 4738
+        "date": "2026-06-24",
+        "value": 10673
       },
       {
-        "date": "2026-06-27",
-        "value": 4819
+        "date": "2026-07-01",
+        "value": 11080
       },
       {
-        "date": "2026-07-04",
-        "value": 4907
+        "date": "2026-07-08",
+        "value": 11126
       },
       {
-        "date": "2026-07-11",
-        "value": 4995
+        "date": "2026-07-15",
+        "value": 11429
       },
       {
-        "date": "2026-07-18",
-        "value": 5076
+        "date": "2026-07-22",
+        "value": 11786
       },
       {
-        "date": "2026-07-25",
-        "value": 5164
+        "date": "2026-07-29",
+        "value": 12427
       },
       {
-        "date": "2026-08-01",
-        "value": 5252
+        "date": "2026-08-05",
+        "value": 13255
       },
       {
-        "date": "2026-08-08",
-        "value": 5333
+        "date": "2026-08-12",
+        "value": 14188
       },
       {
-        "date": "2026-08-15",
-        "value": 5421
+        "date": "2026-08-19",
+        "value": 14986
       },
       {
-        "date": "2026-08-22",
-        "value": 5509
+        "date": "2026-08-26",
+        "value": 15455
       },
       {
-        "date": "2026-08-29",
-        "value": 5608
+        "date": "2026-09-02",
+        "value": 15708
       }
-    ]
+    ],
+    "_notes": {
+      "contactHistory": "Cumulative portal contacts, derived as total minus contacts created after each weekly boundary.",
+      "totalContacts": "15,708 - the seeded mock value of 6,342 was not real.",
+      "productEvents7d": "api_key_count is the only product property carrying data. first_api_key_created_date is empty on every record; first_api_request_date on 3."
+    }
   },
   "googleAds": {
-    "totalSpend7d": 1850,
-    "totalSpend30d": 7420,
-    "totalImpressions7d": 89000,
-    "totalClicks7d": 1240,
-    "totalSignups7d": 18,
-    "avgCtr7d": 3.1,
-    "avgCpc7d": 1.49,
-    "avgCostPerSignup7d": 102.78,
-    "campaigns": [
-      {
-        "id": "c1",
-        "name": "DevTools - PLG Search",
-        "status": "ENABLED",
-        "spend7d": 720,
-        "spend30d": 2880,
-        "impressions7d": 34000,
-        "clicks7d": 510,
-        "signups7d": 8,
-        "ctr": 3.2,
-        "cpc": 1.41,
-        "costPerSignup": 90
-      },
-      {
-        "id": "c2",
-        "name": "API Competitor Terms",
-        "status": "ENABLED",
-        "spend7d": 540,
-        "spend30d": 2160,
-        "impressions7d": 28000,
-        "clicks7d": 420,
-        "signups7d": 6,
-        "ctr": 3.0,
-        "cpc": 1.29,
-        "costPerSignup": 90
-      },
-      {
-        "id": "c3",
-        "name": "Retargeting - Signup Dropoff",
-        "status": "ENABLED",
-        "spend7d": 340,
-        "spend30d": 1360,
-        "impressions7d": 18000,
-        "clicks7d": 180,
-        "signups7d": 4,
-        "ctr": 3.33,
-        "cpc": 1.89,
-        "costPerSignup": 85
-      },
-      {
-        "id": "c4",
-        "name": "Brand - Radium",
-        "status": "PAUSED",
-        "spend7d": 0,
-        "spend30d": 250,
-        "impressions7d": 0,
-        "clicks7d": 0,
-        "signups7d": 0,
-        "ctr": 0,
-        "cpc": 0,
-        "costPerSignup": 0
-      },
-      {
-        "id": "c5",
-        "name": "Display - Awareness",
-        "status": "ENABLED",
-        "spend7d": 250,
-        "spend30d": 770,
-        "impressions7d": 9000,
-        "clicks7d": 130,
-        "signups7d": 0,
-        "ctr": 2.89,
-        "cpc": 1.92,
-        "costPerSignup": 0
-      }
-    ],
-    "conversionBreakdown": [
-      {
-        "name": "Signup",
-        "count": 14
-      },
-      {
-        "name": "API Key Created",
-        "count": 3
-      },
-      {
-        "name": "First Token Usage",
-        "count": 1
-      }
-    ],
+    "_status": "unavailable",
+    "_reason": "Not sourceable from the cloud run on 2026-09-02: the Google Ads and LinkedIn MCPs are local-only. Values are zeroed, NOT estimated.",
+    "_customerId": "529-156-7552",
+    "totalSpend7d": 0,
+    "totalSpend30d": 0,
+    "totalImpressions7d": 0,
+    "totalClicks7d": 0,
+    "totalSignups7d": 0,
+    "avgCtr7d": 0,
+    "avgCpc7d": 0,
+    "avgCostPerSignup7d": 0,
+    "campaigns": [],
+    "conversionBreakdown": [],
     "paidVsOrganicSignups": [
       {
         "source": "paid",
-        "signups7d": 18,
-        "signups30d": 72
+        "signups7d": 39,
+        "signups30d": 386,
+        "_source": "HubSpot hs_analytics_source, not Google Ads"
       },
       {
         "source": "organic",
-        "signups7d": 29,
-        "signups30d": 120
+        "signups7d": 10,
+        "signups30d": 57,
+        "_source": "HubSpot hs_analytics_source, not Google Ads"
       }
     ]
   },
   "linkedin": {
-    "followers": 2870,
-    "followerGrowth7d": 12,
-    "impressions7d": 45000,
-    "clicks7d": 580,
-    "engagements7d": 620,
-    "ctr": 1.29,
-    "leadGenForms7d": 4,
-    "avgEngagementRate": 3.4,
-    "recentPosts": [
-      {
-        "id": "lp1",
-        "title": "Why we chose Rust for our inference engine",
-        "date": "2026-08-30",
-        "impressions": 12400,
-        "clicks": 90,
-        "reactions": 34,
-        "comments": 12
-      },
-      {
-        "id": "lp2",
-        "title": "What 10M API requests taught us about caching",
-        "date": "2026-08-26",
-        "impressions": 9800,
-        "clicks": 72,
-        "reactions": 28,
-        "comments": 8
-      },
-      {
-        "id": "lp3",
-        "title": "We are hiring an ML engineer in Vancouver",
-        "date": "2026-08-22",
-        "impressions": 15600,
-        "clicks": 340,
-        "reactions": 62,
-        "comments": 45
-      },
-      {
-        "id": "lp4",
-        "title": "Testing strategies for inference pipelines",
-        "date": "2026-08-18",
-        "impressions": 7200,
-        "clicks": 48,
-        "reactions": 19,
-        "comments": 5
-      },
-      {
-        "id": "lp5",
-        "title": "Radiums August product update",
-        "date": "2026-08-14",
-        "impressions": 11000,
-        "clicks": 65,
-        "reactions": 31,
-        "comments": 9
-      }
-    ],
-    "weeklyHistory": [
-      {
-        "date": "2026-06-08",
-        "value": 31000
-      },
-      {
-        "date": "2026-06-15",
-        "value": 34000
-      },
-      {
-        "date": "2026-06-22",
-        "value": 29000
-      },
-      {
-        "date": "2026-06-29",
-        "value": 38000
-      },
-      {
-        "date": "2026-07-06",
-        "value": 35000
-      },
-      {
-        "date": "2026-07-13",
-        "value": 41000
-      },
-      {
-        "date": "2026-07-20",
-        "value": 33000
-      },
-      {
-        "date": "2026-07-27",
-        "value": 45000
-      },
-      {
-        "date": "2026-08-03",
-        "value": 42000
-      },
-      {
-        "date": "2026-08-10",
-        "value": 39000
-      },
-      {
-        "date": "2026-08-17",
-        "value": 47000
-      },
-      {
-        "date": "2026-08-24",
-        "value": 45000
-      }
-    ]
+    "_status": "unavailable",
+    "_reason": "Not sourceable from the cloud run on 2026-09-02: the Google Ads and LinkedIn MCPs are local-only. Values are zeroed, NOT estimated.",
+    "followers": 0,
+    "followerGrowth7d": 0,
+    "impressions7d": 0,
+    "clicks7d": 0,
+    "engagements7d": 0,
+    "ctr": 0,
+    "leadGenForms7d": 0,
+    "avgEngagementRate": 0,
+    "recentPosts": [],
+    "weeklyHistory": []
   },
   "website": {
-    "sessions7d": 5800,
-    "sessions30d": 24800,
-    "uniqueVisitors7d": 4200,
-    "bounceRate": 42,
-    "avgSessionSeconds": 145,
+    "_status": "live",
+    "_source": "Contentsquare project 921964, mapping 2963820 (High-level)",
+    "_asOf": "2026-09-01T23:59:59Z",
+    "sessions7d": 1856,
+    "sessions30d": 5379,
+    "uniqueVisitors7d": 752,
+    "bounceRate": 83.6,
+    "avgSessionSeconds": 193,
     "pages": [
       {
-        "path": "pitch",
-        "sessions7d": 2610,
-        "bounceRate": 38,
-        "avgTimeSeconds": 170
+        "path": "home",
+        "sessions7d": 884,
+        "bounceRate": 78.6,
+        "avgTimeSeconds": 54,
+        "scrollRate": 30.5
       },
       {
-        "path": "pricing",
-        "sessions7d": 870,
-        "bounceRate": 28,
-        "avgTimeSeconds": 210
+        "path": "pricing (Offers & Services)",
+        "sessions7d": 127,
+        "bounceRate": 83.0,
+        "avgTimeSeconds": 65,
+        "scrollRate": 51.5
       },
       {
-        "path": "docs/getting-started",
-        "sessions7d": 754,
-        "bounceRate": 35,
-        "avgTimeSeconds": 300
+        "path": "product-details",
+        "sessions7d": 27,
+        "bounceRate": 54.5,
+        "avgTimeSeconds": 17,
+        "scrollRate": 54.0
       },
       {
-        "path": "blog/august-report",
-        "sessions7d": 580,
-        "bounceRate": 58,
-        "avgTimeSeconds": 90
-      },
-      {
-        "path": "signup",
-        "sessions7d": 470,
-        "bounceRate": 20,
-        "avgTimeSeconds": 90
+        "path": "articles-blog",
+        "sessions7d": 26,
+        "bounceRate": 83.3,
+        "avgTimeSeconds": 124,
+        "scrollRate": 48.7
       }
     ],
     "funnel": [
       {
-        "stage": "Landing Page",
-        "visitors": 4200
+        "stage": "Site visits",
+        "visitors": 1856
       },
       {
-        "stage": "Sign up",
-        "visitors": 470,
-        "conversionToNext": 81
+        "stage": "Homepage",
+        "visitors": 884,
+        "conversionToNext": 7.1
       },
       {
-        "stage": "API Key Created",
-        "visitors": 38,
-        "conversionToNext": 58
+        "stage": "Pricing",
+        "visitors": 63
       },
       {
-        "stage": "First Token Usage",
-        "visitors": 22,
-        "conversionToNext": 64
+        "stage": "Signup (HubSpot contact)",
+        "visitors": 253,
+        "_break": true
       },
       {
-        "stage": "First Spend",
-        "visitors": 14
+        "stage": "API key created",
+        "visitors": 9,
+        "conversionToNext": 3.6
+      },
+      {
+        "stage": "First token usage",
+        "visitors": 0,
+        "_status": "unmeasurable"
       }
     ],
     "dailySessions": [
       {
-        "date": "2026-08-25",
-        "value": 780
-      },
-      {
         "date": "2026-08-26",
-        "value": 840
+        "value": 184
       },
       {
         "date": "2026-08-27",
-        "value": 760
+        "value": 208
       },
       {
         "date": "2026-08-28",
-        "value": 920
+        "value": 231
       },
       {
         "date": "2026-08-29",
-        "value": 680
+        "value": 321
       },
       {
         "date": "2026-08-30",
-        "value": 820
+        "value": 275
       },
       {
         "date": "2026-08-31",
-        "value": 900
+        "value": 335
       },
       {
         "date": "2026-09-01",
-        "value": 100
+        "value": 302
       }
-    ]
+    ],
+    "_notes": {
+      "funnel": "NOT A JOINED FUNNEL. Stages 1-3 are Contentsquare sessions; stages 4-6 are HubSpot contacts. They cannot be joined because deploy.radium.cloud sits outside analytics and no Contentsquare goals are configured - that is exactly T021. Signup (253) exceeding Pricing (63) is this break, not a real conversion.",
+      "goals": "Zero conversion goals configured in Contentsquare as of 2026-09-02.",
+      "bounceRate": "83.6% this week vs 77.7% the week prior. Visits up 21% w/w; the extra traffic is bouncing."
+    }
   },
   "product": {
-    "signups7d": 47,
-    "signups30d": 192,
-    "apiKeyCreated7d": 38,
-    "firstTokenUsage7d": 22,
-    "firstSpend7d": 14,
-    "activationRate": 81,
-    "qualifiedActivationRate": 47,
-    "paidActivationRate": 30,
-    "weeklyActiveUsers": 340,
+    "_status": "partial",
+    "signups7d": 253,
+    "signups30d": 2453,
+    "apiKeyCreated7d": 9,
+    "firstTokenUsage7d": 0,
+    "firstSpend7d": 0,
+    "activationRate": 3.6,
+    "qualifiedActivationRate": 0,
+    "paidActivationRate": 15.4,
+    "weeklyActiveUsers": 0,
     "eventHistory": {
-      "signup": [
-        {
-          "date": "2026-08-25",
-          "value": 7
-        },
-        {
-          "date": "2026-08-26",
-          "value": 6
-        },
-        {
-          "date": "2026-08-27",
-          "value": 5
-        },
-        {
-          "date": "2026-08-28",
-          "value": 9
-        },
-        {
-          "date": "2026-08-29",
-          "value": 4
-        },
-        {
-          "date": "2026-08-30",
-          "value": 8
-        },
-        {
-          "date": "2026-08-31",
-          "value": 8
-        }
-      ],
-      "apiKeyCreated": [
-        {
-          "date": "2026-08-25",
-          "value": 6
-        },
-        {
-          "date": "2026-08-26",
-          "value": 5
-        },
-        {
-          "date": "2026-08-27",
-          "value": 4
-        },
-        {
-          "date": "2026-08-28",
-          "value": 7
-        },
-        {
-          "date": "2026-08-29",
-          "value": 3
-        },
-        {
-          "date": "2026-08-30",
-          "value": 7
-        },
-        {
-          "date": "2026-08-31",
-          "value": 6
-        }
-      ],
-      "firstTokenUsage": [
-        {
-          "date": "2026-08-25",
-          "value": 3
-        },
-        {
-          "date": "2026-08-26",
-          "value": 4
-        },
-        {
-          "date": "2026-08-27",
-          "value": 2
-        },
-        {
-          "date": "2026-08-28",
-          "value": 5
-        },
-        {
-          "date": "2026-08-29",
-          "value": 2
-        },
-        {
-          "date": "2026-08-30",
-          "value": 3
-        },
-        {
-          "date": "2026-08-31",
-          "value": 3
-        }
-      ]
+      "signup": [],
+      "apiKeyCreated": [],
+      "firstTokenUsage": []
+    },
+    "_notes": {
+      "eventHistory": "EMPTY BY NECESSITY. Per-day event series need first_api_key_created_date and first_api_request_date; both are effectively unpopulated, so no daily series can be built. This chart stays blank until the second half of T019 ships.",
+      "paidActivationRate": "6 of 39 paid-search contacts created a key - the strongest activation signal on the board.",
+      "weeklyActiveUsers": "UNAVAILABLE - last_api_request_date is not populated."
     }
   }
 }

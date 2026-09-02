@@ -400,14 +400,13 @@
             {
               "id": "T019",
               "title": "Ship six product events into HubSpot",
-              "description": "signup, api_key_created, first_request, first_spend, model_used, usage_threshold. This is now the gate on the ad account working properly as well as on reporting, because the usage-based conversion cannot be bid to until these events exist and can be uploaded to Google Ads. Escalate to Adam on 2 Sep if it is still unscheduled.",
+              "description": "signup, api_key_created, first_request, first_spend, model_used, usage_threshold. This is now the gate on the ad account working properly as well as on reporting, because the usage-based conversion cannot be bid to until these events exist and can be uploaded to Google Ads. Escalate to Adam on 2 Sep if it is still unscheduled. Update 2 Sep: unblocked but only half shipped. api_key_created is landing - 9 accounts created their first key 24-30 Aug, 7 of them from Google Ads, and Brandon's engineering tests pass. Checked HubSpot portal 244452220 the same night: api_key_count is populated on 30 contacts, but first_api_key_created_date is empty on every record and first_api_request_date is set on only 3, all from June/July. So the count arrives without the timestamps, and first_request is not arriving at all. Ask Eng for those two fields specifically. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
               "completed": false,
               "assignee": "Eng",
               "priority": "high",
               "dueDate": "2026-09-08",
               "tags": [
-                "urgent",
-                "blocked"
+                "urgent"
               ],
               "channel": "Product",
               "bucket": "now"
@@ -732,7 +731,7 @@
         {
           "id": "ep-06-3",
           "title": "Ship docs that acquire",
-          "description": "9 tasks",
+          "description": "10 tasks",
           "owner": "Leo",
           "status": "not_started",
           "tasks": [
@@ -845,6 +844,20 @@
               "tags": [],
               "channel": "Docs",
               "bucket": "next"
+            },
+            {
+              "id": "T100",
+              "title": "Finish and ship the RAG landing page",
+              "description": "Leo, 2 Sep: in progress, wants it finished this week. Sits alongside the other acquisition pages in this epic. ASSUMPTIONS TO CORRECT: assignee Leo, channel SEO, Friday 4 Sep. If Natalie is building it, or it belongs with the persona-routed paths in T013 rather than here, move it.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-04",
+              "tags": [
+                "week"
+              ],
+              "channel": "SEO",
+              "bucket": "now"
             }
           ]
         },
@@ -1125,7 +1138,7 @@
         {
           "id": "ep-07-1",
           "title": "Clean up paid so it stops lying",
-          "description": "11 tasks",
+          "description": "14 tasks",
           "owner": "Mona",
           "status": "in_progress",
           "tasks": [
@@ -1158,8 +1171,8 @@
             {
               "id": "T059",
               "title": "Convert remaining ICP keywords to exact match",
-              "description": "193 of 195 are still phrase or broad, and Fireworks Alternatives alone runs 40 on broad. Broad match is what lets a bid on production inference terms end up buying consumer curiosity.",
-              "completed": false,
+              "description": "193 of 195 are still phrase or broad, and Fireworks Alternatives alone runs 40 on broad. Broad match is what lets a bid on production inference terms end up buying consumer curiosity. Update 2 Sep: closed. Grace found the one keyword that had dropped to broad match and switched it back to exact live in the call; Mona confirmed the rest of the set was already exact. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
+              "completed": true,
               "assignee": "Mona",
               "priority": "low",
               "dueDate": "2026-09-08",
@@ -1184,7 +1197,7 @@
             {
               "id": "T061",
               "title": "Make first token usage the counted primary conversion, not signup",
-              "description": "Decided 31 Aug. Optimising to signup buys people looking for a chatbot, because a signup is free and means nothing. Usage is the first event that proves a real workload. Blocked until the product events reach HubSpot and can be uploaded to Google Ads as offline conversions.",
+              "description": "Decided 31 Aug. Optimising to signup buys people looking for a chatbot, because a signup is free and means nothing. Usage is the first event that proves a real workload. Blocked until the product events reach HubSpot and can be uploaded to Google Ads as offline conversions. Update 2 Sep: still blocked, now on one field rather than the whole pipe. Google is importing key creation as the conversion; first_api_request_date is not populating in HubSpot, so first-token cannot be counted or uploaded yet. Gated on the second half of T019. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
               "completed": false,
               "assignee": "Mona",
               "priority": "high",
@@ -1236,10 +1249,10 @@
             {
               "id": "T065",
               "title": "Launch both AI agent workload campaigns",
-              "description": "Demand gen budget is approved and Adam said turn it on. Agent workloads are the most cost-elastic traffic available, which makes them the audience most likely to care about the price argument. Set the search budget in the same pass.",
+              "description": "Demand gen budget is approved and Adam said turn it on. Agent workloads are the most cost-elastic traffic available, which makes them the audience most likely to care about the price argument. Set the search budget in the same pass. Update 2 Sep: cleared to launch. Mona's last blocking question was ad rotation ('before turning this on'); Grace recommended Optimized - prefer best-performing ads, with the caveat to watch for an ad the system abandons that is still worth funding. Keywords are on exact match. Nothing else is outstanding. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
               "completed": false,
               "assignee": "Mona",
-              "priority": "low",
+              "priority": "high",
               "dueDate": "2026-09-08",
               "tags": [],
               "channel": "Paid search",
@@ -1269,6 +1282,44 @@
                 "blocked"
               ],
               "channel": "Paid social",
+              "bucket": "now"
+            },
+            {
+              "id": "T097",
+              "title": "Run the Thursday keyword cleanup session with Google",
+              "description": "Booked live in the 1 Sep sync for Thursday 3 Sep, same time. Scope agreed as search only - demand gen is being left to mature. Mona to bring the keyword set to prune, Grace to bring competitor keyword lists and third-party spend data. This is the working session that T057 and T059 feed into. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-03",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T098",
+              "title": "Get Grace's competitor keyword and third-party spend data before Thursday",
+              "description": "Grace is sending competitor keyword lists by email and is waiting on a third-party request that covers spend levels and cost-per-click across Google, Meta and other paid social - not just Google Ads. Useful for the full media mix, not only the keyword session. Chase it if it has not landed by Wednesday night. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "medium",
+              "dueDate": "2026-09-03",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T099",
+              "title": "Verify the duplicate value-prop ad group was removed from all but its own campaign",
+              "description": "The value-prop ad group appeared across several campaigns, including competitor conquesting, apparently from duplicating campaigns. Grace said she would remove it from all but the one it belongs on and offered to do it during the call, so it may already be done - confirm rather than redo. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
               "bucket": "now"
             }
           ]
@@ -1422,9 +1473,10 @@
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
-              "dueDate": "2026-09-08",
+              "dueDate": "2026-09-04",
               "tags": [
-                "urgent"
+                "urgent",
+                "week"
               ],
               "channel": "OOH",
               "bucket": "now"
@@ -1436,9 +1488,10 @@
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
-              "dueDate": "2026-09-08",
+              "dueDate": "2026-09-04",
               "tags": [
-                "urgent"
+                "urgent",
+                "week"
               ],
               "channel": "OOH",
               "bucket": "now"
@@ -1446,7 +1499,7 @@
             {
               "id": "T078",
               "title": "Lock subway print production and MTA clearance dates",
-              "description": "Clearance and print are the timeline bottleneck, not the media booking. Missing these dates moves the flight to November regardless of whether everything else is ready.",
+              "description": "Clearance and print are the timeline bottleneck, not the media booking. Missing these dates moves the flight to November regardless of whether everything else is ready. Update 2 Sep: Leo pulled T076 and T077 to Friday 4 Sep. This task depends on T077 - print production and MTA clearance cannot be locked before the OUTFRONT order is confirmed, so it moves only once T077 lands.",
               "completed": false,
               "assignee": "Leo",
               "priority": "low",
