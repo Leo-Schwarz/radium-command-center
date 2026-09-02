@@ -1,0 +1,501 @@
+{
+  "lastSyncAt": "2026-09-01T14:30:00Z",
+  "dateRange": "7d",
+  "kpis": {
+    "weeklySignups": 47,
+    "weeklyActivations": 38,
+    "weeklyQualifiedActivations": 22,
+    "activationRate": 81,
+    "qualifiedActivationRate": 47,
+    "costPerSignup": 56,
+    "organicVsPaidSplit": 62
+  },
+  "hubspot": {
+    "totalContacts": 6342,
+    "newContacts7d": 47,
+    "newContacts30d": 192,
+    "productEvents7d": [
+      {
+        "event": "Signup Form Submit",
+        "count": 47
+      },
+      {
+        "event": "API Key Created",
+        "count": 38
+      },
+      {
+        "event": "First Token Usage",
+        "count": 22
+      },
+      {
+        "event": "First Spend",
+        "count": 14
+      }
+    ],
+    "contactHistory": [
+      {
+        "date": "2026-06-06",
+        "value": 4562
+      },
+      {
+        "date": "2026-06-13",
+        "value": 4650
+      },
+      {
+        "date": "2026-06-20",
+        "value": 4738
+      },
+      {
+        "date": "2026-06-27",
+        "value": 4819
+      },
+      {
+        "date": "2026-07-04",
+        "value": 4907
+      },
+      {
+        "date": "2026-07-11",
+        "value": 4995
+      },
+      {
+        "date": "2026-07-18",
+        "value": 5076
+      },
+      {
+        "date": "2026-07-25",
+        "value": 5164
+      },
+      {
+        "date": "2026-08-01",
+        "value": 5252
+      },
+      {
+        "date": "2026-08-08",
+        "value": 5333
+      },
+      {
+        "date": "2026-08-15",
+        "value": 5421
+      },
+      {
+        "date": "2026-08-22",
+        "value": 5509
+      },
+      {
+        "date": "2026-08-29",
+        "value": 5608
+      }
+    ]
+  },
+  "googleAds": {
+    "totalSpend7d": 1850,
+    "totalSpend30d": 7420,
+    "totalImpressions7d": 89000,
+    "totalClicks7d": 1240,
+    "totalSignups7d": 18,
+    "avgCtr7d": 3.1,
+    "avgCpc7d": 1.49,
+    "avgCostPerSignup7d": 102.78,
+    "campaigns": [
+      {
+        "id": "c1",
+        "name": "DevTools - PLG Search",
+        "status": "ENABLED",
+        "spend7d": 720,
+        "spend30d": 2880,
+        "impressions7d": 34000,
+        "clicks7d": 510,
+        "signups7d": 8,
+        "ctr": 3.2,
+        "cpc": 1.41,
+        "costPerSignup": 90
+      },
+      {
+        "id": "c2",
+        "name": "API Competitor Terms",
+        "status": "ENABLED",
+        "spend7d": 540,
+        "spend30d": 2160,
+        "impressions7d": 28000,
+        "clicks7d": 420,
+        "signups7d": 6,
+        "ctr": 3.0,
+        "cpc": 1.29,
+        "costPerSignup": 90
+      },
+      {
+        "id": "c3",
+        "name": "Retargeting - Signup Dropoff",
+        "status": "ENABLED",
+        "spend7d": 340,
+        "spend30d": 1360,
+        "impressions7d": 18000,
+        "clicks7d": 180,
+        "signups7d": 4,
+        "ctr": 3.33,
+        "cpc": 1.89,
+        "costPerSignup": 85
+      },
+      {
+        "id": "c4",
+        "name": "Brand - Radium",
+        "status": "PAUSED",
+        "spend7d": 0,
+        "spend30d": 250,
+        "impressions7d": 0,
+        "clicks7d": 0,
+        "signups7d": 0,
+        "ctr": 0,
+        "cpc": 0,
+        "costPerSignup": 0
+      },
+      {
+        "id": "c5",
+        "name": "Display - Awareness",
+        "status": "ENABLED",
+        "spend7d": 250,
+        "spend30d": 770,
+        "impressions7d": 9000,
+        "clicks7d": 130,
+        "signups7d": 0,
+        "ctr": 2.89,
+        "cpc": 1.92,
+        "costPerSignup": 0
+      }
+    ],
+    "conversionBreakdown": [
+      {
+        "name": "Signup",
+        "count": 14
+      },
+      {
+        "name": "API Key Created",
+        "count": 3
+      },
+      {
+        "name": "First Token Usage",
+        "count": 1
+      }
+    ],
+    "paidVsOrganicSignups": [
+      {
+        "source": "paid",
+        "signups7d": 18,
+        "signups30d": 72
+      },
+      {
+        "source": "organic",
+        "signups7d": 29,
+        "signups30d": 120
+      }
+    ]
+  },
+  "linkedin": {
+    "followers": 2870,
+    "followerGrowth7d": 12,
+    "impressions7d": 45000,
+    "clicks7d": 580,
+    "engagements7d": 620,
+    "ctr": 1.29,
+    "leadGenForms7d": 4,
+    "avgEngagementRate": 3.4,
+    "recentPosts": [
+      {
+        "id": "lp1",
+        "title": "Why we chose Rust for our inference engine",
+        "date": "2026-08-30",
+        "impressions": 12400,
+        "clicks": 90,
+        "reactions": 34,
+        "comments": 12
+      },
+      {
+        "id": "lp2",
+        "title": "What 10M API requests taught us about caching",
+        "date": "2026-08-26",
+        "impressions": 9800,
+        "clicks": 72,
+        "reactions": 28,
+        "comments": 8
+      },
+      {
+        "id": "lp3",
+        "title": "We are hiring an ML engineer in Vancouver",
+        "date": "2026-08-22",
+        "impressions": 15600,
+        "clicks": 340,
+        "reactions": 62,
+        "comments": 45
+      },
+      {
+        "id": "lp4",
+        "title": "Testing strategies for inference pipelines",
+        "date": "2026-08-18",
+        "impressions": 7200,
+        "clicks": 48,
+        "reactions": 19,
+        "comments": 5
+      },
+      {
+        "id": "lp5",
+        "title": "Radiums August product update",
+        "date": "2026-08-14",
+        "impressions": 11000,
+        "clicks": 65,
+        "reactions": 31,
+        "comments": 9
+      }
+    ],
+    "weeklyHistory": [
+      {
+        "date": "2026-06-08",
+        "value": 31000
+      },
+      {
+        "date": "2026-06-15",
+        "value": 34000
+      },
+      {
+        "date": "2026-06-22",
+        "value": 29000
+      },
+      {
+        "date": "2026-06-29",
+        "value": 38000
+      },
+      {
+        "date": "2026-07-06",
+        "value": 35000
+      },
+      {
+        "date": "2026-07-13",
+        "value": 41000
+      },
+      {
+        "date": "2026-07-20",
+        "value": 33000
+      },
+      {
+        "date": "2026-07-27",
+        "value": 45000
+      },
+      {
+        "date": "2026-08-03",
+        "value": 42000
+      },
+      {
+        "date": "2026-08-10",
+        "value": 39000
+      },
+      {
+        "date": "2026-08-17",
+        "value": 47000
+      },
+      {
+        "date": "2026-08-24",
+        "value": 45000
+      }
+    ]
+  },
+  "website": {
+    "sessions7d": 5800,
+    "sessions30d": 24800,
+    "uniqueVisitors7d": 4200,
+    "bounceRate": 42,
+    "avgSessionSeconds": 145,
+    "pages": [
+      {
+        "path": "pitch",
+        "sessions7d": 2610,
+        "bounceRate": 38,
+        "avgTimeSeconds": 170
+      },
+      {
+        "path": "pricing",
+        "sessions7d": 870,
+        "bounceRate": 28,
+        "avgTimeSeconds": 210
+      },
+      {
+        "path": "docs/getting-started",
+        "sessions7d": 754,
+        "bounceRate": 35,
+        "avgTimeSeconds": 300
+      },
+      {
+        "path": "blog/august-report",
+        "sessions7d": 580,
+        "bounceRate": 58,
+        "avgTimeSeconds": 90
+      },
+      {
+        "path": "signup",
+        "sessions7d": 470,
+        "bounceRate": 20,
+        "avgTimeSeconds": 90
+      }
+    ],
+    "funnel": [
+      {
+        "stage": "Landing Page",
+        "visitors": 4200
+      },
+      {
+        "stage": "Sign up",
+        "visitors": 470,
+        "conversionToNext": 81
+      },
+      {
+        "stage": "API Key Created",
+        "visitors": 38,
+        "conversionToNext": 58
+      },
+      {
+        "stage": "First Token Usage",
+        "visitors": 22,
+        "conversionToNext": 64
+      },
+      {
+        "stage": "First Spend",
+        "visitors": 14
+      }
+    ],
+    "dailySessions": [
+      {
+        "date": "2026-08-25",
+        "value": 780
+      },
+      {
+        "date": "2026-08-26",
+        "value": 840
+      },
+      {
+        "date": "2026-08-27",
+        "value": 760
+      },
+      {
+        "date": "2026-08-28",
+        "value": 920
+      },
+      {
+        "date": "2026-08-29",
+        "value": 680
+      },
+      {
+        "date": "2026-08-30",
+        "value": 820
+      },
+      {
+        "date": "2026-08-31",
+        "value": 900
+      },
+      {
+        "date": "2026-09-01",
+        "value": 100
+      }
+    ]
+  },
+  "product": {
+    "signups7d": 47,
+    "signups30d": 192,
+    "apiKeyCreated7d": 38,
+    "firstTokenUsage7d": 22,
+    "firstSpend7d": 14,
+    "activationRate": 81,
+    "qualifiedActivationRate": 47,
+    "paidActivationRate": 30,
+    "weeklyActiveUsers": 340,
+    "eventHistory": {
+      "signup": [
+        {
+          "date": "2026-08-25",
+          "value": 7
+        },
+        {
+          "date": "2026-08-26",
+          "value": 6
+        },
+        {
+          "date": "2026-08-27",
+          "value": 5
+        },
+        {
+          "date": "2026-08-28",
+          "value": 9
+        },
+        {
+          "date": "2026-08-29",
+          "value": 4
+        },
+        {
+          "date": "2026-08-30",
+          "value": 8
+        },
+        {
+          "date": "2026-08-31",
+          "value": 8
+        }
+      ],
+      "apiKeyCreated": [
+        {
+          "date": "2026-08-25",
+          "value": 6
+        },
+        {
+          "date": "2026-08-26",
+          "value": 5
+        },
+        {
+          "date": "2026-08-27",
+          "value": 4
+        },
+        {
+          "date": "2026-08-28",
+          "value": 7
+        },
+        {
+          "date": "2026-08-29",
+          "value": 3
+        },
+        {
+          "date": "2026-08-30",
+          "value": 7
+        },
+        {
+          "date": "2026-08-31",
+          "value": 6
+        }
+      ],
+      "firstTokenUsage": [
+        {
+          "date": "2026-08-25",
+          "value": 3
+        },
+        {
+          "date": "2026-08-26",
+          "value": 4
+        },
+        {
+          "date": "2026-08-27",
+          "value": 2
+        },
+        {
+          "date": "2026-08-28",
+          "value": 5
+        },
+        {
+          "date": "2026-08-29",
+          "value": 2
+        },
+        {
+          "date": "2026-08-30",
+          "value": 3
+        },
+        {
+          "date": "2026-08-31",
+          "value": 3
+        }
+      ]
+    }
+  }
+}

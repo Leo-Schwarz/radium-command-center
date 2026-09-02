@@ -1,0 +1,91 @@
+[
+  {
+    "timestamp": "2026-09-02T02:02:50.169Z",
+    "steps": [
+      {
+        "name": "fireflies",
+        "status": "ok"
+      },
+      {
+        "name": "hubspot",
+        "status": "error",
+        "error": "sync-hubspot.ts exited with code 1"
+      },
+      {
+        "name": "linkedin",
+        "status": "skipped"
+      },
+      {
+        "name": "mockData",
+        "status": "unchanged"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T02:01:46.976Z",
+    "steps": [
+      {
+        "name": "fireflies",
+        "status": "ok"
+      },
+      {
+        "name": "hubspot",
+        "status": "error",
+        "error": "sync-hubspot.ts exited with code 1"
+      },
+      {
+        "name": "linkedin",
+        "status": "skipped"
+      },
+      {
+        "name": "mockData",
+        "status": "unchanged"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T01:45:05.357Z",
+    "steps": [
+      {
+        "name": "fireflies",
+        "status": "ok"
+      },
+      {
+        "name": "hubspot",
+        "status": "error",
+        "error": "sync-hubspot.ts exited with code 1"
+      },
+      {
+        "name": "linkedin",
+        "status": "skipped"
+      },
+      {
+        "name": "mockData",
+        "status": "unchanged"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T01:44:50.322Z",
+    "steps": [
+      {
+        "name": "fireflies",
+        "status": "ok"
+      },
+      {
+        "name": "hubspot",
+        "status": "error",
+        "error": "sync-hubspot.ts exited with code 1"
+      },
+      {
+        "name": "linkedin",
+        "status": "skipped"
+      },
+      {
+        "name": "mockData",
+        "status": "updated",
+        "lastUpdated": "2026-09-02"
+      }
+    ]
+  }
+]

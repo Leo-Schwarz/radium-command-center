@@ -1,0 +1,48 @@
+{
+  "lastSyncAt": "2026-09-02T02:02:52.070Z",
+  "meetingDateRange": "2026-09-01",
+  "taskGroups": [
+    {
+      "meetingId": "01M1F233A5FHE5MWA80S3V4R0F",
+      "meetingTitle": "Google x Radium Weekly Sync",
+      "meetingDate": "2026-09-01",
+      "milestoneId": "ms-05",
+      "actionItems": [
+        "**Mona Seyum**",
+        "Share ongoing API key conversion updates (07:26)",
+        "Schedule working session on Thursday (15:04)",
+        "**Grace Morgan**",
+        "Review Google Ads keywords driving conversions (09:58)",
+        "Monitor Demand Gen campaign results and placements (11:59)",
+        "Remove duplicate ad groups from campaigns (13:09)",
+        "Share competitor keyword insights and third-party data (14:14)",
+        "Prepare keyword lists for working session (14:14)",
+        "Conduct deeper Demand Gen campaign analysis (16:34)",
+        "**Leo Schwarz**",
+        "Confirm availability for Thursday working session (15:22)"
+      ]
+    },
+    {
+      "meetingId": "01M0ZG5SJE3FJ6XPAPWRAZJB1Z",
+      "meetingTitle": "Google x Radium Weekly Sync",
+      "meetingDate": "2026-09-01",
+      "milestoneId": "ms-05",
+      "actionItems": [
+        "**Mona Seyum**",
+        "Share API signup data updates and ensure data is flowing properly into Google Ads measurement system; monitor initial user conversions (06:26)",
+        "Schedule and coordinate keyword cleanup working session on Thursday (14:35)",
+        "Update keywords in campaigns before work session",
+        "removing duplicates and irrelevant ad groups where noticed (12:00)",
+        "**Grace Morgan**",
+        "Monitor campaign learning and conversion data import over next 24-48 hours and alert Mona if issues arise (07:50)",
+        "Remove duplicate/value prop ad groups from campaigns where not applicable (12:20)",
+        "Complete competitor keyword and third-party insights research and share findings via email ahead of Thursday session (13:20)",
+        "Analyze demand gen campaign’s audience and placement performance to identify optimization opportunities",
+        "provide feedback (10:47)",
+        "Prepare keyword prioritization suggestions based on competitor data and campaign performance for Thursday work session (14:45)",
+        "**Leo Schwarz**",
+        "Confirm availability for Thursday keyword session and participate in strategic keyword review (14:32)"
+      ]
+    }
+  ]
+}

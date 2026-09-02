@@ -1,0 +1,1579 @@
+{
+  "lastUpdated": "2026-09-02",
+  "milestones": [
+    {
+      "id": "ms-01",
+      "title": "M01 Ownership",
+      "description": "One accountable owner, real engineering time, and a goal that is actually achievable.",
+      "targetDate": "2026-09-15",
+      "icon": "Shield",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-01-1",
+          "title": "Name the funnel owner",
+          "description": "1 tasks",
+          "owner": "Leo",
+          "status": "completed",
+          "tasks": [
+            {
+              "id": "T001",
+              "title": "Name one owner for the end-to-end funnel",
+              "description": "Settled 31 Aug: Leo owns the end-to-end funnel. Before this, ads, site, signup, activation and CRM each had a different owner and nobody was accountable for the number that spans them, which is why problems at the seams went unfixed for months.",
+              "completed": true,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ep-01-2",
+          "title": "Fund a loop with engineering time",
+          "description": "1 tasks",
+          "owner": "Adam",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T002",
+              "title": "Fund one distribution loop with engineering time",
+              "description": "Pick exactly one of LiteLLM, the docs, or the open artefact and staff it with named engineering hours. Engineering capacity is the company's stated constraint, so an unfunded loop is a loop that does not happen. Doing none of the three is the current plan by default, which is how 100% of inbound ended up rented.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-01-3",
+          "title": "Restate the goal as a funnel goal",
+          "description": "1 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T003",
+              "title": "Restate the PLG goal as a funnel goal, not a revenue goal",
+              "description": "400 accounts at $10k a month implies $48M at a $120k ACV, against an ICP of under 300 companies. The target exceeds the market as defined, so it cannot be hit and cannot be planned against. Restate it as qualified activated accounts handed to sales per month, and put the revenue number on the combined motion instead. Now Leo's call to make.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "week"
+              ],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-01-4",
+          "title": "Agree the pass/fail bar",
+          "description": "1 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T004",
+              "title": "Agree the decision rule before 15 Sep",
+              "description": "Write down now, in advance, what result justifies continuing to fund PLG and what result justifies moving the budget to ABM and outbound. Deciding the bar after seeing the number is how a bad programme survives another quarter on hope.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "week"
+              ],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-01-5",
+          "title": "Own the marketing budget",
+          "description": "4 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T005",
+              "title": "Send Martha August actuals and a September number",
+              "description": "Adam asked directly. $20k is approved, roughly $23k is committed once the LinkedIn bump is counted, and today is the last day of the month. Finance should hear the variance from Leo before it appears in a report.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "Ops",
+              "bucket": "now"
+            },
+            {
+              "id": "T006",
+              "title": "Stand up one monthly budget sheet: approved, committed, actual, variance",
+              "description": "One row per channel per month. The column that matters most is committed versus actual: a signed $67k subway order commits in August but spends in October, and if those collapse into one number finance gets surprised twice.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Ops",
+              "bucket": "now"
+            },
+            {
+              "id": "T007",
+              "title": "Agree the monthly reporting date and format with Martha",
+              "description": "Same shape, same date, every month, so the conversation is about the number rather than about the format. The job is to forecast next month before it starts, not explain last month after it ends.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "next"
+            },
+            {
+              "id": "T008",
+              "title": "Put a cost-per-activated-account line on the budget sheet",
+              "description": "Tracking spend alone says nothing about whether the money worked. Blocked until product events reach HubSpot, because there is no activation number to divide by yet.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-02",
+      "title": "M02 Product",
+      "description": "A developer who switches has to be better off on the task they actually care about, not just on price.",
+      "targetDate": "2026-09-15",
+      "icon": "Code",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-02-1",
+          "title": "Prove it internally first",
+          "description": "1 tasks",
+          "owner": "Adam",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T009",
+              "title": "Get Radium engineers onto Radium",
+              "description": "One Radium engineer put the productivity cost of switching at 30%. Until that is false internally it is true externally, and no amount of funnel work survives it. Make the model upgrade the gate on scaling spend rather than a workstream running alongside it.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Product",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-02-2",
+          "title": "Run the structured feedback loop",
+          "description": "3 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T010",
+              "title": "Run the Reddit feedback play",
+              "description": "The RunPod precedent: free access given openly, feedback mandatory in return. Target r/LocalLLaMA, r/MachineLearning and the MLOps and FinOps communities. Read each sub's rules first and post as a person, because a brand account posting an offer reads as an ad and gets removed.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Community",
+              "bucket": "now"
+            },
+            {
+              "id": "T011",
+              "title": "Put ten companies on credits with a feedback contract",
+              "description": "Credits topped up only after a recorded 30-minute call. The contract is the part that makes it work: free credits alone produce silent users, and silent users teach you nothing. Ten companies of varying sizes is the sample that makes the answers mean something.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "now"
+            },
+            {
+              "id": "T012",
+              "title": "Make call recording a term of the sales hire",
+              "description": "Ask for it in the offer, where it is a normal condition of the role, rather than three weeks in where it reads as surveillance. Recordings are the raw material the whole feedback loop runs on.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-ms-02-claude",
+          "title": "Claude Inbox",
+          "description": "2 task(s)",
+          "owner": "Claude",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "T086",
+              "title": "Wire up MCP server in Claude Desktop config and verify task creation",
+              "description": "Add the radium-command-center MCP server to ~/Library/Application Support/Claude/claude_desktop_config.json, restart Claude Desktop, and test the create_task tool by saying \"add a task to the dashboard\".",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-09",
+              "tags": [
+                "urgent",
+                "week"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T087",
+              "title": "E2E test task from MCP",
+              "description": "Created via automated test to verify the full pipeline.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-09",
+              "tags": [],
+              "channel": "Claude",
+              "bucket": "now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-03",
+      "title": "M03 Market Fit",
+      "description": "Someone with a corporate card and no approval chain has to be able to decide.",
+      "targetDate": "2026-09-15",
+      "icon": "Target",
+      "status": "partial",
+      "epics": [
+        {
+          "id": "ep-03-1",
+          "title": "Split self-serve from enterprise",
+          "description": "1 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T013",
+              "title": "Build persona-routed paths for switch, enterprise and tokenomics",
+              "description": "Every campaign currently lands on the same page regardless of who clicked. A developer evaluating a swap and a CTO evaluating a vendor need different journeys, different proof and different CTAs. One page cannot do both jobs without doing neither well.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "Website",
+              "bucket": "later"
+            }
+          ]
+        },
+        {
+          "id": "ep-03-2",
+          "title": "Settle the wedge: cost or capability",
+          "description": "4 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T014",
+              "title": "Decide whether the wedge is cost or capability",
+              "description": "Enterprise buyers are relatively price-insensitive for frontier work and choose on capability, and open-weight share of enterprise usage fell to roughly 11% over the past year. Every Radium ad currently leads on cost. If cost is not the switching trigger, the entire message set is aimed at the wrong nerve. Blocked on the ten interviews.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Content",
+              "bucket": "next"
+            },
+            {
+              "id": "T015",
+              "title": "Write the ten-interview script",
+              "description": "Two questions carry the weight: what happened in the two weeks before you last changed providers, and did a human get involved before or after the first API call. The first finds the trigger, the second tells you whether this is really a self-serve motion at all.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Product",
+              "bucket": "now"
+            },
+            {
+              "id": "T016",
+              "title": "Reposition the trial around eval sweeps, not production traffic",
+              "description": "Every current message asks a prospect to move production traffic on the first try, which is the highest-risk request available. Eval sweeps and judge calls are high volume, quality-relative and carry no customer-facing risk, so they are the easiest first yes.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "next"
+            },
+            {
+              "id": "T017",
+              "title": "Target Promptfoo, Braintrust and Langfuse users as the entry point",
+              "description": "These are where eval workloads already run, so the audience is pre-qualified by behaviour rather than by job title. The output of the trial is a comparison table the prospect built themselves, which is far more persuasive than one Radium publishes.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Partnerships",
+              "bucket": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-04",
+      "title": "M04 Instrumentation",
+      "description": "Every gate from click to spend has to emit an event, and the systems have to agree.",
+      "targetDate": "2026-09-15",
+      "icon": "Gauge",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-04-1",
+          "title": "Ship the product events",
+          "description": "3 tasks",
+          "owner": "Eng",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "T018",
+              "title": "Answer whether zero API keys is real or a broken event pipe",
+              "description": "Answered 31 Aug: not real. At least two accounts have generated keys. Nothing is linked to HubSpot yet, so this was a reporting gap rather than activation collapse. The consequence is that every key and activation figure in the CRM is unreliable rather than zero, and nobody should read the funnel as dead until the events ship.",
+              "completed": true,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "now"
+            },
+            {
+              "id": "T019",
+              "title": "Ship six product events into HubSpot",
+              "description": "signup, api_key_created, first_request, first_spend, model_used, usage_threshold. This is now the gate on the ad account working properly as well as on reporting, because the usage-based conversion cannot be bid to until these events exist and can be uploaded to Google Ads. Escalate to Adam on 2 Sep if it is still unscheduled.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent",
+                "blocked"
+              ],
+              "channel": "Product",
+              "bucket": "now"
+            },
+            {
+              "id": "T020",
+              "title": "Instrument the billing step",
+              "description": "Payment method add attempted, succeeded, and failed with reason. Without it the credit-card-friction theory can never be settled, and it has been shaping decisions for a month on no data at all.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ep-04-2",
+          "title": "Fix the analytics plumbing",
+          "description": "3 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T021",
+              "title": "Configure Contentsquare goals and map deploy.radium.cloud",
+              "description": "Zero goals are configured today, so the tool records behaviour but cannot say whether any of it succeeded. The app subdomain sits outside analytics entirely, which means the half of the journey where activation actually happens is invisible.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "now"
+            },
+            {
+              "id": "T022",
+              "title": "Strip Offline Sources contacts from reporting and Google uploads",
+              "description": "2,925 of 3,584 contacts in 30 days carry that source. They swamp every report they appear in, and because they are also being uploaded to Google, the pollution is being taught back to the bidding algorithm as if it were demand.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "now"
+            },
+            {
+              "id": "T023",
+              "title": "Rename or retire the form_waitlist property",
+              "description": "Set to yes on 547 of 553 August accounts with no description of what it means. It has already caused one wrong diagnosis in writing, and a property that nobody can define will cause another.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ep-04-3",
+          "title": "Reconcile the numbers weekly",
+          "description": "1 tasks",
+          "owner": "Mona",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T024",
+              "title": "Reconcile Ads, GA4 and HubSpot weekly to within 10%",
+              "description": "Last month the three systems reported 926 conversions, 605 paid contacts and zero customers. Until they agree within a tolerance, every meeting starts by arguing about whose number is right instead of what to do.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-05",
+      "title": "M05 Funnel",
+      "description": "A developer goes from landing to a successful API call without asking anyone for help.",
+      "targetDate": "2026-09-15",
+      "icon": "Funnel",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-05-1",
+          "title": "Fix the homepage",
+          "description": "4 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T025",
+              "title": "Put pricing above the fold as a comparison table",
+              "description": "Only 1.7% of homepage visits reach pricing today and Tokenomics saw 22 visits, so the page designated as where the 50% claim gets verified is effectively unvisited. Make it a table against OpenAI and Anthropic list rates that someone can screenshot and paste into Slack.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Website",
+              "bucket": "next"
+            },
+            {
+              "id": "T026",
+              "title": "Cut the homepage to one proposition",
+              "description": "82.5% bounce, 23.7% scroll depth, 29 second median. Four competing claims from the ad set all land here, so whoever arrives has to work out which promise applies to them, and most leave instead.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Website",
+              "bucket": "next"
+            },
+            {
+              "id": "T027",
+              "title": "Remove remaining bare-metal language",
+              "description": "Keep the ownership claim, drop the insider term. Radium positions as a production model company, not an infrastructure company, and the phrase pulls readers back toward the wrong category.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Website",
+              "bucket": "next"
+            },
+            {
+              "id": "T028",
+              "title": "Put a docs link in the primary homepage path",
+              "description": "0.3% of homepage visits reach the docs. Developers who read five or more docs pages convert at materially higher rates, and docs are where evaluation actually happens, so burying them costs conversions twice over.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Website",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-05-2",
+          "title": "Fix trial mechanics",
+          "description": "3 tasks",
+          "owner": "Eng",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T029",
+              "title": "Add a bucketed current-spend field at signup",
+              "description": "One optional field with ranges rather than a number. It tells you immediately whether the 50% saving claim has any force for the person in front of you, and it is the cheapest qualification signal available.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "next"
+            },
+            {
+              "id": "T030",
+              "title": "Test key-first with spend cap against card-first",
+              "description": "A card before a key sheds exactly the evaluating engineer this motion exists to capture, but nobody knows by how much. Only readable once billing is instrumented and ICP traffic is actually arriving, so sequence it after both.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "next"
+            },
+            {
+              "id": "T031",
+              "title": "Add team invites and measure as a conversion signal",
+              "description": "Reported as the single most reliable predictor of paid conversion in API products, because a second person on the account means the evaluation became a decision. Treat it as a growth feature, not an admin one.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "later"
+            }
+          ]
+        },
+        {
+          "id": "ep-05-3",
+          "title": "Wire up lifecycle email",
+          "description": "2 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T032",
+              "title": "Build the activation sequence from signup to first request",
+              "description": "Today a signup is followed by silence, so the 1,220 accounts that never returned were never asked to. Three messages keyed to where someone stalled: no key, key but no request, request but no spend. Blocked until the product events exist to trigger on.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Email",
+              "bucket": "next"
+            },
+            {
+              "id": "T033",
+              "title": "Set up the AI Bill report nurture",
+              "description": "The report generates a list; without a follow-up sequence it generates a list and nothing else. Route readers toward the price-match trial rather than a generic demo request.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Email",
+              "bucket": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-06",
+      "title": "M06 Education and Community",
+      "description": "The two channels where the cost of attention falls over time instead of rising.",
+      "targetDate": "2026-09-15",
+      "icon": "BookOpen",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-06-1",
+          "title": "Hire the education engineer",
+          "description": "2 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T034",
+              "title": "Write the forward-deployed education engineer spec",
+              "description": "Deliberately not a classic DevRel hire: DevRel produces audience, and audience is what Radium is least short of given the paid programme and the October flight. This person converts attention into conviction by sitting inside a prospect's actual workload, and owns the benchmark work, the education backlog and the customer wire.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Ops",
+              "bucket": "now"
+            },
+            {
+              "id": "T035",
+              "title": "Put the publish-a-loss test in the interview loop",
+              "description": "Give a candidate a Radium model, a competitor and three days, and ask for the comparison they would publish. A candidate who only shows the wins is the wrong hire, and this is the fastest signal available in the process.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Ops",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-06-2",
+          "title": "Ship onboarding content",
+          "description": "3 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T036",
+              "title": "Ship the narrated setup video",
+              "description": "Adam's ask. Signup through to first successful request, one take, under five minutes, no editing theatre. It doubles as the honest timing test: whatever is awkward to narrate is what developers are tripping on.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Content",
+              "bucket": "next"
+            },
+            {
+              "id": "T037",
+              "title": "Stand up the engineering FAQ board",
+              "description": "One place engineering answers into, once, where marketing and sales can both read it. It is the only structural fix for engineering having no wire to customers and marketing only getting feedback secondhand.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            },
+            {
+              "id": "T038",
+              "title": "Publish the dated compatibility divergence list",
+              "description": "Run the conformance suite against OpenAI Chat Completions and Anthropic Messages first, then publish exactly where behaviour differs, with a date on it. Every ad promises a one-line migration, and no page currently backs that claim or admits its limits.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-06-3",
+          "title": "Ship docs that acquire",
+          "description": "9 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T039",
+              "title": "Turn Mona's keyword list into a page list",
+              "description": "The terms people actually search have almost no matching page on the site, which is why organic is 0.3% of inbound. The keyword list is a content brief, not just a targeting input, and converting it is what turns paid research into an owned asset.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "SEO",
+              "bucket": "now"
+            },
+            {
+              "id": "T040",
+              "title": "Ship /compare/claude-api-alternative",
+              "description": "Comparison pages catch people at the exact moment they are evaluating a switch, and they are increasingly what AI assistants quote when asked how to move providers. High intent, and nothing currently ranks.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "SEO",
+              "bucket": "next"
+            },
+            {
+              "id": "T041",
+              "title": "Ship /compare/openai-alternative",
+              "description": "The higher-volume sibling of the Claude page and the one most likely to be cited back by search assistants. Same template, different comparison set.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "SEO",
+              "bucket": "next"
+            },
+            {
+              "id": "T042",
+              "title": "Ship /docs/openai-compatible-api",
+              "description": "The page that answers \"will my existing code work\" without a sales conversation. It acquires and activates with the same asset, which is what makes docs the cheapest channel Radium has.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            },
+            {
+              "id": "T043",
+              "title": "Ship /docs/anthropic-compatible-api",
+              "description": "The Messages API equivalent, needed because the ads promise both compatibilities and only one can currently be evidenced anywhere.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            },
+            {
+              "id": "T044",
+              "title": "Ship /resources/ai-cost-calculator",
+              "description": "A calculator ranks for cost queries and produces the reader's own number rather than Radium's claim, which is the difference between an assertion and proof.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "SEO",
+              "bucket": "next"
+            },
+            {
+              "id": "T045",
+              "title": "Add curl, Python and TypeScript examples to every priority docs page",
+              "description": "Docs-to-signup runs 0.8 to 5% where it is done well. Copy-pasteable examples in the language someone already uses are what move a reader from reading to trying inside the same visit.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            },
+            {
+              "id": "T046",
+              "title": "Put a get-an-API-key CTA beside the working examples, not at page bottom",
+              "description": "The moment of highest intent is the moment the example makes sense, not the end of the page. A CTA at the bottom collects only the people who already decided.",
+              "completed": false,
+              "assignee": "Natalie",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            },
+            {
+              "id": "T047",
+              "title": "Ship the migration error and troubleshooting reference",
+              "description": "The page a developer lands on mid-switch at 2am when something breaks. It ranks for the exact error strings people paste into search, and it is the difference between a stalled migration and a completed one.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-06-4",
+          "title": "Publish proof, not opinions",
+          "description": "4 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T048",
+              "title": "Stand up /benchmarks as a proof hub with methodology and caveats",
+              "description": "Summaries, the method used, and a plain statement of where Radium is not the right answer. AI infrastructure buyers are skeptical by default, and the honesty about limits is what makes the favourable numbers believable to an engineer actively looking for a reason to say no.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Content",
+              "bucket": "next"
+            },
+            {
+              "id": "T049",
+              "title": "Start the Benchmark Exchange offer",
+              "description": "Take a prospect's real workload, run it against Hal, Clarke and Tycho, and hand back actual cost, latency and quality numbers. It is an education asset and a recruiting channel at once, and it gets you inside the workload rather than talking about it.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "next"
+            },
+            {
+              "id": "T050",
+              "title": "Set an engineering editorial calendar at two technical posts a month",
+              "description": "Engineering-authored depth beneath the API layer, on a schedule rather than when someone has spare time. It ranks, it gives sales something concrete to point at, and it is the cheapest way to make the team's expertise externally visible.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Content",
+              "bucket": "next"
+            },
+            {
+              "id": "T051",
+              "title": "Ship the model-selection map and eval cookbook",
+              "description": "The two pieces of the education backlog that outlast any campaign: which model for which job, and how to evaluate the swap properly. Both answer the questions that stall a migration after the first successful call.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "Docs",
+              "bucket": "later"
+            }
+          ]
+        },
+        {
+          "id": "ep-06-5",
+          "title": "Show up where developers already are",
+          "description": "14 task(s)",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T052",
+              "title": "Pick three communities and commit to weekly presence",
+              "description": "r/LocalLLaMA, the MLOps and FinOps communities, and Hacker News. Roughly half of developers discover tools through private Slacks, wikis and direct messages, traffic that never shows in an attribution report, which is exactly why it stays under-invested. Read the rules first, post as Leo, never as the brand.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Community",
+              "bucket": "now"
+            },
+            {
+              "id": "T053",
+              "title": "Build the engage board with Tier 1 and Tier 2 target lists",
+              "description": "Tier 1 is the accounts that set the token-economics conversation, with notifications on. Tier 2 is the ICP in public: engineers and platform leads at the under-300 companies actually running inference in house. A reply inside twenty minutes buys timeline position that the same reply at hour six does not.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Social",
+              "bucket": "now"
+            },
+            {
+              "id": "T054",
+              "title": "Book the daily 40 minutes of replies into the calendar",
+              "description": "Two timed sessions, twenty minutes each. The timer is the system: without it, replies either expand to fill the day or collapse to zero by week three. With an ICP under 300 companies, being seen repeatedly by the right few hundred people beats reach entirely.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Social",
+              "bucket": "now"
+            },
+            {
+              "id": "T055",
+              "title": "Get the social queue to ten approved items before Friday",
+              "description": "Ten approved items on a Friday is the single number that predicts whether the posting plan survives. Daily posting always fails in the same place: week three, when the stock of opinions runs out and nothing has been built to generate the next one.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Social",
+              "bucket": "now"
+            },
+            {
+              "id": "T056",
+              "title": "Buy one technical workshop as a recruiting channel",
+              "description": "A workshop is an interview room with a curated audience already sitting in it. Buy it for the conversations, not the awareness, and judge it on conversations booked rather than heads counted.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Events",
+              "bucket": "next"
+            },
+            {
+              "id": "T088",
+              "title": "Resolve radium-1 / hal-1.0 model string before any code-bearing Reddit post",
+              "description": "Hard gate. Reddit practitioners read curl snippets closely and a model string that does not match the docs turns the thread into a conversation about our documentation. No post, comment, or offer page showing code ships until this is settled. Already a gate for other public assets showing code; this makes it blocking for the Reddit program too.",
+              "completed": false,
+              "assignee": "Vijay",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "reddit",
+                "blocker"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T089",
+              "title": "Name second Reddit operator alongside Vijay",
+              "description": "Program runs on named personal accounts with disclosed affiliation, not a brand handle. Needs two operators at roughly three hours per week each to hold the 9:1 non-promotional ratio. Below two operators the ratio cannot be maintained and the program fails on volume. Second operator should be engineering, not marketing. Decision with Adam.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "reddit"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T090",
+              "title": "Set test credits grant size and expiry",
+              "description": "Credits for running a real workload plus one 30-minute structured feedback session. Size to a real evaluation rather than a demo, since the output we want is the use case, not a testimonial. 60-day expiry proposed, no card required.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "reddit",
+                "credits"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T091",
+              "title": "Add disclosure line to test credits offer terms",
+              "description": "One line: anyone who received credits and posts publicly about Radium should mention they received them. FTC guidance puts the onus on us to tell participants up front, not to police what they write. The program itself is a beta feedback programme and is not otherwise affected. Not blocking, but should land before the offer page goes live.",
+              "completed": false,
+              "assignee": "Alex",
+              "priority": "medium",
+              "dueDate": "2026-09-15",
+              "tags": [
+                "reddit",
+                "credits"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T092",
+              "title": "Create and age named Reddit operator accounts",
+              "description": "Real profiles, real names, affiliation stated in the first line of any Radium-adjacent comment. No brand handle. Accounts need age and karma before AutoMod in the target subs will accept anything. Karma and account-age gates are per-subreddit, so read live sidebar rules for r/LocalLLaMA, r/LLMDevs and r/AIEngineer on the day.",
+              "completed": false,
+              "assignee": "Vijay",
+              "priority": "high",
+              "dueDate": "2026-09-15",
+              "tags": [
+                "reddit"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T093",
+              "title": "Phase 1: comment-only participation in r/LocalLLaMA, r/LLMDevs, r/AIEngineer",
+              "description": "Thirty days, no Radium mentions at all. Two to three substantive comments per operator per week. Standing triggers: surprise inference bills, whether a task needs a frontier model, Canadian or EU residency for open weights, throughput and cold start on specific models, who actually owns hardware versus rents it. Answer honestly including when the answer points away from us. Comments written by the operator; r/LocalLLaMA disallows primarily LLM-generated content.",
+              "completed": false,
+              "assignee": "Vijay",
+              "priority": "medium",
+              "dueDate": "2026-10-15",
+              "tags": [
+                "reddit"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T094",
+              "title": "Reddit UTM scheme and self-reported source field at signup",
+              "description": "Reddit traffic carries no GCLID, so the existing Webflow to deploy.radium.cloud attribution break does not block this channel, but without its own path Reddit lands in direct and stays invisible. Distinct UTM set per subreddit plus a dedicated landing path for the credits offer. Self-reported source field at signup will likely outperform the deterministic path on a channel this dark. Must be live before the first disclosed Radium mention.",
+              "completed": false,
+              "assignee": "Brandon",
+              "priority": "high",
+              "dueDate": "2026-09-30",
+              "tags": [
+                "reddit",
+                "attribution"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T095",
+              "title": "Clear token cost anatomy claims for public Reddit posting",
+              "description": "The six-layer breakdown (compute, cloud rent, idle capacity, training cost recovery, licensing, platform margin) from the Tokenomics page. Strongest single asset for this channel because it runs without naming Radium once and reframes the cost conversation on our terms. Cost claims stay scoped to closed labs. May overlap with existing Tokenomics sign-off in ep-06-4.",
+              "completed": false,
+              "assignee": "Adam",
+              "priority": "medium",
+              "dueDate": "2026-09-30",
+              "tags": [
+                "reddit",
+                "content"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            },
+            {
+              "id": "T096",
+              "title": "Clear Hal 1.0 benchmark and methodology for Reddit publication",
+              "description": "Full methodology published alongside numbers, no gating, no email wall. That format is specifically rewarded in r/LocalLLaMA and benchmark posts that hide method get taken apart. Exclusions hold: the June 23 Opus run with the disclosed worker-count defect stays data-room only, no benchmark citing a competitor worker-count defect goes public, and Stanford CRFM and Carnegie Mellon citations stay data-room only until cleared. May overlap with existing benchmark items in ep-06-4.",
+              "completed": false,
+              "assignee": "Vijay",
+              "priority": "medium",
+              "dueDate": "2026-10-15",
+              "tags": [
+                "reddit",
+                "content"
+              ],
+              "channel": "Claude",
+              "bucket": "now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-07",
+      "title": "M07 Distribution",
+      "description": "Users have to arrive through something the company owns, not only something it rents.",
+      "targetDate": "2026-09-15",
+      "icon": "Share2",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-07-1",
+          "title": "Clean up paid so it stops lying",
+          "description": "11 tasks",
+          "owner": "Mona",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "T057",
+              "title": "Build and apply the account-level negative keyword list",
+              "description": "A negative keyword stops the ad showing for any search containing that term, and applied at account level it covers every campaign at once. Five exist today and all five are non-English, so the account is paying for chatbot queries, logins, how-tos, homework help, jobs and courses. This is the mechanism behind consumer share sitting at 59%. Roughly two hours against about $15k a month of misdirected spend. Do this first.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T058",
+              "title": "Restore the three keywords, exact match only",
+              "description": "claude api alternative, low cost ai inference, openai compatible api inference. Agreed on the 27 Aug call after pausing them dropped signups to one a day, which was also the clearest evidence yet that nothing owned sits underneath the paid spend.",
+              "completed": true,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T059",
+              "title": "Convert remaining ICP keywords to exact match",
+              "description": "193 of 195 are still phrase or broad, and Fireworks Alternatives alone runs 40 on broad. Broad match is what lets a bid on production inference terms end up buying consumer curiosity.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T060",
+              "title": "Stop bidding to the HubSpot lifecycle change at MANY_PER_CLICK",
+              "description": "Every day it runs teaches the algorithm the wrong thing, and MANY_PER_CLICK lets a single click count repeatedly. Switch to one per click and drop the lifecycle-change conversion out of the bid metric now, before the replacement is ready.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T061",
+              "title": "Make first token usage the counted primary conversion, not signup",
+              "description": "Decided 31 Aug. Optimising to signup buys people looking for a chatbot, because a signup is free and means nothing. Usage is the first event that proves a real workload. Blocked until the product events reach HubSpot and can be uploaded to Google Ads as offline conversions.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-22",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Paid search",
+              "bucket": "next"
+            },
+            {
+              "id": "T062",
+              "title": "Fix the malformed final URL",
+              "description": "The final URL reads radium.cloud/?https://www.radium.cloud/switch&utm_term=... so the real destination was pasted into the homepage URL's query string instead of being the URL. Every /switch click lands on the homepage with the wrong message, and /switch shows no traffic, making the page look like it failed when it was never reached.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T063",
+              "title": "Confirm brand defence is live, then fence off brand terms",
+              "description": "The audit found Brand Search paused while Mona referenced a brand defence campaign, so the cheapest owned asset in the account may currently be switched off. Settle which is true, then add brand terms as negatives everywhere else so they stop being bought at generic CPCs.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T064",
+              "title": "Kill or fold the competitor conquesting campaign",
+              "description": "Three ad groups work and the rest converted nothing. Email Grace for the context first, then move the budget rather than leaving it running out of politeness.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T065",
+              "title": "Launch both AI agent workload campaigns",
+              "description": "Demand gen budget is approved and Adam said turn it on. Agent workloads are the most cost-elastic traffic available, which makes them the audience most likely to care about the price argument. Set the search budget in the same pass.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T066",
+              "title": "Keep AI Max off and document why",
+              "description": "It ran for two weeks and is how the bare query \"ai\" became the single largest line of spend. Write down what happened so nobody re-enables it in six months when the reasoning has been forgotten.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T067",
+              "title": "Close out the LinkedIn double UTM",
+              "description": "Support cannot find it and it is not visible on the ad or the account, yet it keeps appending. Needs the workflow log from Adam's Claude session to trace where it is injected.",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Paid social",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ep-07-2",
+          "title": "Claim integration surfaces",
+          "description": "3 tasks",
+          "owner": "Eng",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T068",
+              "title": "Ship a LiteLLM provider entry",
+              "description": "One merged pull request makes Radium selectable for every LiteLLM user at once, and inherits the tools that use it as their model layer, including OpenHands and Google ADK. Ranked first of 69 mapped surfaces, and the only item here where the work finishes permanently and keeps distributing with no further spend.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Partnerships",
+              "bucket": "next"
+            },
+            {
+              "id": "T069",
+              "title": "Claim Portkey and Cloudflare AI Gateway listings",
+              "description": "Enterprise installs already running cost-based routing rules are looking for a cheaper leg to route to, which is the shortest sales conversation available anywhere in the plan.",
+              "completed": false,
+              "assignee": "Eng",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "Partnerships",
+              "bucket": "later"
+            },
+            {
+              "id": "T070",
+              "title": "Pick one open artefact to build and publish",
+              "description": "A migration CLI, a conformance suite or a benchmark harness. Radium already has the raw material for the last two. It is a quarter of work and the only loop on the board that a better-funded competitor cannot simply outspend.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "Partnerships",
+              "bucket": "later"
+            }
+          ]
+        },
+        {
+          "id": "ep-07-3",
+          "title": "Earn coverage instead of buying links",
+          "description": "2 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T071",
+              "title": "Land one technical publication or newsletter placement",
+              "description": "Prioritise earned media, partner references and technical citations over volume link building, which does not work for a skeptical technical audience. One placement in something the ICP actually reads beats fifty directory links.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "PR",
+              "bucket": "next"
+            },
+            {
+              "id": "T072",
+              "title": "Write the launch story and pitch list for the October flight",
+              "description": "A subway takeover by an AI model company is a story, but only if someone is briefed to tell it. Decide the angle and the target list before the creative is locked, not after the posters are up.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-10-06",
+              "tags": [],
+              "channel": "PR",
+              "bucket": "later"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-08",
+      "title": "M08 Message",
+      "description": "The promise on the page has to be the actual reason a buyer would move.",
+      "targetDate": "2026-09-15",
+      "icon": "MessageSquare",
+      "status": "unproven",
+      "epics": [
+        {
+          "id": "ep-08-1",
+          "title": "Ship the message content",
+          "description": "3 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T073",
+              "title": "Ship the launch week queue",
+              "description": "14 X posts and 3 LinkedIn memos, gated against the Social Engine checks before anything goes out. Price claims name Claude Opus 5 explicitly with the date and a link to the pricing page, rather than a vague frontier comparison that a developer can dismiss in one reply.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "week"
+              ],
+              "channel": "Social",
+              "bucket": "now"
+            },
+            {
+              "id": "T074",
+              "title": "Ship the AI Bill gated report",
+              "description": "The reader is a founder or CTO at an AI-native company and the conversion is the price-match trial, not a demo request. It is the asset that makes the cost argument in the buyer's own terms rather than Radium's.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Content",
+              "bucket": "next"
+            },
+            {
+              "id": "T075",
+              "title": "Pull the cost-per-task calculator ahead of the full report",
+              "description": "One field, work email, no call, and the deliverable is the reader's own cost-per-task number. It was built to do exactly this job and can start qualifying people the week it exists, months before the full report is ready.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "Content",
+              "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ep-08-2",
+          "title": "Run the NYC OOH campaign",
+          "description": "5 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T076",
+              "title": "Finalise the full OOH plan",
+              "description": "One flight, one budget envelope and one creative deadline across subway, programmatic DOOH and any street-level formats, rather than three separate decisions made at three different times. Decide what the whole campaign is measured on before it books, given the PLG goal is a funnel number and OOH does not produce one directly.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "OOH",
+              "bucket": "now"
+            },
+            {
+              "id": "T077",
+              "title": "Confirm the OUTFRONT subway order",
+              "description": "11\"H x 70\"W, Activate tier, 1,000 units, $67,000. The direct rate card beat Plug Talk by 2.2x for the identical package. Print production and MTA clearance are the long-lead items, so this order gates the October flight.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "urgent"
+              ],
+              "channel": "OOH",
+              "bucket": "now"
+            },
+            {
+              "id": "T078",
+              "title": "Lock subway print production and MTA clearance dates",
+              "description": "Clearance and print are the timeline bottleneck, not the media booking. Missing these dates moves the flight to November regardless of whether everything else is ready.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "OOH",
+              "bucket": "now"
+            },
+            {
+              "id": "T079",
+              "title": "Place the Vistar programmatic DOOH buy",
+              "description": "Roughly $58k consolidating LinkNYC, office and elevator screens and street furniture into a single programmatic buy, instead of negotiating three separate direct deals against a fixed print deadline.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "OOH",
+              "bucket": "next"
+            },
+            {
+              "id": "T080",
+              "title": "Build the workload-comparison creative",
+              "description": "The 11x70 format was chosen specifically to fit a developer-facing workload comparison. One number, shaped by the workload it came from, legible from across a subway car.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "low",
+              "dueDate": "2026-09-22",
+              "tags": [],
+              "channel": "OOH",
+              "bucket": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-07",
+      "title": "Integrations & Access",
+      "description": "Connect the tools that feed the command center with live data.",
+      "targetDate": "2026-09-15",
+      "icon": "Plug",
+      "status": "failing",
+      "epics": [
+        {
+          "id": "ep-07-1",
+          "title": "Connect HubSpot CRM",
+          "description": "3 tasks",
+          "owner": "Leo",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "T081",
+              "title": "Request Private App access from HubSpot admin",
+              "description": "Need crm.objects.deals.read, crm.objects.contacts.read, crm.objects.companies.read, crm.schemas.deals.read scopes.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "CRM",
+              "bucket": "now"
+            },
+            {
+              "id": "T082",
+              "title": "Paste token into .env and test sync:hubspot",
+              "description": "Run npm run sync:hubspot to verify end-to-end ingestion.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "CRM",
+              "bucket": "now"
+            },
+            {
+              "id": "T083",
+              "title": "Wire HubSpot filter into dashboard UI",
+              "description": "Apply patch on mount, add amber tag filter, update footer counts.",
+              "completed": true,
+              "assignee": "Hal",
+              "priority": "medium",
+              "dueDate": "2026-09-01",
+              "tags": [],
+              "channel": "CRM",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ep-07-2",
+          "title": "Connect LinkedIn",
+          "description": "2 tasks",
+          "owner": "Leo",
+          "status": "not_started",
+          "tasks": [
+            {
+              "id": "T084",
+              "title": "Share LinkedIn app credentials (Client ID / Secret)",
+              "description": "Need the app's Client ID and Client Secret to implement OAuth sign-in and data fetch.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [
+                "blocked"
+              ],
+              "channel": "Social",
+              "bucket": "now"
+            },
+            {
+              "id": "T085",
+              "title": "Decide what LinkedIn data to ingest",
+              "description": "Options: company page posts/analytics, social selling index, lead gen forms, or member profile data. Each requires different API permissions.",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Social",
+              "bucket": "now"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

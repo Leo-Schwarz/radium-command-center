@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "2026-09-01",
+  "docs": [
+    {
+      "id": "kd-001",
+      "title": "PLG Strategy by 15 September — Measurement, Signups, Feedback Loop",
+      "content": "# PLG Strategy by 15 September\n\n## The Goal\nA readable PLG signal by 15 September — measurement, real signups, and a live feedback loop, in that order.\n\n## Three Phases\n1. **Measurement** — Get analytics working end-to-end (Contentsquare, HubSpot events, Google Ads conversion tracking).\n2. **Real Signups** — Drive actual traffic that converts through a working signup flow.\n3. **Live Feedback Loop** — Close the loop so every experiment teaches us something within 48 hours.\n\n## Key Metrics to Track\n- Homepage bounce rate\n- Scroll rate on pricing page\n- Home-to-pricing conversion\n- Signup completion rate\n- api_key_created events (HubSpot product events)\n- Cost per signup by channel\n\n## Decision Log\n- 31 Aug: Leo named as end-to-end funnel owner.\n- 1 Sep: Engineering time for distribution loop still unfunded — marked blocked.",
+      "source": "claude",
+      "tags": ["strategy", "plg", "september-goal"],
+      "linkedMilestoneIds": ["ms-01", "ms-02", "ms-03"],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-09-01",
+      "updatedAt": "2026-09-01",
+      "author": "Claude"
+    }
+  ]
+}
