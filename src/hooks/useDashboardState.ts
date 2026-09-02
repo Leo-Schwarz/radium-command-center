@@ -42,6 +42,18 @@ function applyCompletions(data: DashboardData): DashboardData {
   return next;
 }
 
+async function persist(data: DashboardData) {
+  try {
+    await fetch('/api/save-dashboard', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  } catch {
+    // endpoint only exists in dev; silently ignore in production
+  }
+}
+
 export function useDashboardState(initialData: DashboardData) {
   const [data, setData] = useState<DashboardData>(() => applyCompletions(initialData));
 
@@ -110,6 +122,7 @@ export function useDashboardState(initialData: DashboardData) {
         })),
       };
       saveCompletions(completions);
+      persist(next); // write back to disk in dev
       return next;
     });
   }, []);
@@ -287,12 +300,31 @@ export function useDashboardState(initialData: DashboardData) {
     });
   }, []);
 
+  const updateTask = useCallback((taskId: string, updates: Partial<Task>) => {
+    setData(prev => {
+      const next: DashboardData = JSON.parse(JSON.stringify(prev));
+      for (const ms of next.milestones) {
+        for (const ep of ms.epics) {
+          const task = ep.tasks.find(t => t.id === taskId);
+          if (task) {
+            Object.assign(task, updates);
+            next.lastUpdated = new Date().toISOString().split('T')[0];
+            persist(next);
+            return next;
+          }
+        }
+      }
+      return next;
+    });
+  }, []);
+
   return {
     data,
     overallProgress,
     computeEpicProgress,
     computeMilestoneProgress,
     toggleTask,
+    updateTask,
     applySyncPatch,
     applyHubSpotPatch,
     applyLinkedInPatch,

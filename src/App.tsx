@@ -38,7 +38,7 @@ function buildTaskIndex(milestones: Milestone[]) {
 type FilterTag = 'all' | 'blocked' | 'urgent' | 'week' | 'hubspot' | 'linkedin';
 
 function DashboardContent({ initialData }: { initialData: DashboardData }) {
-  const { data, computeEpicProgress, computeMilestoneProgress, toggleTask, applySyncPatch, applyHubSpotPatch, applyLinkedInPatch } =
+  const { data, computeEpicProgress, computeMilestoneProgress, toggleTask, updateTask, applySyncPatch, applyHubSpotPatch, applyLinkedInPatch } =
     useDashboardState(initialData);
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -305,6 +305,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
               epicTitle={selectedTaskInfo.epic.title}
               onClose={() => setSelectedTaskId(null)}
               onToggle={toggleTask}
+              onUpdate={updateTask}
             />
           )}
         </>
@@ -651,6 +652,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
             epicTitle={selectedTaskInfo.epic.title}
             onClose={() => setSelectedTaskId(null)}
             onToggle={toggleTask}
+            onUpdate={updateTask}
           />
         )}
 
