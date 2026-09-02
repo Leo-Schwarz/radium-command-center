@@ -108,7 +108,7 @@
           "tasks": [
             {
               "id": "T005",
-              "title": "Send Martha August actuals and a September number",
+              "title": "Send Martha August actuals and a September excel",
               "description": "Adam asked directly. $20k is approved, roughly $23k is committed once the LinkedIn bump is counted, and today is the last day of the month. Finance should hear the variance from Leo before it appears in a report.",
               "completed": false,
               "assignee": "Leo",
@@ -635,6 +635,388 @@
               "tags": [],
               "channel": "Email",
               "bucket": "next"
+            }
+          ]
+        },
+        {
+          "id": "ff-01M1F233A5FHE5MWA80S3V4R0F",
+          "title": "Google x Radium Weekly Sync",
+          "description": "12 task(s) derived from Fireflies · 2026-09-01",
+          "owner": "Fireflies",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-0",
+              "title": "**Mona Seyum**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-1",
+              "title": "Share ongoing API key conversion updates (07:26)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-2",
+              "title": "Schedule working session on Thursday (15:04)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-3",
+              "title": "**Grace Morgan**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-4",
+              "title": "Review Google Ads keywords driving conversions (09:58)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-5",
+              "title": "Monitor Demand Gen campaign results and placements (11:59)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-6",
+              "title": "Remove duplicate ad groups from campaigns (13:09)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-7",
+              "title": "Share competitor keyword insights and third-party data (14:14)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-8",
+              "title": "Prepare keyword lists for working session (14:14)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-9",
+              "title": "Conduct deeper Demand Gen campaign analysis (16:34)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-10",
+              "title": "**Leo Schwarz**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M1F233A5FHE5MWA80S3V4R0F-11",
+              "title": "Confirm availability for Thursday working session (15:22)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            }
+          ]
+        },
+        {
+          "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z",
+          "title": "Google x Radium Weekly Sync",
+          "description": "14 task(s) derived from Fireflies · 2026-09-01",
+          "owner": "Fireflies",
+          "status": "in_progress",
+          "tasks": [
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-0",
+              "title": "**Mona Seyum**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-1",
+              "title": "Share API signup data updates and ensure data is flowing properly into Google Ads measurement system; monitor initial user conversions (06:26)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-2",
+              "title": "Schedule and coordinate keyword cleanup working session on Thursday (14:35)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-3",
+              "title": "Update keywords in campaigns before work session",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-4",
+              "title": "removing duplicates and irrelevant ad groups where noticed (12:00)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-5",
+              "title": "**Grace Morgan**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-6",
+              "title": "Monitor campaign learning and conversion data import over next 24-48 hours and alert Mona if issues arise (07:50)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-7",
+              "title": "Remove duplicate/value prop ad groups from campaigns where not applicable (12:20)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-8",
+              "title": "Complete competitor keyword and third-party insights research and share findings via email ahead of Thursday session (13:20)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-9",
+              "title": "Analyze demand gen campaign’s audience and placement performance to identify optimization opportunities",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-10",
+              "title": "provide feedback (10:47)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-11",
+              "title": "Prepare keyword prioritization suggestions based on competitor data and campaign performance for Thursday work session (14:45)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-12",
+              "title": "**Leo Schwarz**",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
+            },
+            {
+              "id": "ff-01M0ZG5SJE3FJ6XPAPWRAZJB1Z-13",
+              "title": "Confirm availability for Thursday keyword session and participate in strategic keyword review (14:32)",
+              "description": "From: Google x Radium Weekly Sync · 2026-09-01",
+              "completed": false,
+              "assignee": "Unassigned",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [
+                "fireflies"
+              ],
+              "channel": "Meeting",
+              "bucket": "now"
             }
           ]
         }
