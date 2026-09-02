@@ -81,7 +81,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
 
   return (
     <div className="min-h-screen bg-[#0a0a0c]">
-      <div className="max-w-[1400px] mx-auto px-6 py-8">
+      <div className="px-6 py-8 w-full">
 
         {/* Header */}
         <div className="mb-8">

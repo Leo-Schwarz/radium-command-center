@@ -54,7 +54,7 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
   const totalSignups7d = (paidSplit?.signups7d ?? 0) + (organicSplit?.signups7d ?? 0);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pb-20">
+    <div className="px-4 md:px-8 lg:px-12 pb-20 w-full">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pt-2">
         <div>

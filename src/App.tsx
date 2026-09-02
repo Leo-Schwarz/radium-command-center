@@ -221,7 +221,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
     const url = new URL(window.location.href);
     url.searchParams.set('milestone', id);
     url.hash = '';
-    window.open(url.toString(), '_blank');
+    window.location.assign(url.toString());
   }, []);
 
   // Keyboard shortcut: / to focus search

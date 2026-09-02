@@ -53,7 +53,7 @@ const MilestonePage: React.FC<MilestonePageProps> = ({
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 py-8 w-full">
+      <div className="px-6 py-8 w-full">
         <MilestoneSection
           milestone={milestone}
           progress={computeMilestoneProgress(milestone)}
