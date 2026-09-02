@@ -1,18 +1,162 @@
 {
-  "lastUpdated": "2026-09-01",
+  "lastUpdated": "2026-09-02",
   "docs": [
     {
       "id": "kd-001",
-      "title": "PLG Strategy by 15 September — Measurement, Signups, Feedback Loop",
-      "content": "# PLG Strategy by 15 September\n\n## The Goal\nA readable PLG signal by 15 September — measurement, real signups, and a live feedback loop, in that order.\n\n## Three Phases\n1. **Measurement** — Get analytics working end-to-end (Contentsquare, HubSpot events, Google Ads conversion tracking).\n2. **Real Signups** — Drive actual traffic that converts through a working signup flow.\n3. **Live Feedback Loop** — Close the loop so every experiment teaches us something within 48 hours.\n\n## Key Metrics to Track\n- Homepage bounce rate\n- Scroll rate on pricing page\n- Home-to-pricing conversion\n- Signup completion rate\n- api_key_created events (HubSpot product events)\n- Cost per signup by channel\n\n## Decision Log\n- 31 Aug: Leo named as end-to-end funnel owner.\n- 1 Sep: Engineering time for distribution loop still unfunded — marked blocked.",
-      "source": "claude",
-      "tags": ["strategy", "plg", "september-goal"],
-      "linkedMilestoneIds": ["ms-01", "ms-02", "ms-03"],
+      "title": "PLG Strategy by 15 September",
+      "content": "# PLG Strategy by 15 September\n\nAll pillars feed into one goal: a readable PLG signal by 15 September \u2014 measurement, real signups, and a live feedback loop.\n\n## Velocity Rules\n- Every task must ship to staging or production in \u2264 3 days.\n- No new features without a metric to validate them.\n- Friday = retrospective + planning only.\n\n## Decision Log\n- 31 Aug: Leo named as end-to-end funnel owner.\n- 1 Sep: Engineering time for distribution loop still unfunded \u2014 marked blocked.",
+      "source": "manual",
+      "tags": [
+        "strategy",
+        "plg",
+        "september-goal"
+      ],
+      "linkedMilestoneIds": [
+        "ops"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-09-01",
+      "updatedAt": "2026-09-02",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p1-positioning",
+      "title": "P1 Positioning & Messaging Doc",
+      "content": "# P1 Positioning & Messaging\n\n## Current Positioning Statement\nRadium is the AI-native platform that lets teams deploy, scale, and monitor autonomous AI agents in production \u2014 without the infrastructure complexity.\n\n## Messaging Hierarchy\n\n### One-liner\n\"Deploy AI agents. Scale them. Sleep at night.\"\n\n### Tagline\n\"The command center for AI-driven teams.\"\n\n### Value Propositions\n1. **Zero-infrastructure deployment** \u2014 Push agents to prod in minutes, not weeks.\n2. **Fleet-wide observability** \u2014 See what every agent is doing, in real time.\n3. **Human-in-the-loop when it matters** \u2014 Escalate edge cases without losing autonomy.\n\n## Target Personas\n- **Primary**: Engineering leads at Series A-C SaaS companies building AI features.\n- **Secondary**: CTOs evaluating AI infrastructure platforms.\n- **Tertiary**: AI product managers who need visibility into agent behavior.\n\n## Competitive Positioning\n| Dimension | Radium | LangChain | AutoGPT |\n|-----------|--------|-----------|---------|\n| Production focus | \u2705 First-class | \u26a0\ufe0f Framework | \u274c Experimental |\n| Observability | \u2705 Built-in | \u274c None | \u274c None |\n| Human override | \u2705 Native | \u274c None | \u274c None |\n\n## Messaging Test Results (August 2026)\n- Homepage A/B: \"AI agents, deployed\" won +12% CTR over \"Production Agent Platform.\"\n- \"Zero infrastructure\" performed +18% better than \"Production-ready AI\" in LinkedIn ads.\n\n## Decision Log\n- 15 Aug: Solidified \"fleet\" metaphor \u2014 agents as a fleet moving in formation.\n- 22 Aug: Dropped \"orchestration\" language \u2014 too enterprise-y.\n- 29 Aug: Moved from \"autonomous agents\" to \"AI agents\" \u2014 simpler, broader appeal.",
+      "source": "manual",
+      "tags": [
+        "strategy",
+        "positioning",
+        "messaging"
+      ],
+      "linkedMilestoneIds": [
+        "p1"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-15",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p2-rented",
+      "title": "P2 Rented Demand Playbook \u2014 Paid Ads & Sponsored Content",
+      "content": "# P2 Rented Demand Playbook\n\n## Channels & Current Status\n| Channel | Monthly Budget | CPA Target | Status |\n|---------|---------------|------------|--------|\n| Google Ads Search | \u20ac3,000 | \u20ac25 | \ud83d\udfe1 Optimising |\n| LinkedIn Sponsored Content | \u20ac1,500 | \u20ac45 | \ud83d\udfe1 Testing |\n| LinkedIn Thought Leadership | \u20ac0 | N/A | \ud83d\udfe2 Organic only |\n\n## Messaging by Channel\n- **Google Ads**: Focus on \"AI agent monitoring\" and \"agent fleet management.\"\n- **LinkedIn**: Focus on founder-led PLG content and behind-the-scenes builds.\n\n## Decision Log\n- 12 Aug: Paused LinkedIn lead-gen forms \u2014 quality was too low. Switched to direct website traffic.\n- 20 Aug: Google Ads switched from broad to phrase match \u2014 CPA dropped 22%.\n- 1 Sep: Doubling LinkedIn organic cadence to 3 posts/week after +40% profile views.",
+      "source": "manual",
+      "tags": [
+        "playbook",
+        "paid-ads",
+        "google-ads",
+        "linkedin"
+      ],
+      "linkedMilestoneIds": [
+        "p2"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-12",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p3-owned",
+      "title": "P3 Owned Demand Strategy \u2014 Content & SEO",
+      "content": "# P3 Owned Demand Strategy\n\n## Content Pillars\n1. **Technical deep-dives** \u2014 How we build, deploy, and monitor AI agents at scale.\n2. **PLG in public** \u2014 Sharing metrics, experiments, and failures transparently.\n3. **Tool comparisons** \u2014 Honest evaluations of LangChain, AutoGPT, CrewAI vs Radium.\n\n## SEO Targets (Q3 2026)\n| Keyword | Current Rank | Target Rank | Content Type |\n|---------|-------------|-------------|--------------|\n| ai agent deployment | 28 | 5 | Product page |\n| agent monitoring platform | 14 | 3 | Comparison guide |\n| crewai alternative | 9 | 3 | Comparison post |\n\n## Distribution\n- Newsletter: Monthly + experiment spotlights.\n- Twitter/X: Daily threads on build decisions.\n- LinkedIn: 3 posts/week founder narrative.\n\n## Decision Log\n- 10 Aug: Hired freelance writer (\u00a3800/month) for 2 long-form posts.\n- 25 Aug: Ghost blog migrated to Next.js for better SEO performance.",
+      "source": "manual",
+      "tags": [
+        "strategy",
+        "seo",
+        "content",
+        "owned-demand"
+      ],
+      "linkedMilestoneIds": [
+        "p3"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-10",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p4-conversion",
+      "title": "P4 Conversion Playbook \u2014 Signup Flow & Pricing Page",
+      "content": "# P4 Conversion Playbook\n\n## Current Funnel Metrics\n| Step | Rate | Target |\n|------|------|--------|\n| Homepage \u2192 Pricing | 18% | 25% |\n| Pricing \u2192 Signup start | 35% | 45% |\n| Signup start \u2192 Complete | 52% | 70% |\n| Complete \u2192 API key created | \u2014 | Track Q3 |\n\n## Known Friction\n1. Email verification step drops 30% of users.\n2. Pricing page has no comparison table.\n3. No social proof on signup page.\n\n## Experiments Queue\n1. Remove email verification for non-sensitive features.\n2. Add \"Trusted by X teams\" banner to pricing.\n3. Interactive demo on homepage.\n\n## Decision Log\n- 5 Aug: Moved from 3-tier to 2-tier pricing (simpler = better).\n- 18 Aug: Added Calendly CTA on pricing for enterprise inquiries.",
+      "source": "manual",
+      "tags": [
+        "playbook",
+        "conversion",
+        "signup",
+        "funnel"
+      ],
+      "linkedMilestoneIds": [
+        "p4"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-05",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p5-retention",
+      "title": "P5 Retention & Expansion Framework",
+      "content": "# P5 Retention & Expansion Framework\n\n## Retention Signals\n| Signal | Health Threshold | Action |\n|--------|-----------------|--------|\n| Weekly active agents | \u2265 3 per team | \u2705 Healthy |\n| API calls / week | \u2265 100 | \u2705 Healthy |\n| Time since last login | > 7 days | \ud83d\udea8 Re-engagement email |\n\n## Expansion Triggers\n1. Team grows to 5+ members \u2192 auto-suggest Team plan.\n2. API usage > 80% of tier \u2192 upgrade nudge.\n3. Custom integration request \u2192 enterprise outreach.\n\n## Decision Log\n- 3 Aug: Defined \"product-qualified lead\" = 3+ agents deployed + 7+ day streak.\n- 20 Aug: Started weekly \"Fleet Health\" email to active users.",
+      "source": "manual",
+      "tags": [
+        "framework",
+        "retention",
+        "expansion",
+        "product-qualified"
+      ],
+      "linkedMilestoneIds": [
+        "p5"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-03",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-p6-measurement",
+      "title": "P6 Measurement & Analytics Setup",
+      "content": "# P6 Measurement & Analytics Setup\n\n## Tools Stack\n| Layer | Tool | Status |\n|-------|------|--------|\n| Web analytics | Contentsquare | \ud83d\udfe1 Tracking set up |\n| Product analytics | HubSpot (custom events) | \ud83d\udfe2 Live |\n| Ads tracking | Google Ads + GTM | \ud83d\udfe1 Conversion events need wiring |\n| Backend monitoring | Custom + Datadog | \ud83d\udfe2 Live |\n\n## Key Events to Track\n- `page_view` (homepage, pricing, docs)\n- `signup_start`\n- `signup_complete`\n- `api_key_created` (product-qualified moment)\n- `agent_deployed`\n- `agent_error` (for health monitoring)\n\n## Decision Log\n- 2 Aug: Chose Contentsquare over Hotjar for scroll-depth and session replay.\n- 15 Aug: HubSpot product events pipeline built \u2014 api_key_created now tracked.\n- 28 Aug: Contentsquare firing but dashboards incomplete.",
+      "source": "manual",
+      "tags": [
+        "setup",
+        "analytics",
+        "measurement",
+        "tracking"
+      ],
+      "linkedMilestoneIds": [
+        "p6"
+      ],
+      "linkedEpicIds": [],
+      "linkedTaskIds": [],
+      "createdAt": "2026-08-02",
+      "updatedAt": "2026-09-01",
+      "author": "Leo Schwarz"
+    },
+    {
+      "id": "kd-dep-product",
+      "title": "Product Dependency Tracker",
+      "content": "# Product Dependency Tracker\n\n## Blocking the Funnel\n| Dependency | Blocked Since | ETA | Owner | Impact |\n|------------|--------------|-----|-------|--------|\n| Agent deployment API | 15 Aug | 15 Sep | eng-team | P1, P4 |\n| Multi-agent orchestration | 1 Sep | 1 Oct | eng-team | P5 |\n| Real-time event streaming | 20 Aug | 1 Oct | eng-team | P6 |\n\n## Workarounds\n- Manual deployment process documented for beta users.\n- HubSpot events as proxy for product analytics until real-time stream is ready.\n\n## Decision Log\n- 1 Sep: Engineering sprint capacity confirmed for Sep 15\u2013Oct 1.",
+      "source": "manual",
+      "tags": [
+        "tracking",
+        "dependencies",
+        "engineering"
+      ],
+      "linkedMilestoneIds": [
+        "dep"
+      ],
       "linkedEpicIds": [],
       "linkedTaskIds": [],
       "createdAt": "2026-09-01",
       "updatedAt": "2026-09-01",
-      "author": "Claude"
+      "author": "Leo Schwarz"
     }
   ]
 }
