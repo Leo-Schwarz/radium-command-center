@@ -193,7 +193,8 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         }
       })
       .catch(err => {
-        console.warn('LinkedIn sync failed:', err.message);
+        // TODO: surface sync errors in UI instead of console
+        console.warn('LinkedIn sync failed:', err instanceof Error ? err.message : String(err));
       });
   }, [applyLinkedInPatch]);
 
@@ -333,6 +334,12 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
   const epicTitleMap = useMemo(() => {
     const map: Record<string, string> = {};
     data.milestones.forEach(ms => ms.epics.forEach(ep => { map[ep.id] = ep.title; }));
+    return map;
+  }, [data.milestones]);
+
+  const milestoneTitleMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    data.milestones.forEach(m => { map[m.id] = m.title; });
     return map;
   }, [data.milestones]);
 
@@ -727,11 +734,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         {selectedKnowledgeDoc && (
           <KnowledgeDocDetail
             doc={selectedKnowledgeDoc}
-            milestoneTitles={useMemo(() => {
-              const map: Record<string, string> = {};
-              data.milestones.forEach(m => { map[m.id] = m.title; });
-              return map;
-            }, [data.milestones])}
+            milestoneTitles={milestoneTitleMap}
             epicTitles={epicTitleMap}
             completedTaskIds={completedTaskIds}
             onClose={() => setSelectedKnowledgeDocId(null)}

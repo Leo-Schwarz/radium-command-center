@@ -320,7 +320,7 @@
               ],
               "channel": "CRM",
               "bucket": "now",
-              "completedAt": "2026-09-03T14:05:42.196Z"
+              "completedAt": "2026-09-03T14:05:42.199Z"
             },
             {
               "id": "T149",
@@ -515,11 +515,11 @@
             {
               "id": "T114",
               "title": "Clear the three hard gates on the AI Bill report",
-              "description": "T074 is a single low task for a 25-page gated report with three gates in front of it. Gate one: Hal priced one way across the site, /pricing as the single source (Leo). Gate two: conformance suite run and a published divergence list, or chapter five only describes hand-verified pairs (Vijay). Gate three: the price-match cap and terms, or chapter nine cannot be written (Adam). Chapters one to four depend on nothing and can be drafted now. Source: Inference Bill Report Plan. [Wed 3 Sep – gate #1 only: fix Hal pricing across site, 1.5 hr]",
+              "description": "T074 is a single low task for a 25-page gated report with three gates in front of it. Gate one: Hal priced one way across the site, /pricing as the single source (Leo). Gate two: conformance suite run and a published divergence list, or chapter five only describes hand-verified pairs (Vijay). Gate three: the price-match cap and terms, or chapter nine cannot be written (Adam). Chapters one to four depend on nothing and can be drafted now. Source: Inference Bill Report Plan. [Wed 3 Sep – gate #1 only: fix Hal pricing across site, 1.5 hr]. Update 3 Sep: Gate #1 cleared — Leo confirmed Hal is priced consistently one way across the site with /pricing as the single source.",
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
-              "dueDate": "2026-09-03",
+              "dueDate": "2026-09-05",
               "tags": [
                 "report",
                 "initiative"
@@ -817,7 +817,7 @@
               "tags": [],
               "channel": "Paid social",
               "bucket": "now",
-              "completedAt": "2026-09-03T14:06:20.509Z"
+              "completedAt": "2026-09-03T14:06:20.511Z"
             },
             {
               "id": "T109",

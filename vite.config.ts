@@ -21,7 +21,7 @@ export default defineConfig({
               res.statusCode = 200
               res.setHeader('Content-Type', 'application/json')
               res.end(JSON.stringify({ ok: true }))
-            } catch (e: any) {
+            } catch (e) {
               res.statusCode = 500
               res.setHeader('Content-Type', 'application/json')
               res.end(JSON.stringify({ ok: false, error: String(e) }))

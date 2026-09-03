@@ -1,5 +1,5 @@
 import type{DashboardData}from'../types';export const mockDashboardData:DashboardData={
-  "lastUpdated": "2026-09-02",
+  "lastUpdated": "2026-09-03",
   "milestones": [
     {
       "id": "ms-01",
@@ -1217,7 +1217,7 @@ import type{DashboardData}from'../types';export const mockDashboardData:Dashboar
             {
               "id": "T074",
               "title": "Ship the AI Bill gated report",
-              "description": "The reader is a founder or CTO at an AI-native company and the conversion is the price-match trial, not a demo request. It is the asset that makes the cost argument in the buyer's own terms rather than Radium's.",
+              "description": "The reader is a founder or CTO at an AI-native company and the conversion is the price-match trial, not a demo request. It is the asset that makes the cost argument in the buyer's own terms rather than Radium's. [3 Sep — Gate #1 cleared: Hal priced consistently across site; /pricing is single source. Gates #2 (conformance suite, Vijay) and #3 (price-match terms, Adam) still open. Chapters 1–4 have no dependencies and can be drafted now.]",
               "completed": false,
               "assignee": "Leo",
               "priority": "low",
