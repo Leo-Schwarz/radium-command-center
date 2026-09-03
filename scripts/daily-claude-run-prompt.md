@@ -112,8 +112,19 @@ If you need to edit existing tasks (tick done, change priority, add/remove block
 - To append context: add a dated line to the `description` string.
 - After any edit, update `lastUpdated` to today's date.
 
-### If all MCPs are blocked
-Skip this step. The digest will carry the suggested changes instead.
+### If all MCPs are blocked (normal for cloud scheduled runs)
+Write a Python patch script to the repo root instead. A local watcher on Leo's machine polls for these and auto-executes them within ~30 seconds of Drive sync.
+
+**Patch script requirements:**
+- **Filename:** `apply-YYYY-MM-DD.py` (e.g. `apply-2026-09-03.py`)
+- **Location:** repo root
+- **Flag:** Must support `--write` (dry-run without it, applies with it)
+- **Idempotency:** Skip already-applied changes so it is safe to run twice
+- **Backup:** Back up `dashboard-data.json` to `.bak` before modifying
+- **Digest:** Print every change made, every skip, and a summary at the end
+- **Verification:** SHA256 the final JSON and print it so Leo can diff-check
+
+The script should perform the same surgical edits you would make via MCP: tick done, add/remove "blocked", append dated notes, change priority, and add new tasks in the correct epic. Use task IDs to anchor new tasks to existing epics (locate the epic by searching for a known anchor task ID, never by epic name).
 
 ---
 
@@ -147,6 +158,12 @@ Ranked list of the top 3–5 actions Leo should take tomorrow. Be specific: name
 
 ### 7. SOURCES UNREACHABLE
 Name any MCP or native connector that failed.
+
+**If you wrote a patch script** (no MCP access): Add a "PATCH DELIVERED" section confirming:
+- Filename and whether `create_file` reported success
+- Byte size of the script
+- SHA256 of the final script
+- Expected execution time: the local watcher will pick it up within ~30 seconds of Drive sync and auto-apply it
 
 **If filesystem was blocked:** Replace sections 4–5 with a structured "Suggested changes" section listing each proposed edit so Leo can apply it manually.
 

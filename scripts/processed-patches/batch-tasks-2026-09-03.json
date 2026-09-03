@@ -1,0 +1,644 @@
+{
+  "date": "2026-09-03",
+  "source": "Command center review against Radium_Governance_Wedge, Radium_No_Cluster_Strategy, Radium_Critical_Mass_Brand_Recipe, Radium_Inference_Bill_Report_Plan, Radium_Nine_Preconditions, Radium_Twelve_Working_Days, Radium_Customer_Language_Engine, Radium_Search_and_Answer_Audit, Radium_Social_Engine, Radium_NYC_OOH_Plan, Radium_OOH_Inventory_and_Ideas, Radium_OOH_Budget_Allocation, Radium_OUTFRONT_Grid_October_Buy, Radium_Master_Tracker_Source, PLG Digest 2026-09-03. T110-T138 were already created live via create_task before the batch-file format was requested; included here so this file is a complete single-source record of the full review.",
+  "tasks": [
+    {
+      "id": "T110",
+      "title": "Build the 15 Sep PLG review pack for Adam",
+      "description": "One page, four numbers, one framing sentence, and the decision rule applied to them. Consumer share of paid spend, accounts to API key, key to first request, companies in structured trial. Everything on the board feeds this and nothing on the board builds it. Source: Twelve Working Days.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-14",
+      "tags": [
+        "report",
+        "week"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T001",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T111",
+      "title": "Stand up the weekly PLG report cadence, first edition 8 Sep",
+      "description": "The PowerPoint template and Excel workbook exist with 19 named charts across Acquisition, Activation and Revenue. Nobody receives it on a schedule. Ship edition one to Adam on Monday with the Google Ads and LinkedIn blocks pulled locally, since the cloud run cannot reach them, and mark every unmeasurable chart as such rather than leaving it blank.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-08",
+      "tags": [
+        "report",
+        "week"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T024",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T112",
+      "title": "Confirm whether the Deploy to HubSpot contact sync is still running",
+      "description": "Integration-sourced contacts ran at roughly 150 a day every weekday from 4 to 20 Aug, then 5, 0, 0, 2, 2, 2 through 2 Sep. Either the sync broke six days ago and the 15 Sep read is built on a series that stopped moving, or the 150 a day was a backfill and real signups are about nine a day. Ask Brandon, or pull 29 to 31 Aug signups from Deploy and check they exist in HubSpot. Ten-minute question, every HubSpot number inherits the answer.",
+      "assignee": "Brandon",
+      "priority": "high",
+      "dueDate": "2026-09-04",
+      "tags": [
+        "data",
+        "urgent"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T019",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T113",
+      "title": "Fix the Agents page above the fold before any more agent campaign spend",
+      "description": "/agents took 51.7% of all landings this week, up from 7.2%, with 90.9% bounce and a 15.7% scroll rate on a 9,200px page. It is now the front door and it keeps nobody. Put the proposition and a price in the first screen and make the ad copy and the first screen say the same thing. Everything p4-1 prescribes for the homepage applies harder here, and T108 is buying a bigger leak until this is done.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-08",
+      "tags": [
+        "data",
+        "week"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T025",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T114",
+      "title": "Clear the three hard gates on the AI Bill report",
+      "description": "T074 is a single low task for a 25-page gated report with three gates in front of it. Gate one: Hal priced one way across the site, /pricing as the single source (Leo). Gate two: conformance suite run and a published divergence list, or chapter five only describes hand-verified pairs (Vijay). Gate three: the price-match cap and terms, or chapter nine cannot be written (Adam). Chapters one to four depend on nothing and can be drafted now. Source: Inference Bill Report Plan.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "report",
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T073",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T115",
+      "title": "Name the AI Bill byline and start the LinkedIn argument posts",
+      "description": "Articles currently publish with Radium as the author. A report with no named human behind it is worth less on LinkedIn and in AI citation. Pick the byline, then run chapters one and two as the LinkedIn arc in parallel with drafting, so the ungated page has organic engagement to inherit when paid starts.",
+      "assignee": "Natalie",
+      "priority": "medium",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "report"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T073",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T116",
+      "title": "Layout, ungated page, HubSpot sequence and attribution for the AI Bill launch",
+      "description": "Week three of the report plan. Layout on the brand system, ungated page in Webflow, gated PDF and audit spreadsheet behind one HubSpot form, download-to-trial sequence, UTMs verified end to end before the launch post. Paid starts one week after launch, not the same day.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-10-13",
+      "tags": [
+        "report",
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T073",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T117",
+      "title": "Build the AI Governance Readiness Assessment",
+      "description": "The Track A entry asset from the Governance Wedge, and the only initiative in the set that depends on none of the engineering gates. Ungated self-serve diagnostic, email-gated two-page policy template, sales-assisted policy review. Gives fractional CTOs, vCISOs and IPO-readiness advisors something to hand out at the end of the presentation they already make. Alex's Kingston board is the first live test.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "initiative",
+        "report"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T073",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T118",
+      "title": "Instrument the Kingston board presentation as the first Track A live test",
+      "description": "Alex is presenting to that board anyway. Record what the policy conversation surfaces, which tools they actually use, where Radium would plug in, and what procurement asks for. One real account beats a quarter of speculation, and it costs a trip to Kingston.",
+      "assignee": "Alex",
+      "priority": "medium",
+      "dueDate": "2026-09-30",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T010",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T119",
+      "title": "Retire the contradicted claims and replace accountable with shared liability",
+      "description": "Pull the Cursor and coding-agent claims and the blanket 50%. Replace hold-us-accountable language with the shared-liability framing wherever it appears. Two hours of work and it removes the only claims on the site that have been internally contradicted. T027 covers bare metal; this covers the rest.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-10",
+      "tags": [
+        "week"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T073",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T120",
+      "title": "Publish the model equivalence table on the homepage",
+      "description": "Which Radium model replaces Claude Opus 5, which replaces GPT, which replaces Llama, at what price, dated and linked. Buyers arrive in their own vocabulary and are answered with Hal, Clarke and Tycho. Was a now item on the tracker and never made the board. Pairs with T025.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T025",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T121",
+      "title": "Publish the manifesto as an argument with a name on it",
+      "description": "The production-economics thesis and the Canadian sovereignty thesis are both contrarian and neither has been said out loud in public. Step three of the Critical Mass recipe, and the widest gap it identified. Adam's byline, Leo drafts, Natalie edits. Shadow AI, the policy gap, the S-2 and OSFI angles are the second piece.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T048",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T122",
+      "title": "Publish the build-vs-buy TCO calculator, ungated, with methodology",
+      "description": "The primary demand asset in the No Cluster strategy. Salaries do not fall when Anthropic cuts prices, so the against-the-build argument gets stronger every year while the token argument gets weaker. Different from T044, which compares per-token cost. This models an AI team versus a Radium contract.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-10-15",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T048",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T123",
+      "title": "Measure cost per completed task on three workloads",
+      "description": "The number the entire economics argument rests on, and it does not exist. Support chat, a RAG workload, and a routine code task, run through Claude and through Hal, with token multiplier and prompt count recorded. Gates one and two of the Governance Wedge, and the honest version of the 50% claim.",
+      "assignee": "Vijay",
+      "priority": "high",
+      "dueDate": "2026-09-30",
+      "tags": [
+        "initiative",
+        "trust"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T009",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T124",
+      "title": "Publish a status page with uptime history and latency percentiles",
+      "description": "p50, p95, p99 and error rate by model, with methodology, at trust.radium.cloud. Under a production-models position this is the central proof asset, and it is the only proof that needs nobody's permission to publish. Ninety days of history is the Horizon I exit condition, so the clock starts the day it goes live.",
+      "assignee": "Vijay",
+      "priority": "high",
+      "dueDate": "2026-09-30",
+      "tags": [
+        "trust",
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T009",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T125",
+      "title": "Answer the infrastructure question and decide the SOC 2 path",
+      "description": "Certified third-party facilities or our own data centres. It gates SOC 2 scope, the sovereignty claim and the E&O and cyber insurance conversation at once, and everything in the governance pillar waits behind it. If not yet certified, publish the roadmap. A developer at an AI-native company still needs security sign-off before pointing production traffic at a new provider, and this blocks activation silently.",
+      "assignee": "Adam",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "trust"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T009",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T126",
+      "title": "Ship the security page and a publishable DPA with no-train and no-retention clauses",
+      "description": "Nothing on the site survives a security review and the FAQ is a 404. The Glossary is explicit that no-train and no-retention belong in the DPA with clause references, not in website copy. Enterprise buyers treat both as a baseline before evaluation. First half of the admin-flip collateral.",
+      "assignee": "Alex",
+      "priority": "high",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "trust",
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T013",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T127",
+      "title": "Decide the rate-lock mechanic: 12-month fixed price on production workloads",
+      "description": "Certainty is the product and this is the commercial handle for it. Top of Adam's decision ledger and not on the board. Needs engineering feasibility from Vijay and commercial risk sign-off from Adam. If yes, it becomes the offer in the AI Bill report, the OOH creative and the enterprise pitch. If no, say so, because the fixed-rate frame is being written into copy as though it exists.",
+      "assignee": "Adam",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T014",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T128",
+      "title": "Name thirty accounts and go win three with publication rights",
+      "description": "Under 300 companies globally is a list, not an audience. Step six of the Critical Mass recipe and the Horizon I exit condition: three referenceable customers with publication rights written into the pricing. Adam owns enterprise pipeline until the VP Sales hire, so Adam owns the list. Marketing supplies the account brief and the collateral.",
+      "assignee": "Adam",
+      "priority": "high",
+      "dueDate": "2026-09-30",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T013",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T129",
+      "title": "Get naming approval and publish the Telus case study",
+      "description": "Pending legal approval on naming. The first named customer proof on the site, and the only one close to ready. Chase the approval, then write it to the proof standard: workload, before and after cost, what changed in the config, dated.",
+      "assignee": "Natalie",
+      "priority": "medium",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T048",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T130",
+      "title": "Stand up the Customer Language Engine: corpus board, objection ledger, Friday signal review",
+      "description": "Week one needs no headcount and no engineering. Pull every Opportunity-stage and closed-lost record out of HubSpot and read the notes, which is the first draft of the Objection Ledger. Export 90 days of docs site search sorted by zero-result, which is the Education Backlog. Stand up the corpus board with the four registers and quote IDs. Put the Friday 30-minute Signal Review on the calendar with one engineer named. The interviews from T015 feed it.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T010",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T131",
+      "title": "Decide the SuperOptimal engagement: interview sprint yes, top-of-funnel no",
+      "description": "Buy the bounded interview sprint and corpus delivery, and workshops scoped as recruiting rooms in SF, NYC and Toronto. Hold newsletters, podcasts, dinners, summits and hackathons until the bottom of the funnel converts. Two conditions in writing: the corpus, recordings and relationships are Radium's, and it runs alongside the search rather than instead of it. Price it as a media buy with a strategy layer, not as sponsorship.",
+      "assignee": "Adam",
+      "priority": "medium",
+      "dueDate": "2026-09-15",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T010",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T132",
+      "title": "Design the startup and researcher credits programme",
+      "description": "RunPod model, $20k a month cap, feedback mandatory as a term of the credits. Mona and Natalie both want a dedicated session before it is tasked further, so this is that session plus the one-page programme design: eligibility, grant size, expiry, feedback contract, and how it feeds the Reddit programme and T011. Depends on T090 for the grant size.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-09-30",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T090",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T133",
+      "title": "Turn the lights on: sitemap, robots.txt, Search Console, corrected schema",
+      "description": "There is no sitemap, robots.txt is empty, and the Organization schema does nothing to say Radium is not a chemical element. Enable the sitemap, publish robots.txt, submit to Search Console, ship the corrected Organization and WebSite schema with real sameAs links, and make /pricing the single source for the Hal price. Week one of the Search and Answer Audit and none of it is on the board.",
+      "assignee": "Brandon",
+      "priority": "high",
+      "dueDate": "2026-09-15",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T039",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T134",
+      "title": "Run weeks two to four of the Search and Answer Audit",
+      "description": "Decide the fate of the six empty pages, redirect /migration into /switching-guide, repoint the Documentation nav at docs.radium.cloud, add the eight missing OG images. One H1 per page, definitional opening paragraph on the four key pages, sweep the JSON-LD for bare metal and Radium One, strip the $1,600 Offer price, fix the /articles hasPart array. Add Author, SEO description and Excerpt to Articles and backfill all nine posts, switch to a named Person author, publish llms.txt, verify the 22 FAQ pairs are visible on-page.",
+      "assignee": "Brandon",
+      "priority": "medium",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T039",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T135",
+      "title": "Rebuild the PQL on usage and write the PQL-to-human routing rule",
+      "description": "Lifecycle stage can be triggered by any email address. Spend, request volume and model count cannot. Define the PQL on those, then write who calls a qualified account, within what window, with what. At $120k ACV behind a self-serve front door, the handoff is where the money is and it does not exist. Leo defines, Adam signs the routing rule and owns the calls until the sales hire.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T101",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T136",
+      "title": "Ship in-product spend caps and budget alerts, then measure week 1 to week 4 retention",
+      "description": "A production buyer will not route real traffic to a provider where spend cannot be capped, and the fixed-rate story needs a control in the product. Once caps exist, measure week 1 to week 4 retention on accounts that made a first request. The tracker currently stops at first spend, and first spend is not the finish line.",
+      "assignee": "Brendan",
+      "priority": "medium",
+      "dueDate": "2026-10-15",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T101",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T137",
+      "title": "Time ten developers from docs to first successful request",
+      "description": "Record every point they stick. The events tell you activation fails. Only this tells you why. The Peer engineer lost 30 minutes on the isolated-instance question alone. Was a now item on the tracker and never made the board. Feeds T032 and T105.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "data"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T029",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T138",
+      "title": "Add work-email verification or domain classification at signup",
+      "description": "A sample of 30 paid contacts was almost entirely personal Gmail. Cheapest available filter and it segments every downstream metric, including the activation rate that decides the 15 Sep call.",
+      "assignee": "Brendan",
+      "priority": "medium",
+      "dueDate": "2026-10-06",
+      "tags": [
+        "data"
+      ],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T029",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T139",
+      "title": "Build the /101 SF landing page",
+      "description": "A destination that acknowledges the board, so a half-remembered impression converts on recognition rather than hitting an 82.5% bounce homepage. Live 5 October, the day the board goes up, not after. Pairs with the NYC subway flight as one moment across both cities.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-10-05",
+      "tags": [
+        "ooh",
+        "initiative"
+      ],
+      "channel": "brand",
+      "bucket": "p2",
+      "anchorTaskId": "T077",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T140",
+      "title": "Prep the SF brand search-capture campaign to go live 5 Oct",
+      "description": "Brand campaign on radium, radium ai, radium cloud, radium inference and misspellings, with brand fenced off elsewhere, ready to flip the day the board goes up. Not running yet, since there is no impression to capture. Media space is purchased and locked at $126k, board install date confirmed for 5 October.",
+      "assignee": "Mona",
+      "priority": "high",
+      "dueDate": "2026-10-05",
+      "tags": [
+        "ooh",
+        "paid"
+      ],
+      "channel": "paid",
+      "bucket": "p2",
+      "anchorTaskId": "T057",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T141",
+      "title": "Book a real photographer for the SF board on day one",
+      "description": "Not a phone shot from the car. A proper image at the right hour carries the LinkedIn posts, PR outreach and ABM sequence for weeks. Highest return item on the SF list and it costs a few hundred dollars. Baseline the control metrics before 5 October so there is a clean pre/post read.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-10-05",
+      "tags": [
+        "ooh"
+      ],
+      "channel": "brand",
+      "bucket": "p2",
+      "anchorTaskId": "T077",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T142",
+      "title": "Give Paper Trails the SF activation ceiling and brief the pairing shortlist",
+      "description": "$15,000 ceiling for one SF guerrilla/activation concept, decided 31 Aug. Send Arvid the SF pairing shortlist: projections in SoMa and the Mission, LED truck on the named account list, wall posting and stickers in the corridor. Run during the board's flight, same window as the NY activation, so the campaign reads as one moment across both cities.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-09-10",
+      "tags": [
+        "ooh"
+      ],
+      "channel": "brand",
+      "bucket": "p2",
+      "anchorTaskId": "T076",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T143",
+      "title": "Start the NYC substantiation file and legal read",
+      "description": "Dated PDF of the Anthropic pricing page, the Radium rate card and the benchmark methodology, signed off by counsel before creative goes to MTA. The long pole on the 21 September artwork date. Copy approval is required and a named comparative price claim on MTA property makes a forced creative revision a live risk, which is what the contingency budget is for.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-08",
+      "tags": [
+        "ooh",
+        "trust"
+      ],
+      "channel": "legal",
+      "bucket": "p2",
+      "anchorTaskId": "T076",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T144",
+      "title": "Define the merch kit and budget",
+      "description": "Nothing on the board covers merch, and the October NYC and SF flights plus the Paris event give it a real first use: named-account gifting, the SF activation, and conference giveaways. Scope the kit small and durable. One or two items on the brand system, cream and signal blue, JetBrains Mono for any printed label, set per-unit budget and order quantity against the named-account list from T128.",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-09-15",
+      "tags": [
+        "brand",
+        "initiative"
+      ],
+      "channel": "brand",
+      "bucket": "p3",
+      "anchorTaskId": "T052",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T145",
+      "title": "Design the merch on the brand system",
+      "description": "Cream #FAF9F6, ink #242220, signal blue #0000CC, JetBrains Mono for any printed label. Held to the same standard as the social program and the OOH creative. Route through Arvid alongside the OOH creative work so the two ship on one visual language.",
+      "assignee": "Leo",
+      "priority": "low",
+      "dueDate": "2026-09-22",
+      "tags": [
+        "brand"
+      ],
+      "channel": "brand",
+      "bucket": "p3",
+      "anchorTaskId": "T052",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T146",
+      "title": "Order the first merch run before the October flight and Paris event",
+      "description": "Depends on T144 and T145 clearing first. Lead time has to clear both the 5 October SF board and the 12 October NYC subway start, since the named-account gifting motion in T128 is meant to run alongside both.",
+      "assignee": "Leo",
+      "priority": "low",
+      "dueDate": "2026-09-29",
+      "tags": [
+        "brand"
+      ],
+      "channel": "brand",
+      "bucket": "p3",
+      "anchorTaskId": "T052",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T147",
+      "title": "Decide DevRel hire vs forward-deployed education engineer: one role or two",
+      "description": "The forward-deployed education engineer spec (T034) may be the same role as the DevRel hire agreed in principle on the SuperOptimal call. Decide before either gets a task, since a wrong split means writing two job specs and interview loops for one seat, or leaving a real second seat unfilled.",
+      "assignee": "Adam",
+      "priority": "high",
+      "dueDate": "2026-09-15",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "ops",
+      "bucket": "p3",
+      "anchorTaskId": "T034",
+      "insertAfter": true,
+      "status": "pending_apply"
+    },
+    {
+      "id": "T148",
+      "title": "Reconcile the Cision and Georgiana/Spark PR tracks before more PR spend",
+      "description": "Two PR tracks are running independently and neither conversation referenced the other. Justine settled Cision Canada at roughly $235 to $1,300 CAD per placement, with one release expected soon. Natalie separately named Georgiana or Spark at $20k to $30k. Pick one motion, or a sequence, before committing further spend.",
+      "assignee": "Adam",
+      "priority": "medium",
+      "dueDate": "2026-09-10",
+      "tags": [
+        "initiative"
+      ],
+      "channel": "ops",
+      "bucket": "p3",
+      "anchorTaskId": "T071",
+      "insertAfter": true,
+      "status": "pending_apply"
+    }
+  ]
+}

@@ -30,15 +30,15 @@ export default function FunnelChart({ stages, maxVisitors }: FunnelChartProps) {
                 className={`h-8 rounded-md border ${colorCls} flex items-center px-3 transition-all`}
                 style={{ width: `${Math.max(widthPct, 8)}%` }}
               >
-                <span className="text-[11px] font-medium text-white/80 whitespace-nowrap tabular-nums">
+                <span className="text-[11px] font-medium text-gray-800 dark:text-white/80 whitespace-nowrap tabular-nums">
                   {s.visitors.toLocaleString()}
                 </span>
               </div>
             </div>
             <div className="w-32 flex-shrink-0">
-              <p className="text-[11px] font-medium text-white/60">{s.stage}</p>
+              <p className="text-[11px] font-medium text-gray-600 dark:text-white/60">{s.stage}</p>
               {s.conversionToNext != null && (
-                <p className="text-[10px] text-white/30">
+                <p className="text-[10px] text-gray-400 dark:text-white/30">
                   {s.conversionToNext.toFixed(1)}% → next
                 </p>
               )}

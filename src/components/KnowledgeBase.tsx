@@ -80,23 +80,23 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0c]">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0c]">
       <div className="px-6 py-8 w-full">
 
         {/* Header */}
         <div className="mb-8">
-          <button onClick={onBack} className="inline-flex items-center gap-1.5 text-[12px] text-white/40 hover:text-white/70 transition-colors mb-4">
+          <button onClick={onBack} className="inline-flex items-center gap-1.5 text-[12px] text-gray-500 dark:text-white/40 hover:text-gray-600 dark:text-white/70 transition-colors mb-4">
             <ArrowLeft size={13} />
             Back to dashboard
           </button>
           <div className="flex items-center gap-3 mb-2">
-            <BookOpen size={20} className="text-white/50" />
-            <h1 className="text-[22px] font-semibold text-white/90 tracking-tight">Knowledge Base</h1>
-            <span className="text-[12px] text-white/30 tabular-nums bg-white/[0.04] px-2 py-0.5 rounded-md">
+            <BookOpen size={20} className="text-gray-500 dark:text-white/50" />
+            <h1 className="text-[22px] font-semibold text-gray-900 dark:text-white/90 tracking-tight">Knowledge Base</h1>
+            <span className="text-[12px] text-gray-400 dark:text-white/30 tabular-nums bg-black/[0.04] dark:bg-white/[0.04] px-2 py-0.5 rounded-md">
               {docs.length} doc{docs.length !== 1 ? 's' : ''}
             </span>
           </div>
-          <p className="text-[13px] text-white/40 max-w-xl">
+          <p className="text-[13px] text-gray-500 dark:text-white/40 max-w-xl">
             Strategy docs, meeting notes, research, and decisions. Linked to milestones and epics so context stays next to the work.
           </p>
         </div>
@@ -104,13 +104,13 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
         {/* Search + Filters */}
         <div className="mb-6 space-y-3">
           <div className="relative">
-            <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/30" />
+            <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 dark:text-white/30" />
             <input
               id="kb-search"
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search documents… (press / to focus)"
-              className="w-full bg-[#0f0f11] border border-white/[0.08] rounded-xl pl-10 pr-4 py-2.5 text-[13px] text-white/80 placeholder:text-white/25 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10"
+              className="w-full bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-xl pl-10 pr-4 py-2.5 text-[13px] text-gray-800 dark:text-white/80 placeholder:text-gray-400 dark:text-white/25 focus:outline-none focus:border-gray-400 dark:focus:border-white/20 focus:ring-1 focus:ring-gray-200 dark:focus:ring-white/10"
             />
           </div>
 
@@ -118,7 +118,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
             <select
               value={activeMilestone || ''}
               onChange={e => setActiveMilestone(e.target.value || null)}
-              className="bg-[#0f0f11] border border-white/[0.08] rounded-lg px-3 py-1.5 text-[11px] text-white/60 focus:outline-none focus:border-white/20"
+              className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-lg px-3 py-1.5 text-[11px] text-gray-600 dark:text-white/60 focus:outline-none focus:border-gray-400 dark:focus:border-white/20"
             >
               <option value="">All Pillars</option>
               {milestones.map(m => (
@@ -130,7 +130,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
               <button
                 key={src}
                 onClick={() => setActiveSource(activeSource === src ? null : src)}
-                className={`text-[10px] px-2.5 py-1 rounded-full border transition-colors uppercase tracking-wide font-semibold ${activeSource === src ? 'bg-white/15 text-white/80 border-white/25' : 'bg-white/[0.04] text-white/40 border-white/[0.06] hover:border-white/15'}`}
+                className={`text-[10px] px-2.5 py-1 rounded-full border transition-colors uppercase tracking-wide font-semibold ${activeSource === src ? 'bg-black/10 dark:bg-white/15 text-gray-800 dark:text-white/80 border-white/25' : 'bg-black/[0.04] dark:bg-white/[0.04] text-gray-500 dark:text-white/40 border-gray-200 dark:border-white/[0.06] hover:border-gray-300 dark:hover:border-white/15'}`}
               >
                 {src}
               </button>
@@ -140,7 +140,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
               <button
                 key={tag}
                 onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-                className={`inline-flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border transition-colors ${activeTag === tag ? 'bg-white/15 text-white/80 border-white/25' : 'bg-white/[0.04] text-white/40 border-white/[0.06] hover:border-white/15'}`}
+                className={`inline-flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border transition-colors ${activeTag === tag ? 'bg-black/10 dark:bg-white/15 text-gray-800 dark:text-white/80 border-white/25' : 'bg-black/[0.04] dark:bg-white/[0.04] text-gray-500 dark:text-white/40 border-gray-200 dark:border-white/[0.06] hover:border-gray-300 dark:hover:border-white/15'}`}
               >
                 <Tag size={9} />
                 {tag}
@@ -150,7 +150,7 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
             {(activeTag || activeSource || activeMilestone) && (
               <button
                 onClick={() => { setActiveTag(null); setActiveSource(null); setActiveMilestone(null); }}
-                className="text-[10px] text-white/30 hover:text-white/60 underline"
+                className="text-[10px] text-gray-400 dark:text-white/30 hover:text-gray-600 dark:text-white/60 underline"
               >
                 Clear filters
               </button>
@@ -167,11 +167,11 @@ export default function KnowledgeBase({ docs, milestones, onBack }: Props) {
           </div>
         ) : (
           <div className="py-20 text-center">
-            <BookOpen size={32} className="mx-auto text-white/10 mb-3" />
-            <p className="text-[13px] text-white/30">No documents match your filters.</p>
+            <BookOpen size={32} className="mx-auto text-gray-300 dark:text-white/10 mb-3" />
+            <p className="text-[13px] text-gray-400 dark:text-white/30">No documents match your filters.</p>
             <button
               onClick={() => { setSearch(''); setActiveTag(null); setActiveSource(null); setActiveMilestone(null); }}
-              className="text-[12px] text-white/40 hover:text-white/70 mt-2 underline"
+              className="text-[12px] text-gray-500 dark:text-white/40 hover:text-gray-600 dark:text-white/70 mt-2 underline"
             >
               Clear all filters
             </button>

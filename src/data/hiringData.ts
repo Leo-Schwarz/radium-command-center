@@ -184,5 +184,32 @@ export const hiringData: HiringData = {
       postedAt: '2026-08-28',
       candidates: [],
     },
+    {
+      id: 'hr-devrel-lead',
+      title: 'DevRel Lead',
+      department: 'Marketing',
+      status: 'open',
+      priority: 'critical',
+      location: 'Remote (US/Canada)',
+      salaryRange: '$155k–$230k (US hub $185k–$230k, US remote $155k–$195k, Canada CAD $150k–$190k)',
+      description:
+        'Owns the Owned Demand pillar (P3): quickstarts, migration guides, benchmarks, and technical content that converts prospects into users.',
+      requirements: [
+        'Hands-on coding experience (Python, Go, or systems); credible with ML engineers',
+        'Technical writing: tutorials, benchmarks, migration guides',
+        'Content and community strategy, not just event speaking',
+        'Cross-functional ownership without a manager in the loop',
+      ],
+      niceToHave: [
+        'Open-source contributions or maintenance',
+        'Analytics chops to measure owned-demand pipeline contribution',
+        'B2B SaaS platform experience (AWS, Stripe, Databricks, etc.)',
+      ],
+      owner: 'Leo Schwarz',
+      linkedPillarIds: ['p3'],
+      notes: 'Hiring form submitted to Monday.com 2 Sep. Awaiting Adam on budget/headcount approval.',
+      postedAt: '2026-09-02',
+      candidates: [],
+    },
   ],
 };

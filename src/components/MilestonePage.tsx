@@ -29,14 +29,14 @@ const MilestonePage: React.FC<MilestonePageProps> = ({
   const navItemClass = (isActive: boolean) =>
     `flex-1 text-center py-3.5 text-[13px] font-medium transition-colors whitespace-nowrap px-4 cursor-pointer ${
       isActive
-        ? 'text-white/80 border-b-2 border-white/30'
-        : 'text-white/30 hover:text-white/55'
+        ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+        : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
     }`;
 
   return (
-    <div className="min-h-screen bg-[#08080a]">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#08080a]">
       {/* Full-width pillar nav */}
-      <div className="w-full border-b border-white/[0.08] bg-[#0a0a0c] overflow-x-auto">
+      <div className="w-full border-b border-gray-200 dark:border-white/[0.08] bg-white dark:bg-[#0a0a0c] overflow-x-auto">
         <div className="flex min-w-full">
           <a href="/" className={navItemClass(false)}>
             Dashboard
@@ -79,11 +79,11 @@ const MilestonePage: React.FC<MilestonePageProps> = ({
                 <section className="mt-10">
                   <div className="flex items-center gap-2 mb-4">
                     <CheckCircle2 size={13} className="text-green-400/60" />
-                    <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/40">Completed</h2>
-                    <span className="text-[10px] text-white/25 tabular-nums ml-1">{totalCompleted}</span>
+                    <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/40">Completed</h2>
+                    <span className="text-[10px] text-gray-400 dark:text-white/25 tabular-nums ml-1">{totalCompleted}</span>
                   </div>
-                  <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-                    <div className="divide-y divide-white/[0.04]">
+                  <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+                    <div className="divide-y divide-gray-200 dark:divide-white/[0.04]">
                       {completedGroups.map(({ epic, tasks }) =>
                         tasks.map(task => (
                           <div key={task.id} className="flex items-start gap-3 py-3">
@@ -94,7 +94,7 @@ const MilestonePage: React.FC<MilestonePageProps> = ({
                                 onOpen={onOpenTask ? () => onOpenTask(task.id) : undefined}
                               />
                             </div>
-                            <span className="text-[10px] text-white/20 mt-1 flex-shrink-0">{epic.title}</span>
+                            <span className="text-[10px] text-gray-400 dark:text-white/20 mt-1 flex-shrink-0">{epic.title}</span>
                           </div>
                         ))
                       )}

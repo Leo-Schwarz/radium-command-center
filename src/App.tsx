@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { mockDashboardData } from './data/mockData';
+import { opportunitiesData } from './data/opportunitiesData';
 import { useDashboardState } from './hooks/useDashboardState';
 import type { Task, Milestone, DashboardData, KnowledgeDoc } from './types';
 import TaskBoardCard from './components/TaskBoardCard';
@@ -11,7 +12,10 @@ import KnowledgeBase from './components/KnowledgeBase';
 import KnowledgeDocDetail from './components/KnowledgeDocDetail';
 import MarketingStats from './components/MarketingStats';
 import HiringTab from './components/HiringTab';
+import Opportunities from './components/Opportunities';
 import { hiringData } from './data/hiringData';
+import ThemeToggle from './components/ThemeToggle';
+import { useTheme } from './contexts/ThemeContext';
 import TaskCompletionSummary from './components/TaskCompletionSummary';
 import type { FirefliesSyncPatch, HubSpotSyncPatch, LinkedInSyncPatch } from './types/sync';
 import type { MarketingStats as MarketingStatsType } from './types/marketing';
@@ -40,6 +44,7 @@ function buildTaskIndex(milestones: Milestone[]) {
 type FilterTag = 'all' | 'blocked' | 'urgent' | 'week' | 'hubspot' | 'linkedin';
 
 function DashboardContent({ initialData }: { initialData: DashboardData }) {
+  const { theme } = useTheme();
   const { data, computeEpicProgress, computeMilestoneProgress, toggleTask, updateTask, applySyncPatch, applyHubSpotPatch, applyLinkedInPatch } =
     useDashboardState(initialData);
 
@@ -49,7 +54,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
   const [, setSyncApplied] = useState(false);
   const [liLoading, setLiLoading] = useState(false);
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null);
-  const [activeView, setActiveView] = useState<'dashboard' | 'all-tasks' | 'knowledge-base' | 'marketing-stats' | 'hiring'>('dashboard');
+  const [activeView, setActiveView] = useState<'dashboard' | 'all-tasks' | 'knowledge-base' | 'marketing-stats' | 'hiring' | 'opportunities'>('dashboard');
   const [knowledgeDocs, setKnowledgeDocs] = useState<KnowledgeDoc[]>([]);
   const [selectedKnowledgeDocId, setSelectedKnowledgeDocId] = useState<string | null>(null);
   const [marketingStats, setMarketingStats] = useState<MarketingStatsType | null>(null);
@@ -344,16 +349,16 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
   const selectedKnowledgeDoc = selectedKnowledgeDocId ? knowledgeDocs.find(d => d.id === selectedKnowledgeDocId) : null;
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white/90">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white/90">
       <div className="px-4 md:px-8 lg:px-12 pt-6 md:pt-10 pb-10 mx-auto">
 
         {/* Header */}
         <header className="flex items-center justify-between mb-10">
-          <img src="/Radium-logo-light.svg" alt="Radium Logo" className="h-10" />
+          <img src={theme === 'dark' ? '/Radium-logo-light.svg' : '/Radium-logo-dark.svg'} alt="Radium Logo" className="h-10" />
           <div className="flex items-center gap-3">
             {/* Overall Progress Pill */}
-            <div className="flex items-center gap-2.5 bg-white/[0.04] border border-white/[0.08] rounded-lg px-3.5 py-2">
-              <div className="w-28 h-2.5 bg-white/[0.08] rounded-full overflow-hidden">
+            <div className="flex items-center gap-2.5 bg-black/[0.04] dark:bg-white/[0.04] border border-gray-200 dark:border-white/[0.08] rounded-lg px-3.5 py-2">
+              <div className="w-28 h-2.5 bg-black/[0.08] dark:bg-white/[0.08] rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all duration-700"
                   style={{
@@ -362,20 +367,21 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                   }}
                 />
               </div>
-              <span className="text-[12px] font-medium tabular-nums text-white/50">{Math.round(overallPct)}%</span>
+              <span className="text-[12px] font-medium tabular-nums text-gray-500 dark:text-white/50">{Math.round(overallPct)}%</span>
             </div>
-            <span className="text-[10px] text-white/20 uppercase tracking-wider hidden sm:inline">PLG Tracker</span>
+            <span className="text-[10px] text-gray-400 dark:text-white/20 uppercase tracking-wider hidden sm:inline">PLG Tracker</span>
+            <ThemeToggle />
           </div>
         </header>
 
         {/* View Tabs */}
-        <div className="flex border-b border-white/[0.08] mb-8">
+        <div className="flex border-b border-gray-200 dark:border-white/[0.08] mb-8">
           <button
             onClick={() => { setActiveView('dashboard'); setSearchQuery(''); setActiveTag('all'); }}
             className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
               activeView === 'dashboard'
-                ? 'text-white/80 border-b-2 border-white/30'
-                : 'text-white/30 hover:text-white/55'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
             }`}
           >
             Dashboard
@@ -384,8 +390,8 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
             onClick={() => setActiveView('all-tasks')}
             className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
               activeView === 'all-tasks'
-                ? 'text-white/80 border-b-2 border-white/30'
-                : 'text-white/30 hover:text-white/55'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
             }`}
           >
             All Tasks
@@ -394,34 +400,44 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
             onClick={() => setActiveView('knowledge-base')}
             className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
               activeView === 'knowledge-base'
-                ? 'text-white/80 border-b-2 border-white/30'
-                : 'text-white/30 hover:text-white/55'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
             }`}
           >
             Knowledge Base {knowledgeDocs.length > 0 && (
-              <span className="ml-1 text-[10px] text-white/30 tabular-nums">{knowledgeDocs.length}</span>
+              <span className="ml-1 text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{knowledgeDocs.length}</span>
             )}
           </button>
           <button
             onClick={() => setActiveView('marketing-stats')}
             className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
               activeView === 'marketing-stats'
-                ? 'text-white/80 border-b-2 border-white/30'
-                : 'text-white/30 hover:text-white/55'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
             }`}
           >
             Marketing Stats
           </button>
           <button
+            onClick={() => setActiveView('opportunities')}
+            className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
+              activeView === 'opportunities'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
+            }`}
+          >
+            Opportunities
+          </button>
+          <button
             onClick={() => setActiveView('hiring')}
             className={`flex-1 text-center py-3 text-[13px] font-medium tracking-wide transition-colors cursor-pointer ${
               activeView === 'hiring'
-                ? 'text-white/80 border-b-2 border-white/30'
-                : 'text-white/30 hover:text-white/55'
+                ? 'text-gray-800 dark:text-white/80 border-b-2 border-gray-400 dark:border-white/30'
+                : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/55'
             }`}
           >
             Hiring {hiringData.roles.length > 0 && (
-              <span className="ml-1 text-[10px] text-white/30 tabular-nums">{hiringData.roles.length}</span>
+              <span className="ml-1 text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{hiringData.roles.length}</span>
             )}
           </button>
         </div>
@@ -429,12 +445,12 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         {activeView === 'all-tasks' && (
         <>
         {/* Sticky Toolbar */}
-        <div className="sticky top-0 z-40 bg-[#050505] py-4 mb-10 -mx-4 md:-mx-8 lg:-mx-12 px-4 md:px-8 lg:px-12 border-b border-white/[0.06]">
+        <div className="sticky top-0 z-40 bg-gray-50 dark:bg-[#050505] py-4 mb-10 -mx-4 md:-mx-8 lg:-mx-12 px-4 md:px-8 lg:px-12 border-b border-gray-200 dark:border-white/[0.06]">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             {/* Search */}
             <div className="flex-1 max-w-lg">
-              <div className="flex items-center gap-2 bg-white/[0.03] border border-white/[0.08] rounded-lg px-3 py-2 focus-within:border-white/20 transition-colors">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-white/20 flex-shrink-0">
+              <div className="flex items-center gap-2 bg-black/[0.03] dark:bg-white/[0.03] border border-gray-200 dark:border-white/[0.08] rounded-lg px-3 py-2 focus-within:border-gray-400 dark:focus-within:border-white/20 transition-colors">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-gray-400 dark:text-white/20 flex-shrink-0">
                   <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2"/>
                   <path d="M11.5 11.5L15 15" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
                 </svg>
@@ -444,9 +460,9 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   placeholder="Search tasks, epics, milestones"
-                  className="flex-1 bg-transparent text-[13px] text-white/80 placeholder:text-white/20 outline-none"
+                  className="flex-1 bg-transparent text-[13px] text-gray-800 dark:text-white/80 placeholder:text-gray-400 dark:placeholder:text-white/20 outline-none"
                 />
-                <span className="text-[10px] text-white/15 font-medium px-1.5 py-0.5 rounded bg-white/[0.05]">/</span>
+                <span className="text-[10px] text-gray-400 dark:text-white/15 font-medium px-1.5 py-0.5 rounded bg-black/[0.05] dark:bg-white/[0.05]">/</span>
               </div>
             </div>
 
@@ -458,25 +474,25 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                   onClick={() => setActiveTag(prev => prev === tag ? 'all' : tag)}
                   className={`text-[11px] tracking-[0.05em] uppercase px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                     activeTag === tag
-                      ? 'bg-white/[0.08] border-white/[0.12] text-white/80'
-                      : 'bg-transparent border-transparent text-white/30 hover:text-white/50 hover:bg-white/[0.03]'
+                      ? 'bg-black/[0.08] dark:bg-white/[0.08] border-gray-300 dark:border-white/[0.12] text-gray-800 dark:text-white/80'
+                      : 'bg-transparent border-transparent text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/50 hover:bg-black/[0.03] dark:hover:bg-white/[0.03]'
                   }`}
                 >
                   {tag === 'all' ? 'All' : tag}
                 </button>
               ))}
-              <div className="w-[1px] h-4 bg-white/[0.08] mx-1" />
+              <div className="w-[1px] h-4 bg-gray-200 dark:bg-white/[0.08] mx-1" />
               <button
                 onClick={() => setShowArchive(!showArchive)}
                 className={`text-[11px] tracking-[0.05em] uppercase px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                   showArchive
-                    ? 'bg-white/[0.08] border-white/[0.12] text-white/80'
-                    : 'bg-transparent border-transparent text-white/30 hover:text-white/50 hover:bg-white/[0.03]'
+                    ? 'bg-black/[0.08] dark:bg-white/[0.08] border-gray-300 dark:border-white/[0.12] text-gray-800 dark:text-white/80'
+                    : 'bg-transparent border-transparent text-gray-400 dark:text-white/30 hover:text-gray-500 dark:hover:text-white/50 hover:bg-black/[0.03] dark:hover:bg-white/[0.03]'
                 }`}
               >
                 {showArchive ? 'Hide Archive' : 'Archive'}
                 {completedCount > 0 && (
-                  <span className="ml-1 text-[10px] bg-white/[0.08] text-white/50 px-1.5 py-0.5 rounded-md tabular-nums">
+                  <span className="ml-1 text-[10px] bg-black/[0.08] dark:bg-white/[0.08] text-gray-500 dark:text-white/50 px-1.5 py-0.5 rounded-md tabular-nums">
                     {completedCount}
                   </span>
                 )}
@@ -491,7 +507,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                 className={`text-[11px] px-2.5 py-1 rounded-md border transition-all cursor-pointer flex items-center gap-1.5 ${
                   getStoredToken()
                     ? 'bg-sky-500/10 border-sky-500/20 text-sky-400 hover:bg-sky-500/15'
-                    : 'bg-transparent border-white/[0.08] text-white/30 hover:text-sky-400 hover:border-sky-500/15'
+                    : 'bg-transparent border-gray-200 dark:border-white/[0.08] text-gray-400 dark:text-white/30 hover:text-sky-500 dark:hover:text-sky-400 hover:border-sky-500/15'
                 } ${liLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 {liLoading ? (
@@ -516,12 +532,12 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         {/* Pillars Overview — card grid */}
         <section className="mb-14">
           <div className="flex items-baseline justify-between mb-6">
-            <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/40">
+            <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/40">
               The 8 Core Pillars
             </h2>
             <div className="flex items-center gap-2">
-              <span className="text-[13px] font-medium text-white/50">{Math.round(overallPct)}%</span>
-              <span className="text-[10px] text-white/20 uppercase tracking-wider">overall</span>
+              <span className="text-[13px] font-medium text-gray-500 dark:text-white/50">{Math.round(overallPct)}%</span>
+              <span className="text-[10px] text-gray-400 dark:text-white/20 uppercase tracking-wider">overall</span>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -538,13 +554,13 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         </section>
 
         {/* Urgent — two column, full width with box */}
-        <div className="mb-14 bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-6">
+        <div className="mb-14 bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-400" style={{ boxShadow: '0 0 6px rgba(248,113,113,0.4)' }} />
-              <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Urgent</h2>
+              <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/50">Urgent</h2>
             </div>
-            <span className="text-[11px] font-medium text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-white/[0.04]">{urgentTasks.length}</span>
+            <span className="text-[11px] font-medium text-gray-400 dark:text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-black/[0.04] dark:bg-white/[0.04]">{urgentTasks.length}</span>
           </div>
           {urgentTasks.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -553,7 +569,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
               ))}
             </div>
           ) : (
-            <p className="text-[13px] text-white/20 py-4 text-center">No urgent tasks.</p>
+            <p className="text-[13px] text-gray-400 dark:text-white/20 py-4 text-center">No urgent tasks.</p>
           )}
         </div>
 
@@ -561,16 +577,16 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-2 h-2 rounded-full bg-purple-400" style={{ boxShadow: '0 0 6px rgba(192,132,252,0.4)' }} />
-            <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">Weekly Planner</h2>
+            <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/50">Weekly Planner</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {plannerColumns.map(col => (
               <div
                 key={col.iso}
-                className={`bg-[#0f0f11] rounded-2xl p-4 flex flex-col min-h-[140px] transition-colors ${
+                className={`bg-white dark:bg-[#0f0f11] rounded-2xl p-4 flex flex-col min-h-[140px] transition-colors ${
                   dragOverColumn === col.iso
                     ? 'border border-purple-400/40 ring-1 ring-purple-400/20'
-                    : 'border border-white/[0.08]'
+                    : 'border border-gray-200 dark:border-white/[0.08]'
                 }`}
                 onDragOver={(e) => { e.preventDefault(); setDragOverColumn(col.iso); }}
                 onDragLeave={() => setDragOverColumn(null)}
@@ -584,8 +600,8 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                 }}
               >
                 <div className="mb-3">
-                  <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">{col.label}</h3>
-                  <p className="text-[11px] text-white/25 mt-0.5">{col.subtitle}</p>
+                  <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/50">{col.label}</h3>
+                  <p className="text-[11px] text-gray-400 dark:text-white/25 mt-0.5">{col.subtitle}</p>
                 </div>
                 <div className="flex-1 space-y-0.5">
                   {col.tasks.map(task => (
@@ -602,11 +618,11 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                     />
                   ))}
                   {col.tasks.length === 0 && (
-                    <p className="text-[12px] text-white/15 py-3 text-center italic">No tasks</p>
+                    <p className="text-[12px] text-gray-400 dark:text-white/15 py-3 text-center italic">No tasks</p>
                   )}
                 </div>
-                <div className="mt-3 pt-2 border-t border-white/[0.05] flex items-center justify-between">
-                  <span className="text-[10px] text-white/30 tabular-nums">{col.tasks.length} tasks</span>
+                <div className="mt-3 pt-2 border-t border-gray-200 dark:border-white/[0.05] flex items-center justify-between">
+                  <span className="text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{col.tasks.length} tasks</span>
                 </div>
               </div>
             ))}
@@ -626,15 +642,15 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
         <>
         {/* Task Board */}
         <div className="mb-14">
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-6">
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-white/30" />
-                <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">
+                <span className="w-2 h-2 rounded-full bg-gray-400 dark:bg-white/30" />
+                <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/50">
                   {activeTag === 'all' ? 'All Tasks' : activeTag === 'blocked' ? 'Blocked Tasks' : activeTag === 'urgent' ? 'Critical Tasks' : activeTag === 'week' ? 'This Week' : activeTag === 'hubspot' ? 'HubSpot Tasks' : 'LinkedIn Tasks'}
                 </h2>
               </div>
-              <span className="text-[11px] font-medium text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-white/[0.04]">
+              <span className="text-[11px] font-medium text-gray-400 dark:text-white/30 tabular-nums px-2 py-0.5 rounded-md bg-black/[0.04] dark:bg-white/[0.04]">
                 {filteredTasks.length}
               </span>
             </div>
@@ -651,7 +667,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
               ))}
               {filteredTasks.length === 0 && (
                 <div className="py-8 text-center">
-                  <p className="text-[13px] text-white/20">No tasks match the current filter.</p>
+                  <p className="text-[13px] text-gray-400 dark:text-white/20">No tasks match the current filter.</p>
                 </div>
               )}
             </div>
@@ -684,10 +700,14 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
           <HiringTab data={hiringData.roles} onBack={() => setActiveView('dashboard')} />
         )}
 
+        {activeView === 'opportunities' && (
+          <Opportunities data={opportunitiesData} />
+        )}
+
         {/* Footer */}
-        {activeView !== 'knowledge-base' && activeView !== 'marketing-stats' && activeView !== 'hiring' && (
-          <footer className="mt-20 pt-6 border-t border-white/[0.06]">
-            <p className="text-[10px] tracking-[0.1em] text-white/20">
+        {activeView !== 'knowledge-base' && activeView !== 'marketing-stats' && activeView !== 'hiring' && activeView !== 'opportunities' && (
+          <footer className="mt-20 pt-6 border-t border-gray-200 dark:border-white/[0.06]">
+            <p className="text-[10px] tracking-[0.1em] text-gray-400 dark:text-white/20">
               Updated {data.lastUpdated} · {openTasks.length} open · {allTasks.length} total · {data.milestones.length} pillars{hsCount > 0 ? ` · ${hsCount} from HubSpot` : ''}{liCount > 0 ? ` · ${liCount} from LinkedIn` : ''}{knowledgeDocs.length > 0 ? ` · ${knowledgeDocs.length} knowledge docs` : ''}
             </p>
           </footer>
@@ -738,10 +758,10 @@ function App() {
 
   if (!initialData) {
     return (
-      <div className="h-screen w-screen bg-[#0a0a0c] flex items-center justify-center">
+      <div className="h-screen w-screen bg-gray-50 dark:bg-[#0a0a0c] flex items-center justify-center">
         <div className="flex items-center gap-3">
-          <div className="w-4 h-4 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />
-          <span className="text-sm text-white/50">Loading dashboard…</span>
+          <div className="w-4 h-4 border-2 border-gray-300 dark:border-white/20 border-t-gray-800 dark:border-t-white/80 rounded-full animate-spin" />
+          <span className="text-sm text-gray-500 dark:text-white/50">Loading dashboard…</span>
         </div>
       </div>
     );

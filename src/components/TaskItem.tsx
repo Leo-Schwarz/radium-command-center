@@ -15,39 +15,39 @@ interface TaskItemProps {
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onOpen }) => {
   return (
-    <div onClick={onOpen} className={`flex items-start gap-3 py-3 transition-colors hover:bg-white/[0.02] rounded-lg -mx-1 px-1 ${onOpen ? 'cursor-pointer' : ''} ${task.completed ? 'opacity-40' : 'opacity-100'}`}>
+    <div onClick={onOpen} className={`flex items-start gap-3 py-3 transition-colors hover:bg-black/[0.02] dark:hover:bg-white/[0.02] rounded-lg -mx-1 px-1 ${onOpen ? 'cursor-pointer' : ''} ${task.completed ? 'opacity-40' : 'opacity-100'}`}>
       <button
         onClick={(e) => { e.stopPropagation(); onToggle(task.id); }}
         className={`
           mt-1 flex-shrink-0 w-4 h-4 flex items-center justify-center transition-all rounded-[4px]
-          ${task.completed ? 'bg-white' : 'border-2 border-white/25 hover:border-white/50'}
+          ${task.completed ? 'bg-gray-900 dark:bg-white' : 'border-2 border-gray-400 dark:border-white/25 hover:border-gray-500 dark:hover:border-white/50'}
         `}
       >
         {task.completed && (
           <svg width="9" height="9" viewBox="0 0 8 8" fill="none">
-            <path d="M1.5 4.5l1.5 1.5 3-3.5" stroke="#0a0a0a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M1.5 4.5l1.5 1.5 3-3.5" className="stroke-white dark:stroke-[#0a0a0a]" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         )}
       </button>
 
       <div className="flex-1 min-w-0">
-        <p className={`text-[13px] leading-snug ${task.completed ? 'line-through text-white/25' : 'text-white/80'}`}>
+        <p className={`text-[13px] leading-snug ${task.completed ? 'line-through text-gray-400 dark:text-white/25' : 'text-gray-800 dark:text-white/80'}`}>
           {task.title}
         </p>
         <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mt-1.5">
-          <span className="text-[11px] text-white/40 font-medium">{task.assignee}</span>
+          <span className="text-[11px] text-gray-500 dark:text-white/40 font-medium">{task.assignee}</span>
           {task.dueDate && (
             <>
-              <span className="text-white/10">·</span>
-              <span className="text-[11px] text-white/30">
+              <span className="text-gray-300 dark:text-white/10">·</span>
+              <span className="text-[11px] text-gray-400 dark:text-white/30">
                 {new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
               </span>
             </>
           )}
           {task.channel && (
             <>
-              <span className="text-white/10">·</span>
-              <span className="text-[11px] text-white/30">{task.channel}</span>
+              <span className="text-gray-300 dark:text-white/10">·</span>
+              <span className="text-[11px] text-gray-400 dark:text-white/30">{task.channel}</span>
             </>
           )}
           {task.priority === 'high' && (

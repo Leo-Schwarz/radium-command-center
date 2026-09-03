@@ -88,6 +88,36 @@ export interface KnowledgeIndex {
   lastUpdated: string;
 }
 
+// ─── Opportunities ───
+
+export type PartnershipCategory = 'dev-tools' | 'saas-ai' | 'platforms';
+export type OpportunityPriority = 'high' | 'medium' | 'low';
+
+export interface PartnershipTarget {
+  id: string;
+  company: string;
+  category: PartnershipCategory;
+  whyWeCare: string;
+  priority: OpportunityPriority;
+  notes?: string;
+}
+
+export interface ABMAccount {
+  id: string;
+  company: string;
+  estimatedARR: string;
+  strategicValue: string;
+  salesApproach: string;
+  priority: OpportunityPriority;
+  notes?: string;
+}
+
+export interface OpportunitiesData {
+  partnershipTargets: PartnershipTarget[];
+  abmAccounts: ABMAccount[];
+  lastUpdated: string;
+}
+
 // ─── Hiring Tracker ───
 
 export type CandidateStatus =

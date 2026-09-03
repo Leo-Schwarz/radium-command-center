@@ -10,14 +10,14 @@ interface Props {
 
 function tagColour(tag: string): string {
   if (['strategy', 'positioning', 'messaging', 'playbook', 'framework'].includes(tag))
-    return 'bg-indigo-500/15 text-indigo-300/60';
+    return 'bg-indigo-500/10 text-indigo-700/60 dark:bg-indigo-500/15 dark:text-indigo-300/60';
   if (['conversion', 'signup', 'funnel', 'retention', 'expansion'].includes(tag))
-    return 'bg-emerald-500/15 text-emerald-300/60';
+    return 'bg-emerald-500/10 text-emerald-700/60 dark:bg-emerald-500/15 dark:text-emerald-300/60';
   if (['paid-ads', 'google-ads', 'linkedin', 'seo', 'content', 'owned-demand'].includes(tag))
-    return 'bg-amber-500/15 text-amber-300/60';
+    return 'bg-amber-500/10 text-amber-700/60 dark:bg-amber-500/15 dark:text-amber-300/60';
   if (['analytics', 'measurement', 'tracking', 'setup'].includes(tag))
-    return 'bg-sky-500/15 text-sky-300/60';
-  return 'bg-white/[0.06] text-white/25';
+    return 'bg-sky-500/10 text-sky-700/60 dark:bg-sky-500/15 dark:text-sky-300/60';
+  return 'bg-black/[0.04] dark:bg-white/[0.06] text-gray-300 dark:text-white/25';
 }
 
 export default function MilestoneKnowledgePanel({ docs, milestoneId, epicIds, onOpenDoc }: Props) {
@@ -27,15 +27,15 @@ export default function MilestoneKnowledgePanel({ docs, milestoneId, epicIds, on
   );
 
   return (
-    <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-1">
+    <div className="bg-black/[0.02] dark:bg-white/[0.02] border border-gray-200 dark:border-white/[0.06] rounded-xl p-1">
       <div className="flex items-center justify-between px-3 pt-3 pb-2">
         <div className="flex items-center gap-2">
-          <BookOpen size={14} className="text-white/50" />
-          <h3 className="text-[12px] font-semibold tracking-[0.12em] uppercase text-white/60">
+          <BookOpen size={14} className="text-gray-500 dark:text-white/50" />
+          <h3 className="text-[12px] font-semibold tracking-[0.12em] uppercase text-gray-600 dark:text-white/60">
             Documents
           </h3>
         </div>
-        <span className="text-[10px] text-white/30 tabular-nums bg-white/[0.04] px-2 py-0.5 rounded-full">
+        <span className="text-[10px] text-gray-400 dark:text-white/30 tabular-nums bg-black/[0.04] dark:bg-white/[0.04] px-2 py-0.5 rounded-full">
           {linked.length}
         </span>
       </div>
@@ -43,11 +43,11 @@ export default function MilestoneKnowledgePanel({ docs, milestoneId, epicIds, on
       <div className="px-1 pb-1">
         {linked.length === 0 ? (
           <div className="text-center py-8 px-2">
-            <FileText size={22} className="text-white/10 mx-auto mb-2.5" />
-            <p className="text-[11px] text-white/25 leading-relaxed">
+            <FileText size={22} className="text-gray-300 dark:text-white/10 mx-auto mb-2.5" />
+            <p className="text-[11px] text-gray-300 dark:text-white/25 leading-relaxed">
               No documents linked to this pillar yet.
             </p>
-            <p className="text-[10px] text-white/15 mt-1">
+            <p className="text-[10px] text-gray-300 dark:text-white/15 mt-1">
               Add docs in the Knowledge Base and link them here.
             </p>
           </div>
@@ -57,13 +57,13 @@ export default function MilestoneKnowledgePanel({ docs, milestoneId, epicIds, on
               <button
                 key={doc.id}
                 onClick={() => onOpenDoc(doc.id)}
-                className="w-full text-left flex items-start gap-2.5 bg-white/[0.02] hover:bg-white/[0.05] border border-transparent hover:border-white/[0.08] rounded-lg px-3 py-2.5 transition-all group"
+                className="w-full text-left flex items-start gap-2.5 bg-black/[0.02] dark:bg-white/[0.02] hover:bg-black/[0.03] dark:bg-white/[0.05] border border-transparent hover:border-gray-200 dark:border-white/[0.08] rounded-lg px-3 py-2.5 transition-all group"
               >
-                <div className="w-7 h-7 rounded-md bg-white/[0.05] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-white/[0.08] transition-colors">
-                  <BookOpen size={12} className="text-white/30 group-hover:text-white/50 transition-colors" />
+                <div className="w-7 h-7 rounded-md bg-black/[0.03] dark:bg-white/[0.05] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-black/[0.04] dark:hover:bg-white/[0.08] transition-colors">
+                  <BookOpen size={12} className="text-gray-400 dark:text-white/30 group-hover:text-gray-500 dark:text-white/50 transition-colors" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[12px] font-medium text-white/65 group-hover:text-white/90 leading-snug transition-colors line-clamp-2">
+                  <p className="text-[12px] font-medium text-gray-600 dark:text-white/65 group-hover:text-gray-900 dark:text-white/90 leading-snug transition-colors line-clamp-2">
                     {doc.title}
                   </p>
                   <div className="flex items-center gap-1 flex-wrap mt-1.5">

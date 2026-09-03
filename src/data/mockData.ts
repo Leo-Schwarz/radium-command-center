@@ -624,7 +624,7 @@ import type{DashboardData}from'../types';export const mockDashboardData:Dashboar
               "id": "T034",
               "title": "Write the forward-deployed education engineer spec",
               "description": "Deliberately not a classic DevRel hire: DevRel produces audience, and audience is what Radium is least short of given the paid programme and the October flight. This person converts attention into conviction by sitting inside a prospect's actual workload, and owns the benchmark work, the education backlog and the customer wire.",
-              "completed": false,
+              "completed": true,
               "assignee": "Leo",
               "priority": "medium",
               "dueDate": "2026-09-08",

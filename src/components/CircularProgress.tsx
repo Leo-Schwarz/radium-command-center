@@ -45,7 +45,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-[11px] font-medium tabular-nums text-white/50">
+        <span className="text-[11px] font-medium tabular-nums text-gray-500 dark:text-white/50">
           {Math.round(percentage)}%
         </span>
       </div>

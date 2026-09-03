@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-03",
+  "source": "Batch created to wire Mona's completed HubSpot feedback form (T106) into the Command Center UI. Three tasks: data sync extension, Feedback Inbox component, and escalation/support flagging actions. All anchored to p1-2 after T107.",
+  "tasks": [
+    {
+      "id": "T149",
+      "title": "Extend HubSpot sync to pull feedback form submissions and segmentation fields",
+      "description": "Mona's feedback form (T106) is live but its submissions are invisible to the board. Extend scripts/sync-hubspot.ts to query the HubSpot Forms API for the feedback form, pull submissions with role, experience, and opt-in fields, normalise them, and write public/data/synced-feedback.json. Includes respondent email, submission timestamp, segmentation (role, experience level), opt-in status, and any free-text response. No UI work in this task — this is the data layer every downstream feedback feature depends on. Gate for T150 and T151.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-05",
+      "tags": ["form", "hubspot", "data", "week"],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T107",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T150",
+      "title": "Build the Feedback Inbox view in the Command Center",
+      "description": "A new reusable component (FeedbackInbox.tsx) that reads public/data/synced-feedback.json and displays feedback submissions in a filterable list. Filters: role, experience level, opt-in status, date range. Each row shows respondent segmentation, submission date, a preview of the response, and a link to the HubSpot contact record. Add a new tab or section in the dashboard navigation to surface this view. Model the visual design on the existing Opportunities component for consistency. This is the window into T106's output — without it, the form produces data nobody sees.",
+      "assignee": "Leo",
+      "priority": "high",
+      "dueDate": "2026-09-08",
+      "tags": ["form", "ui", "hubspot", "week"],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T149",
+      "insertAfter": true,
+      "status": "created_live"
+    },
+    {
+      "id": "T151",
+      "title": "Add feedback-to-task escalation and support-request flagging UI",
+      "description": "In the Feedback Inbox (T150), add three actions on each submission row: (1) Create Task — opens a mini-form that converts the feedback into a dashboard task anchored to p1-2, pre-filling the respondent's quote and context; (2) Flag for Support — marks the submission as a support request and auto-links it to the engineering FAQ board (T037) or creates a follow-up task; (3) Mark Reviewed — removes the item from the unread queue. This makes T011's feedback contract operational at scale instead of remaining one-off. Also add a Respondents Summary counts bar at the top of the Feedback Inbox (total, this week, by role, opt-in rate).",
+      "assignee": "Leo",
+      "priority": "medium",
+      "dueDate": "2026-09-09",
+      "tags": ["form", "ui", "workflow", "week"],
+      "channel": "Claude",
+      "bucket": "now",
+      "anchorTaskId": "T150",
+      "insertAfter": true,
+      "status": "created_live"
+    }
+  ]
+}

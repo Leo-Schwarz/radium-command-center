@@ -8,6 +8,7 @@
     "sync:fireflies": "tsx scripts/sync-fireflies.ts",
     "sync:hubspot": "tsx scripts/sync-hubspot.ts",
     "sync:daily": "node scripts/daily-sync.js",
+    "watch:patches": "node scripts/watch-patches.js",
     "mcp": "tsx scripts/mcp-server.ts",
     "build": "tsc && vite build",
     "preview": "vite preview"

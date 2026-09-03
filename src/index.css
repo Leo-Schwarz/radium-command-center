@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: #000000;
   --color-surface: #0a0a0a;
@@ -28,16 +30,28 @@
   --color-week-muted: rgba(168, 85, 247, 0.15);
 }
 
+:root {
+  --app-bg: #f8f8f8;
+  --body-bg: #f8f8f8;
+  --body-text: #1a1a1a;
+}
+
+.dark {
+  --app-bg: #000000;
+  --body-bg: #000000;
+  --body-text: #ffffff;
+}
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--body-bg);
+  color: var(--body-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: #000000;
+  background-color: var(--body-bg);
   min-height: 100vh;
 }
 
@@ -49,6 +63,9 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 2px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
 }

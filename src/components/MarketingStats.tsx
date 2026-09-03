@@ -9,8 +9,8 @@ function SectionHeader({ icon: Icon, label, children }: { icon: React.ElementTyp
   return (
     <div className="flex items-center justify-between mb-4">
       <div className="flex items-center gap-2">
-        <Icon size={14} className="text-white/30" />
-        <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/40">{label}</h3>
+        <Icon size={14} className="text-gray-400 dark:text-white/30" />
+        <h3 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/40">{label}</h3>
       </div>
       {children}
     </div>
@@ -58,26 +58,26 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pt-2">
         <div>
-          <h1 className="text-[22px] font-semibold text-white/90 tracking-tight">PLG Stats</h1>
-          <p className="text-[12px] text-white/30 mt-0.5">Signups · Activation · Product · Paid · Organic</p>
+          <h1 className="text-[22px] font-semibold text-gray-900 dark:text-white/90 tracking-tight">PLG Stats</h1>
+          <p className="text-[12px] text-gray-400 dark:text-white/30 mt-0.5">Signups · Activation · Product · Paid · Organic</p>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex items-center bg-white/[0.04] border border-white/[0.08] rounded-lg p-0.5">
+          <div className="flex items-center bg-black/[0.04] dark:bg-white/[0.04] border border-gray-200 dark:border-white/[0.08] rounded-lg p-0.5">
             {(['7d', '30d', '90d'] as const).map(r => (
               <button
                 key={r}
                 onClick={() => setRange(r)}
                 className={`text-[11px] font-medium px-3 py-1.5 rounded-md transition-colors ${
-                  range === r ? 'bg-white/10 text-white/80' : 'text-white/30 hover:text-white/50'
+                  range === r ? 'bg-black/5 dark:bg-white/10 text-gray-800 dark:text-white/80' : 'text-gray-400 dark:text-white/30 hover:text-gray-500 dark:text-white/50'
                 }`}
               >
                 {r === '7d' ? '7 Days' : r === '30d' ? '30 Days' : '90 Days'}
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-1.5 text-white/20">
+          <div className="flex items-center gap-1.5 text-gray-300 dark:text-white/20">
             <Calendar size={11} />
-            <span className="text-[10px]">Synced {lastSync}</span>
+            <span className="text-[10px] text-gray-400 dark:text-white/30">Synced {lastSync}</span>
           </div>
         </div>
       </div>
@@ -106,23 +106,23 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Contact Growth */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">Contact Growth</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">Contact Growth</h4>
             <MiniSparkline data={hubspotContactSpark} color="#60a5fa" width={520} height={90} fillOpacity={0.08} />
             <div className="flex items-center justify-between mt-3">
-              <span className="text-[10px] text-white/20">{stats.hubspot.contactHistory[0]?.date}</span>
-              <span className="text-[10px] text-white/20">{stats.hubspot.contactHistory[stats.hubspot.contactHistory.length - 1]?.date}</span>
+              <span className="text-[10px] text-gray-300 dark:text-white/20">{stats.hubspot.contactHistory[0]?.date}</span>
+              <span className="text-[10px] text-gray-300 dark:text-white/20">{stats.hubspot.contactHistory[stats.hubspot.contactHistory.length - 1]?.date}</span>
             </div>
           </div>
 
           {/* Product Events */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">Product Events (7d)</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">Product Events (7d)</h4>
             <div className="space-y-2">
               {stats.hubspot.productEvents7d.map(e => (
                 <div key={e.event} className="flex items-center justify-between">
-                  <span className="text-[11px] text-white/50">{e.event}</span>
-                  <span className="text-[11px] font-medium text-white/70 tabular-nums">{e.count}</span>
+                  <span className="text-[11px] text-gray-500 dark:text-white/50">{e.event}</span>
+                  <span className="text-[11px] font-medium text-gray-600 dark:text-white/70 tabular-nums">{e.count}</span>
                 </div>
               ))}
             </div>
@@ -144,29 +144,29 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-3">
           {/* Campaigns Table */}
-          <div className="lg:col-span-2 bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5 overflow-x-auto">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-3">Campaigns</h4>
+          <div className="lg:col-span-2 bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5 overflow-x-auto">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-3">Campaigns</h4>
             <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-white/[0.06]">
-                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-white/25">Campaign</th>
-                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-white/25 text-right">Spend</th>
-                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-white/25 text-right">Signups</th>
-                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-white/25 text-right">CTR</th>
-                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-white/25 text-right">CPS</th>
+                <tr className="border-b border-gray-200 dark:border-white/[0.06]">
+                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/25">Campaign</th>
+                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/25 text-right">Spend</th>
+                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/25 text-right">Signups</th>
+                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/25 text-right">CTR</th>
+                  <th className="pb-2 text-[10px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/25 text-right">CPS</th>
                 </tr>
               </thead>
               <tbody>
                 {stats.googleAds.campaigns.map(c => (
-                  <tr key={c.id} className="border-b border-white/[0.04]">
+                  <tr key={c.id} className="border-b border-gray-200 dark:border-white/[0.04]">
                     <td className="py-2">
-                      <span className={`inline-block w-1.5 h-1.5 rounded-full mr-2 ${c.status === 'ENABLED' ? 'bg-green-400/70' : 'bg-white/15'}`} />
-                      <span className="text-[11px] text-white/60">{c.name}</span>
+                      <span className={`inline-block w-1.5 h-1.5 rounded-full mr-2 ${c.status === 'ENABLED' ? 'bg-green-500 dark:bg-green-400/70' : 'bg-black/10 dark:bg-gray-300 dark:bg-white/15'}`} />
+                      <span className="text-[11px] text-gray-600 dark:text-white/60">{c.name}</span>
                     </td>
-                    <td className="py-2 text-[11px] text-white/40 tabular-nums text-right">{formatCurrency(c.spend7d)}</td>
-                    <td className="py-2 text-[11px] text-white/40 tabular-nums text-right">{c.signups7d}</td>
-                    <td className="py-2 text-[11px] text-white/40 tabular-nums text-right">{c.ctr}%</td>
-                    <td className="py-2 text-[11px] text-white/40 tabular-nums text-right">{c.costPerSignup > 0 ? `$${c.costPerSignup.toFixed(0)}` : '—'}</td>
+                    <td className="py-2 text-[11px] text-gray-500 dark:text-white/40 tabular-nums text-right">{formatCurrency(c.spend7d)}</td>
+                    <td className="py-2 text-[11px] text-gray-500 dark:text-white/40 tabular-nums text-right">{c.signups7d}</td>
+                    <td className="py-2 text-[11px] text-gray-500 dark:text-white/40 tabular-nums text-right">{c.ctr}%</td>
+                    <td className="py-2 text-[11px] text-gray-500 dark:text-white/40 tabular-nums text-right">{c.costPerSignup > 0 ? `$${c.costPerSignup.toFixed(0)}` : '—'}</td>
                   </tr>
                 ))}
               </tbody>
@@ -175,33 +175,33 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
 
           <div className="space-y-3">
             {/* Conversion Breakdown */}
-            <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-              <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-3">Conversions</h4>
+            <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+              <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-3">Conversions</h4>
               {stats.googleAds.conversionBreakdown.map(cb => (
                 <div key={cb.name} className="flex items-center justify-between mb-1.5 last:mb-0">
-                  <span className="text-[11px] text-white/40">{cb.name}</span>
-                  <span className="text-[11px] font-medium text-white/60 tabular-nums">{cb.count}</span>
+                  <span className="text-[11px] text-gray-500 dark:text-white/40">{cb.name}</span>
+                  <span className="text-[11px] font-medium text-gray-600 dark:text-white/60 tabular-nums">{cb.count}</span>
                 </div>
               ))}
             </div>
 
             {/* Paid vs Organic */}
-            <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-              <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-3">Paid vs Organic</h4>
+            <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+              <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-3">Paid vs Organic</h4>
               <div className="space-y-2">
                 {stats.googleAds.paidVsOrganicSignups.map(s => (
                   <div key={s.source}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-[10px] text-white/30 uppercase tracking-wide">{s.source}</span>
-                      <span className="text-[11px] text-white/60 tabular-nums">{s.signups7d}</span>
+                      <span className="text-[10px] text-gray-400 dark:text-white/30 uppercase tracking-wide">{s.source}</span>
+                      <span className="text-[11px] text-gray-600 dark:text-white/60 tabular-nums">{s.signups7d}</span>
                     </div>
-                    <div className="h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-black/[0.03] dark:bg-white/[0.06] rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${s.source === 'paid' ? 'bg-blue-400/60' : 'bg-emerald-400/60'}`}
+                        className={`h-full rounded-full ${s.source === 'paid' ? 'bg-blue-500 dark:bg-blue-400/60' : 'bg-emerald-500 dark:bg-emerald-400/60'}`}
                         style={{ width: `${totalSignups7d > 0 ? (s.signups7d / totalSignups7d) * 100 : 0}%` }}
                       />
                     </div>
-                    <p className="text-[10px] text-white/20 mt-0.5">{s.signups30d} in 30d</p>
+                    <p className="text-[10px] text-gray-300 dark:text-white/20 mt-0.5">{s.signups30d} in 30d</p>
                   </div>
                 ))}
               </div>
@@ -224,15 +224,15 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {/* Weekly Trend */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">12-Week Impressions</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">12-Week Impressions</h4>
             <div className="flex items-end gap-[3px] h-24">
               {stats.linkedin.weeklyHistory.map((pt, i) => {
                 const max = Math.max(...stats.linkedin.weeklyHistory.map(p => p.value), 1);
                 return (
                   <div key={i} className="flex-1 flex flex-col justify-end group">
                     <div
-                      className="w-full bg-blue-400/40 rounded-sm transition-all group-hover:bg-blue-400/60"
+                      className="w-full bg-blue-500/40 dark:bg-blue-400/40 rounded-sm transition-all group-hover:bg-blue-500/60 dark:group-hover:bg-blue-500 dark:bg-blue-400/60"
                       style={{ height: `${(pt.value / max) * 100}%` }}
                     />
                   </div>
@@ -242,19 +242,19 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
           </div>
 
           {/* Recent Posts */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">Recent Posts</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">Recent Posts</h4>
             <div className="space-y-2">
               {stats.linkedin.recentPosts.map(p => (
-                <div key={p.id} className="flex items-center justify-between py-1.5 border-b border-white/[0.04] last:border-0">
+                <div key={p.id} className="flex items-center justify-between py-1.5 border-b border-gray-200 dark:border-white/[0.04] last:border-0">
                   <div className="min-w-0">
-                    <p className="text-[11px] text-white/50 truncate max-w-[280px]">{p.title}</p>
-                    <p className="text-[10px] text-white/20">{p.date}</p>
+                    <p className="text-[11px] text-gray-500 dark:text-white/50 truncate max-w-[280px]">{p.title}</p>
+                    <p className="text-[10px] text-gray-300 dark:text-white/20">{p.date}</p>
                   </div>
                   <div className="flex items-center gap-3 flex-shrink-0">
-                    <span className="text-[10px] text-white/30 tabular-nums">{formatNumber(p.impressions)}</span>
-                    <span className="text-[10px] text-white/30 tabular-nums">{p.clicks} clicks</span>
-                    <span className="text-[10px] text-white/30 tabular-nums">{p.reactions}♥</span>
+                    <span className="text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{formatNumber(p.impressions)}</span>
+                    <span className="text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{p.clicks} clicks</span>
+                    <span className="text-[10px] text-gray-400 dark:text-white/30 tabular-nums">{p.reactions}♥</span>
                   </div>
                 </div>
               ))}
@@ -277,20 +277,20 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {/* Top Pages */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">Top Pages</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">Top Pages</h4>
             <div className="space-y-2">
               {stats.website.pages.map(page => (
                 <div key={page.path} className="flex items-center justify-between">
                   <div className="flex items-center gap-3 min-w-0">
-                    <span className="text-[11px] font-mono text-white/30 flex-shrink-0 w-16 truncate">{page.path}</span>
-                    <div className="h-1.5 w-16 bg-white/[0.06] rounded-full overflow-hidden">
-                      <div className="h-full bg-blue-400/60 rounded-full" style={{ width: `${stats.website.sessions7d > 0 ? (page.sessions7d / stats.website.sessions7d) * 100 : 0}%` }} />
+                    <span className="text-[11px] font-mono text-gray-400 dark:text-white/30 flex-shrink-0 w-16 truncate">{page.path}</span>
+                    <div className="h-1.5 w-16 bg-black/[0.03] dark:bg-white/[0.06] rounded-full overflow-hidden">
+                      <div className="h-full bg-blue-500 dark:bg-blue-400/60 rounded-full" style={{ width: `${stats.website.sessions7d > 0 ? (page.sessions7d / stats.website.sessions7d) * 100 : 0}%` }} />
                     </div>
                   </div>
                   <div className="flex items-center gap-4 flex-shrink-0">
-                    <span className="text-[11px] text-white/40 tabular-nums">{page.sessions7d.toLocaleString()} ses</span>
-                    <span className="text-[10px] text-white/25">{page.bounceRate}% bounce</span>
+                    <span className="text-[11px] text-gray-500 dark:text-white/40 tabular-nums">{page.sessions7d.toLocaleString()} ses</span>
+                    <span className="text-[10px] text-gray-400 dark:text-white/25">{page.bounceRate}% bounce</span>
                   </div>
                 </div>
               ))}
@@ -298,8 +298,8 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
           </div>
 
           {/* PLG Funnel */}
-          <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">PLG Funnel</h4>
+          <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+            <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">PLG Funnel</h4>
             <FunnelChart stages={stats.website.funnel} maxVisitors={Math.max(...stats.website.funnel.map(s => s.visitors), 1)} />
           </div>
         </div>
@@ -319,19 +319,19 @@ export default function MarketingStats({ stats }: MarketingStatsProps) {
           <MetricCard label="WAU" value={`${stats.product.weeklyActiveUsers}`} accent="blue" />
         </div>
 
-        <div className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5">
-          <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/30 mb-4">7-Day Event History</h4>
+        <div className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5">
+          <h4 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-white/30 mb-4">7-Day Event History</h4>
           <div className="grid grid-cols-3 gap-4">
             <div>
-              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-white/20 mb-2">Signups</p>
+              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-gray-300 dark:text-white/20 mb-2">Signups</p>
               <MiniSparkline data={signupSpark} color="#a78bfa" width={280} height={60} fillOpacity={0.12} />
             </div>
             <div>
-              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-white/20 mb-2">API Key Created</p>
+              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-gray-300 dark:text-white/20 mb-2">API Key Created</p>
               <MiniSparkline data={apiKeySpark} color="#60a5fa" width={280} height={60} fillOpacity={0.12} />
             </div>
             <div>
-              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-white/20 mb-2">First Token Usage</p>
+              <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-gray-300 dark:text-white/20 mb-2">First Token Usage</p>
               <MiniSparkline data={tokenSpark} color="#4ade80" width={280} height={60} fillOpacity={0.12} />
             </div>
           </div>

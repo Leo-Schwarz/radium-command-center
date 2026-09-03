@@ -15,3 +15,11 @@ dist-ssr/
 
 # OS files
 .DS_Store
+
+# Dashboard backups & logs
+public/data/dashboard-data-*.json
+!public/data/dashboard-data.json
+public/data/*.bak
+scripts/processed-patches/*.log
+scripts/processed-patches/*.error.log
+

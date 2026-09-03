@@ -76,8 +76,8 @@ export default function TaskCompletionSummary({ tasks, onToggle, onOpen }: TaskC
   return (
     <section className="mb-14">
       <div className="flex items-center gap-2 mb-5">
-        <span className="w-2 h-2 rounded-full bg-white/25" />
-        <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/40">Completion Progress</h2>
+        <span className="w-2 h-2 rounded-full bg-gray-300 dark:bg-white/25" />
+        <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-500 dark:text-white/40">Completion Progress</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -89,28 +89,28 @@ export default function TaskCompletionSummary({ tasks, onToggle, onOpen }: TaskC
           return (
             <div
               key={bucket.label}
-              className="bg-[#0f0f11] border border-white/[0.08] rounded-2xl p-5"
+              className="bg-white dark:bg-[#0f0f11] border border-gray-200 dark:border-white/[0.08] rounded-2xl p-5"
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <Icon size={13} className="text-white/30" />
-                  <h3 className="text-[11px] font-medium tracking-[0.08em] uppercase text-white/40">{bucket.label}</h3>
+                  <Icon size={13} className="text-gray-300 dark:text-white/30" />
+                  <h3 className="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-500 dark:text-white/40">{bucket.label}</h3>
                 </div>
-                <span className="text-[10px] text-white/20">{bucket.sub}</span>
+                <span className="text-[10px] text-gray-400 dark:text-white/20">{bucket.sub}</span>
               </div>
 
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-[22px] font-semibold text-white/80 tabular-nums">{completed}</span>
+                <span className="text-[22px] font-semibold text-gray-800 dark:text-white/80 tabular-nums">{completed}</span>
                 {bucket.label !== 'All Time' ? (
-                  <span className="text-[11px] text-white/25">done</span>
+                  <span className="text-[11px] text-gray-400 dark:text-white/25">done</span>
                 ) : (
-                  <span className="text-[11px] text-white/25">of {bucket.totalTasks} total</span>
+                  <span className="text-[11px] text-gray-400 dark:text-white/25">of {bucket.totalTasks} total</span>
                 )}
-                <span className="text-[11px] font-medium text-white/30 ml-auto tabular-nums">{pct}%</span>
+                <span className="text-[11px] font-medium text-gray-400 dark:text-white/30 ml-auto tabular-nums">{pct}%</span>
               </div>
 
               {/* Progress bar */}
-              <div className="h-1.5 bg-white/[0.06] rounded-full overflow-hidden mb-4">
+              <div className="h-1.5 bg-gray-200 dark:bg-white/[0.06] rounded-full overflow-hidden mb-4">
                 <div
                   className={`h-full ${bucket.color} rounded-full`}
                   style={{ width: `${pct}%` }}
@@ -123,7 +123,7 @@ export default function TaskCompletionSummary({ tasks, onToggle, onOpen }: TaskC
                   <div
                     key={task.id}
                     onClick={() => onOpen(task.id)}
-                    className="group flex items-start gap-2.5 py-2 border-b border-white/[0.04] last:border-0 cursor-pointer"
+                    className="group flex items-start gap-2.5 py-2 border-b border-gray-200 dark:border-white/[0.04] last:border-0 cursor-pointer"
                   >
                     <button
                       onClick={(e) => handleToggle(e, task.id)}
@@ -134,17 +134,17 @@ export default function TaskCompletionSummary({ tasks, onToggle, onOpen }: TaskC
                       </svg>
                     </button>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[12px] text-white/50 group-hover:text-white/70 transition-colors truncate">
+                      <p className="text-[12px] text-gray-500 dark:text-white/50 group-hover:text-gray-700 dark:group-hover:text-white/70 transition-colors truncate">
                         {task.title}
                       </p>
                       <div className="flex items-center gap-2 mt-0.5">
-                        <span className="text-[9px] text-white/20 uppercase tracking-wider truncate max-w-[80px]">{milestone.title}</span>
-                        <span className="text-white/10">·</span>
-                        <span className="text-[9px] text-white/20 truncate max-w-[80px]">{epic.title}</span>
+                        <span className="text-[9px] text-gray-400 dark:text-white/20 uppercase tracking-wider truncate max-w-[80px]">{milestone.title}</span>
+                        <span className="text-gray-300 dark:text-white/10">·</span>
+                        <span className="text-[9px] text-gray-400 dark:text-white/20 truncate max-w-[80px]">{epic.title}</span>
                         {task.completedAt && (
                           <>
-                            <span className="text-white/10">·</span>
-                            <span className="text-[9px] text-white/15">{daysAgoString(task.completedAt)}</span>
+                            <span className="text-gray-300 dark:text-white/10">·</span>
+                            <span className="text-[9px] text-gray-400 dark:text-white/15">{daysAgoString(task.completedAt)}</span>
                           </>
                         )}
                       </div>
@@ -152,10 +152,10 @@ export default function TaskCompletionSummary({ tasks, onToggle, onOpen }: TaskC
                   </div>
                 ))}
                 {bucket.items.length === 0 && (
-                  <p className="text-[12px] text-white/15 py-3 text-center">No tasks completed yet.</p>
+                  <p className="text-[12px] text-gray-400 dark:text-white/15 py-3 text-center">No tasks completed yet.</p>
                 )}
                 {bucket.items.length > 5 && (
-                  <p className="text-[10px] text-white/15 pt-1 text-center">+{bucket.items.length - 5} more</p>
+                  <p className="text-[10px] text-gray-400 dark:text-white/15 pt-1 text-center">+{bucket.items.length - 5} more</p>
                 )}
               </div>
             </div>
