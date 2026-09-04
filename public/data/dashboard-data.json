@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-03",
+  "lastUpdated": "2026-09-04",
   "milestones": [
     {
       "id": "ops",
@@ -414,6 +414,18 @@
               ],
               "channel": "Claude",
               "bucket": "now"
+            },
+            {
+              "id": "T158",
+              "title": "Brief Adam Rogers on the product before his Paris trip",
+              "description": "Adam Rogers is being flown to Paris to represent Radium and told Mona he cannot yet explain the product: 'I'm going to Paris and I have to be able to explain this to somebody. I'm gonna set up a time with Leo for sure because I better be ready in Paris.' He put it at an hour or two to close the gaps. Mona pointed him to Leo three times on the call and said plainly she cannot cover the technical side. Leo was not on that call and nothing is booked. His laptop does not arrive until the 12th and the weekly sync in the week of 14 Sep was cancelled for the trip, so the briefing has to happen before then. Also the cheapest available source of outside-in questions: he agreed to capture what people ask in Paris. source: Fireflies 01M1KS84P75ZB12RAEWT5BMRSN, 3 Sep",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-09",
+              "tags": [],
+              "channel": "Product",
+              "bucket": "now"
             }
           ]
         },
@@ -676,7 +688,7 @@
             {
               "id": "T061",
               "title": "Make first token usage the counted primary conversion, not signup",
-              "description": "Decided 31 Aug. Optimising to signup buys people looking for a chatbot, because a signup is free and means nothing. Usage is the first event that proves a real workload. Blocked until the product events reach HubSpot and can be uploaded to Google Ads as offline conversions. Update 2 Sep: still blocked, now on one field rather than the whole pipe. Google is importing key creation as the conversion; first_api_request_date is not populating in HubSpot, so first-token cannot be counted or uploaded yet. Gated on the second half of T019. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z)",
+              "description": "Decided 31 Aug. Optimising to signup buys people looking for a chatbot, because a signup is free and means nothing. Usage is the first event that proves a real workload. Blocked until the product events reach HubSpot and can be uploaded to Google Ads as offline conversions. Update 2 Sep: still blocked, now on one field rather than the whole pipe. Google is importing key creation as the conversion; first_api_request_date is not populating in HubSpot, so first-token cannot be counted or uploaded yet. Gated on the second half of T019. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Update 3 Sep: the conversion switch now has a nearer path that does not wait on this task. On today's Google session, signup and enhanced conversions are fully live via Google Tag Manager - Mona fixed the tag with Google's tracking support on Tuesday and it is being monitored for seven days. MQLs are now arriving and attributable to individual search terms. Grace set the rule at 20-30 MQLs per campaign before signup comes off as a primary conversion action, put the full switch roughly two weeks out, and set a checkpoint on the Tuesday 8 Sep call where Mona expects to be past 20. Expect a 15-20% lift in attributed conversions once enhanced conversions completes. Note that path optimises to MQL, not to first token. This task stays blocked for the token version: first_api_request_date is still populated on 3 records. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4",
               "completed": false,
               "assignee": "Mona",
               "priority": "high",
@@ -771,7 +783,7 @@
               "id": "T097",
               "title": "Run the Thursday keyword cleanup session with Google",
               "description": "Booked live in the 1 Sep sync for Thursday 3 Sep, same time. Scope agreed as search only - demand gen is being left to mature. Mona to bring the keyword set to prune, Grace to bring competitor keyword lists and third-party spend data. This is the working session that T057 and T059 feed into. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Scheduled 2 Sep: campaign-structure change, so it lands before the 8 Sep freeze. Changing the traffic mix mid-window corrupts the 15 Sep read.",
-              "completed": false,
+              "completed": true,
               "assignee": "Mona",
               "priority": "high",
               "dueDate": "2026-09-03",
@@ -779,12 +791,13 @@
                 "urgent"
               ],
               "channel": "Paid search",
-              "bucket": "now"
+              "bucket": "now",
+              "completedAt": "2026-09-04T00:43:49.000Z"
             },
             {
               "id": "T098",
               "title": "Get Grace's competitor keyword and third-party spend data before Thursday",
-              "description": "Grace is sending competitor keyword lists by email and is waiting on a third-party request that covers spend levels and cost-per-click across Google, Meta and other paid social - not just Google Ads. Useful for the full media mix, not only the keyword session. Chase it if it has not landed by Wednesday night. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Scheduled 2 Sep: campaign-structure change, so it lands before the 8 Sep freeze. Changing the traffic mix mid-window corrupts the 15 Sep read.",
+              "description": "Grace is sending competitor keyword lists by email and is waiting on a third-party request that covers spend levels and cost-per-click across Google, Meta and other paid social - not just Google Ads. Useful for the full media mix, not only the keyword session. Chase it if it has not landed by Wednesday night. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Scheduled 2 Sep: campaign-structure change, so it lands before the 8 Sep freeze. Changing the traffic mix mid-window corrupts the 15 Sep read. Update 3 Sep: partially delivered at the session. Grace presented peer-set benchmarks live - Radium's cost per click is running well above peers at similar spend levels, click-through rate is above peer average, and customer spend sits slightly below a six-player peer average. The deeper third-party competitive analysis did not arrive: 'I have a bigger analysis that I was hoping I would have today, but it didn't come through. Hopefully they'll get it to me tomorrow.' That piece gates general-campaign keyword expansion, which matters because Grace found the general campaign cannot spend its full daily budget on the current exact-match terms and is dipping into competitor queries to fill it - she has opened a support case on that. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4",
               "completed": false,
               "assignee": "Mona",
               "priority": "medium",
@@ -829,6 +842,83 @@
               "dueDate": "2026-09-08",
               "tags": [],
               "channel": "Paid social",
+              "bucket": "now"
+            },
+            {
+              "id": "T152",
+              "title": "Book the Google offline conversion call and finish enhanced conversions",
+              "description": "Grace is pulling availability for the Google offline conversion (OCI) team after her 12:00 call today and will send times for Mona to pick. This is the last step in the tracking chain: Google Tag Manager is in, signup and enhanced conversions are live, and what remains is the additional pixel that captures the PII needed to import offline conversions. Grace expects a 15-20% lift in attributed conversions once it completes, and it matters more than that because it is what lets MQL be imported as a conversion action - the near-term route around T061. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-04",
+              "tags": [
+                "urgent",
+                "data"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T153",
+              "title": "Finish importing and cleaning the MQL data in HubSpot before Tuesday's Google call",
+              "description": "MQL data currently sits in two places. Mona is consolidating and importing it into HubSpot: 'today and tomorrow... I'll be done by tomorrow... everything is going to update by Tuesday.' The Tuesday 8 Sep call is where Google reads whether the 20-30 MQL per campaign threshold has been met, so this import is the gate on that decision rather than housekeeping. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-04",
+              "tags": [
+                "data"
+              ],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T154",
+              "title": "Decide on 8 Sep whether to drop signup as a primary conversion action",
+              "description": "Grace set the rule: 20-30 MQLs per campaign before signup comes off as a primary conversion action, done campaign by campaign rather than account-wide, so a standout campaign can move first. Mona expects to be past 20 by the Tuesday call. Grace: 'removing that sign up as a primary conversion action and only optimizing for MQLs, that will be a really big shift for the algorithm.' This is the decision that stops paid buying free signups, and it lands on the 8 Sep freeze date - changing the traffic mix after that corrupts the 15 Sep read, so it is decide-now or decide-after-the-15th. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "high",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T155",
+              "title": "Rewrite the Built for agent workloads headline to lead with the models",
+              "description": "Leo on the Google session: the headline 'Built for agent workloads' is not particularly strong and would be much stronger as 'AI models built for agent workflows' - naming the thing being sold rather than only the use case. Grace agreed and is sending the asset report. The headline is new so its own data is thin, but it runs on the campaigns feeding /agents, which is now 58% of all site landings at 91% bounce. The ad and the first screen have to say the same thing; this is the ad half of what T113 fixes on the page. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Leo",
+              "priority": "high",
+              "dueDate": "2026-09-05",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T156",
+              "title": "Put the Our models site link on every ad group",
+              "description": "Grace: 'Our models as a site link is doing very, very well. People are clearly interested in knowing specifically what your models look like compared to competitors. That's something I think we should have on all of your ads.' She believes it is the account default but it is worth verifying campaign by campaign. Cheapest possible win on the strongest asset in the account. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
+              "bucket": "now"
+            },
+            {
+              "id": "T157",
+              "title": "Verify the double domain and /switch path are gone from ad final URLs",
+              "description": "Leo flagged on the Google session that click URLs render the Radium domain twice and route through /switch, an old landing page that now forwards to the homepage - a redirect hop with no purpose. Grace is auditing the ads to find where it is set and taking the double-domain question to Google's measurement team to confirm it does not affect tracking; she does not expect a user-experience impact. Distinct from T062, which fixed the malformed final URL. Worth verifying rather than assuming it was picked up. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4, 3 Sep",
+              "completed": false,
+              "assignee": "Mona",
+              "priority": "medium",
+              "dueDate": "2026-09-08",
+              "tags": [],
+              "channel": "Paid search",
               "bucket": "now"
             }
           ]
@@ -1246,10 +1336,10 @@
             {
               "id": "T129",
               "title": "Get naming approval and publish the Telus case study",
-              "description": "Pending legal approval on naming. The first named customer proof on the site, and the only one close to ready. Chase the approval, then write it to the proof standard: workload, before and after cost, what changed in the config, dated.",
+              "description": "Pending legal approval on naming. The first named customer proof on the site, and the only one close to ready. Chase the approval, then write it to the proof standard: workload, before and after cost, what changed in the config, dated. Update 3 Sep: priority raised medium to high. Mona named the absence of published proof as the primary acquisition blocker on the Adam Rogers sync: there is exactly one benchmark, HAL against Opus, run internally. No third-party benchmarks, no published use cases, no case studies. Asked whether Radium has any significant accounts using it today she answered 'not that I know of', and she has no visibility into Telus at all. Her read on the audience: 'they are literally allergic to sales and marketing language, they respond well to technical and peer reviewed information.' Telus is the one real deployment there is, and this is the only task on the board that turns it into something publishable. source: Fireflies 01M1KS84P75ZB12RAEWT5BMRSN",
               "completed": false,
               "assignee": "Natalie",
-              "priority": "medium",
+              "priority": "high",
               "dueDate": "2026-10-06",
               "tags": [
                 "initiative"
@@ -1407,7 +1497,7 @@
             {
               "id": "T090",
               "title": "Set test credits grant size and expiry",
-              "description": "Credits for running a real workload plus one 30-minute structured feedback session. Size to a real evaluation rather than a demo, since the output we want is the use case, not a testimonial. 60-day expiry proposed, no card required. Deferred 2 Sep: not on the critical path to the 15 Sep read. Moved off 8 Sep so the near-term dates mean something.",
+              "description": "Credits for running a real workload plus one 30-minute structured feedback session. Size to a real evaluation rather than a demo, since the output we want is the use case, not a testimonial. 60-day expiry proposed, no card required. Deferred 2 Sep: not on the critical path to the 15 Sep read. Moved off 8 Sep so the near-term dates mean something. Update 3 Sep: Mona put a number and a doubt on this. There are 22 activated users, every one of them on the automatic $25 signup credit and none of them on a credit card. Her concern, raised on the Adam Rogers sync: '$25... now I'm starting to think it's too much. Because they're able to actually test a full workload on that.' She compared it to Clay's trial, which deliberately constrains volume so the trial cannot substitute for the product. Raised, not decided, and no owner was named on the call. source: Fireflies 01M1KS84P75ZB12RAEWT5BMRSN",
               "completed": false,
               "assignee": "Adam",
               "priority": "high",
@@ -1801,7 +1891,7 @@
             {
               "id": "T113",
               "title": "Fix the Agents page above the fold before any more agent campaign spend",
-              "description": "/agents took 51.7% of all landings this week, up from 7.2%, with 90.9% bounce and a 15.7% scroll rate on a 9,200px page. It is now the front door and it keeps nobody. Put the proposition and a price in the first screen and make the ad copy and the first screen say the same thing. Everything p4-1 prescribes for the homepage applies harder here, and T108 is buying a bigger leak until this is done. [Fri 5 Sep – 2 hr]",
+              "description": "/agents took 51.7% of all landings this week, up from 7.2%, with 90.9% bounce and a 15.7% scroll rate on a 9,200px page. It is now the front door and it keeps nobody. Put the proposition and a price in the first screen and make the ad copy and the first screen say the same thing. Everything p4-1 prescribes for the homepage applies harder here, and T108 is buying a bigger leak until this is done. [Fri 5 Sep – 2 hr] Update 3 Sep (eve): figures refreshed for 28 Aug - 3 Sep. /agents took 1,396 visits and 58.3% of all landings against 8.4% the prior week, at 91.4% bounce, 90.1% exit and a 15.4% scroll rate. The homepage fell to 858 visits and 34.8% of landings. Site bounce is 85.3% against 78.5% the week before. The mix has not stabilised - Agents took a further 6.6 points of landing share since the morning check. source: Contentsquare project 921964",
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
@@ -1816,7 +1906,7 @@
             {
               "id": "T120",
               "title": "Publish the model equivalence table on the homepage",
-              "description": "Which Radium model replaces Claude Opus 5, which replaces GPT, which replaces Llama, at what price, dated and linked. Buyers arrive in their own vocabulary and are answered with Hal, Clarke and Tycho. Was a now item on the tracker and never made the board. Pairs with T025. [Thu 4 Sep – 1.5 hr]",
+              "description": "Which Radium model replaces Claude Opus 5, which replaces GPT, which replaces Llama, at what price, dated and linked. Buyers arrive in their own vocabulary and are answered with Hal, Clarke and Tycho. Was a now item on the tracker and never made the board. Pairs with T025. [Thu 4 Sep – 1.5 hr] Update 3 Sep: Google's asset report says this is the highest-signal thing on the page. The 'Our models' site link is the strongest performing asset in the account - Grace: 'people are clearly interested in knowing specifically what your models look like compared to competitors' - and she recommends it on every ad. 'OpenAI compatible' as a headline drove 3 MQLs, and 'best balance of speed and cost' as a description carries the highest click-through rate in the account. The comparison is what converts; this table is the owned version of it. source: Fireflies 01M1F304TY1ARBKKWACQK1J7N4",
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
@@ -1971,7 +2061,7 @@
             {
               "id": "T135",
               "title": "Rebuild the PQL on usage and write the PQL-to-human routing rule",
-              "description": "Lifecycle stage can be triggered by any email address. Spend, request volume and model count cannot. Define the PQL on those, then write who calls a qualified account, within what window, with what. At $120k ACV behind a self-serve front door, the handoff is where the money is and it does not exist. Leo defines, Adam signs the routing rule and owns the calls until the sales hire. [Sun 7 Sep – start: 1.5 hr]",
+              "description": "Lifecycle stage can be triggered by any email address. Spend, request volume and model count cannot. Define the PQL on those, then write who calls a qualified account, within what window, with what. At $120k ACV behind a self-serve front door, the handoff is where the money is and it does not exist. Leo defines, Adam signs the routing rule and owns the calls until the sales hire. [Sun 7 Sep – start: 1.5 hr] Update 3 Sep: the usage data this needs now partially exists. input_tokens_lifetime, output_tokens_lifetime, requests_lifetime and spend_lifetime carry real non-zero values on 29 HubSpot contacts - the same 29 that hold API keys. The trailing 7/30/90-day windows are still zero-filled or empty, so a PQL defined on a rolling window cannot be computed yet, but a lifetime-threshold PQL can be. source: HubSpot portal 244452220, Fireflies 01M1KS84P75ZB12RAEWT5BMRSN",
               "completed": false,
               "assignee": "Leo",
               "priority": "high",
@@ -2030,7 +2120,7 @@
             {
               "id": "T019",
               "title": "Ship six product events into HubSpot",
-              "description": "signup, api_key_created, first_request, first_spend, model_used, usage_threshold. This is now the gate on the ad account working properly as well as on reporting, because the usage-based conversion cannot be bid to until these events exist and can be uploaded to Google Ads. Escalate to Adam on 2 Sep if it is still unscheduled. Update 2 Sep: unblocked but only half shipped. api_key_created is landing - 9 accounts created their first key 24-30 Aug, 7 of them from Google Ads, and Brandon's engineering tests pass. Checked HubSpot portal 244452220 the same night: api_key_count is populated on 30 contacts, but first_api_key_created_date is empty on every record and first_api_request_date is set on only 3, all from June/July. So the count arrives without the timestamps, and first_request is not arriving at all. Ask Eng for those two fields specifically. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Scheduled 2 Sep: on the critical path to a readable 15 Sep signal. The real deadline is 8 Sep, not the 15th - a readable number needs about a week of clean data behind it. Update 3 Sep: no movement. Re-checked HubSpot portal 244452220 - first_api_key_created_date is still empty on every record, first_api_request_date is still on 3 contacts (Jun/Jul), api_key_count is on 29 records, down one from 30. The 2 Sep due date has passed and the description's own trigger (escalate to Adam on 2 Sep) fired. Engineering leadership was in the room at the 2 Sep Engineering <> Marketing sync and product events were not raised; Vijay declined the invite. source: HubSpot 3 Sep; Fireflies 01M0ZG5SJZSHETYYAV41F0QN6Z",
+              "description": "signup, api_key_created, first_request, first_spend, model_used, usage_threshold. This is now the gate on the ad account working properly as well as on reporting, because the usage-based conversion cannot be bid to until these events exist and can be uploaded to Google Ads. Escalate to Adam on 2 Sep if it is still unscheduled. Update 2 Sep: unblocked but only half shipped. api_key_created is landing - 9 accounts created their first key 24-30 Aug, 7 of them from Google Ads, and Brandon's engineering tests pass. Checked HubSpot portal 244452220 the same night: api_key_count is populated on 30 contacts, but first_api_key_created_date is empty on every record and first_api_request_date is set on only 3, all from June/July. So the count arrives without the timestamps, and first_request is not arriving at all. Ask Eng for those two fields specifically. source: Google x Radium Weekly Sync, 1 Sep 2026 (Fireflies 01M0ZG5SJE3FJ6XPAPWRAZJB1Z) Scheduled 2 Sep: on the critical path to a readable 15 Sep signal. The real deadline is 8 Sep, not the 15th - a readable number needs about a week of clean data behind it. Update 3 Sep: no movement. Re-checked HubSpot portal 244452220 - first_api_key_created_date is still empty on every record, first_api_request_date is still on 3 contacts (Jun/Jul), api_key_count is on 29 records, down one from 30. The 2 Sep due date has passed and the description's own trigger (escalate to Adam on 2 Sep) fired. Engineering leadership was in the room at the 2 Sep Engineering <> Marketing sync and product events were not raised; Vijay declined the invite. source: HubSpot 3 Sep; Fireflies 01M0ZG5SJZSHETYYAV41F0QN6Z Update 3 Sep (eve): usage data has started landing, the key-creation timestamp has not. HubSpot now carries real non-zero lifetime values on the same 29 contacts that hold API keys - input_tokens_lifetime, output_tokens_lifetime, requests_lifetime and spend_lifetime. Mona confirmed the source on the Adam Rogers sync: 'engineering just started making that available like this week', where before there was only credit consumption and it was not refreshed daily. But the trailing windows are a shell - input_tokens_7d/30d/90d are populated on 5,527 contacts with every single value zero, and output_tokens_7d/30d and requests_7d/30d are entirely empty. first_api_key_created_date is still 0 records and first_api_request_date still 3, unchanged for a third consecutive check. Of the six events, signup and api_key_created are effectively there, usage volume is there in lifetime form only, and the two timestamps that T061 and T032 actually need are not. source: Fireflies 01M1KS84P75ZB12RAEWT5BMRSN, HubSpot portal 244452220",
               "completed": false,
               "assignee": "Eng",
               "priority": "high",
