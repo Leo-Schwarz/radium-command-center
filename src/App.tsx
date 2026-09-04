@@ -268,7 +268,8 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
       tasks = tasks.filter(t =>
         t.title.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q) ||
-        t.assignee?.toLowerCase().includes(q)
+        t.assignee?.toLowerCase().includes(q) ||
+        t.id.toLowerCase().includes(q)
       );
     }
     return tasks;
@@ -466,7 +467,7 @@ function DashboardContent({ initialData }: { initialData: DashboardData }) {
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  placeholder="Search tasks, epics, milestones"
+                  placeholder="Search tasks, epics, milestones, or task IDs (e.g. T152)"
                   className="flex-1 bg-transparent text-[13px] text-gray-800 dark:text-white/80 placeholder:text-gray-400 dark:placeholder:text-white/20 outline-none"
                 />
                 <span className="text-[10px] text-gray-400 dark:text-white/15 font-medium px-1.5 py-0.5 rounded bg-black/[0.05] dark:bg-white/[0.05]">/</span>
