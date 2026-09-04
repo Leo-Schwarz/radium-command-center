@@ -72,6 +72,7 @@ const CompletedTasksArchive: React.FC<CompletedTasksArchiveProps> = ({ tasks, on
                       </button>
                       <div className="flex-1 min-w-0">
                         <p className="text-[13px] leading-snug text-gray-500 dark:text-white/40 line-through">
+                          <span className="font-mono text-[11px] text-gray-400 dark:text-white/30 mr-1.5 select-none">{task.id}</span>
                           {task.title}
                         </p>
                         <div className="flex items-center gap-2 mt-1">

@@ -750,7 +750,7 @@ function App() {
   const [initialData, setInitialData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch('/data/dashboard-data.json')
+    fetch(`/data/dashboard-data.json?_v=${Date.now()}`)
       .then(res => {
         if (res.ok) return res.json();
         throw new Error('Not found');

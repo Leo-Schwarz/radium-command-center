@@ -32,6 +32,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onOpen }) => {
 
       <div className="flex-1 min-w-0">
         <p className={`text-[13px] leading-snug ${task.completed ? 'line-through text-gray-400 dark:text-white/25' : 'text-gray-800 dark:text-white/80'}`}>
+          <span className="font-mono text-[11px] text-gray-400 dark:text-white/30 mr-1.5 select-none">{task.id}</span>
           {task.title}
         </p>
         <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mt-1.5">

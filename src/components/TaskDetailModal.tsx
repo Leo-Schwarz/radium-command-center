@@ -81,7 +81,10 @@ const TaskDetailModal: React.FC<TaskDetailModalProps> = ({ task, milestoneTitle,
                   placeholder="Task title"
                 />
               ) : (
-                <h2 className={`text-[16px] font-medium leading-snug ${task.completed?'line-through text-gray-400 dark:text-white/30':'text-gray-900 dark:text-white/90'}`}>{task.title}</h2>
+                <h2 className={`text-[16px] font-medium leading-snug ${task.completed?'line-through text-gray-400 dark:text-white/30':'text-gray-900 dark:text-white/90'}`}>
+                  <span className="font-mono text-[13px] text-gray-400 dark:text-white/30 mr-2 select-none">{task.id}</span>
+                  {task.title}
+                </h2>
               )}
               <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mt-2">
                 <span className="text-[11px] text-gray-500 dark:text-white/40 font-medium">{milestoneTitle.replace(/^M\d+\s+/,'')}</span>
